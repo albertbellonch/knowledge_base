@@ -4,6 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
+    <th>E-mail</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
   <tr>
     <td><%= fact.title %></td>
     <td><%= fact.description %></td>
+    <td><%= fact.email %></td>
     <td><%= link_to 'Show', fact %></td>
     <td><%= link_to 'Edit', edit_fact_path(fact) %></td>
     <td><%= link_to 'Destroy', fact, :confirm => 'Are you sure?', :method => :delete %></td>
