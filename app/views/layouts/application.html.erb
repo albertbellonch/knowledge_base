@@ -7,13 +7,49 @@
   <%= csrf_meta_tag %>
 </head>
 <body style="background: #EEEEEE;">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.name %>.
-    <%= link_to 'Edit', edit_user_registration_path %>
-    <%= link_to 'Sign out', destroy_user_session_path %>
-  <% end %>
-  <%= yield %>
+  <div class="container">
+    <div id="logo">
+      <a href="/"><img src="/images/intranet.png" alt="Logo Itnig Intranet" /></a>
+    </div>
+    <div id="header" class="span-24">
+      <h1 class='greet span-9 prepend-1 column'>
+        Knowledge Base
+      </h1>
+      <div id="menu_superior">
+        <div style="float:right">
+          <ul>
+            <li><%= link_to 'New fact', new_fact_path %></li>
+            <li><%=current_user.name%></li>
+            <li><%= link_to 'Edit', edit_user_registration_path %></li>
+            <li><%= link_to 'Signout', destroy_user_session_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="contentbox" class="span-22 prepend-1 append-1 column">
+        <%= yield %>
+    </div>
+  </div>
+  <script src="http://www.google.com/jsapi?key=ABQIAAAAOSd9q8g3QaAV3PdMj3ACmxTouM8V7v86wSq8sRHv9OnhKYqKkRRoZmj11XpuH9QwHACeX7SrwWlPlg"></script>
+  <script type="text/javascript">
+        google.load("jquery", "1.4.2");
+        google.load("jqueryui", "1.8.2");
+  </script>
+  <script src="/javascripts/jquery-rails.js?1299026151" type="text/javascript"></script>
+  <script src="/javascripts/wmd/wmd.js?1299026151" type="text/javascript"></script>
+  <script src="/javascripts/jquery.purr.js?1299026151" type="text/javascript"></script>
+  <script src="/javascripts/facebox.js?1299026151" type="text/javascript"></script>
+  <script src="/javascripts/code-highlight.js?1299026151" type="text/javascript"></script>
+  <script src="/javascripts/jquery.rest_in_place.js?1299026151" type="text/javascript"></script>
+  <script src="/javascripts/crm.js?1299026151" type="text/javascript"></script>  <script type='text/javascript'>
+    //<![CDATA[
+      $(document).ready(function() {
+        $("#payment_accepted").click(function() {
+          $("#payment_alert").fadeOut("slow")
+          $("#projects_to_pay").delay(500).fadeIn("slow")
+        })
+      })
+    //]]>
+  </script>
 </body>
 </html>

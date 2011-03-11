@@ -1,3 +1,35 @@
+<h1 class='welcome'>Fact list</h1>
+<ul class='projects'>
+  <li class='odd'>
+    <% @facts.each do |fact| %>
+      <br/>
+      <div id="fact-<%=fact.id%>" class="fact">
+        <div class="fact-header">
+          <%= link_to 'Show', fact %>
+          <%= link_to 'Edit', edit_fact_path(fact) %>
+          <%= link_to 'Destroy', fact, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <div class="fact-body">
+          <div class="gravatar">
+            <%=gravatar_image_tag(fact.email)%>
+          </div>
+          <div class="fact-text">
+            <h2><%= fact.title %></h2>
+            <%= get_markdown_html(fact.description, :max => 200) %>
+          </div>
+        </div>
+        <div class="fact-footer">
+          Posted on <%= fact.created_at %>
+        </div>
+      </div>
+    <% end %>
+  </li>
+</ul>
+<hr>
+
+
+ 
+<!-- To copy -->
 <h1>Knowledge base</h1>
 
 <%= link_to 'New Fact', new_fact_path %>
