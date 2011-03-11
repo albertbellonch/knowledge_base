@@ -1,4 +1,7 @@
 class FactsController < ApplicationController
+  # Require Devise authentication
+  before_filter :authenticate_user!
+
   # GET /facts
   # GET /facts.xml
   def index

@@ -1,4 +1,5 @@
 KnowledgeBase::Application.routes.draw do
+  devise_for :users
   resources :facts, :except => :index
   root :to => 'facts#index'
 
