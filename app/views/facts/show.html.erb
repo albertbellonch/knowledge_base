@@ -11,12 +11,7 @@
 </p>
 
 <p>
-  <b>E-mail:</b>
-  <%= @fact.email %>
-</p>
-
-<p>
-  <%=gravatar_image_tag(@fact.email)%>
+  <%=gravatar_image_tag(@fact.user.email)%>
 </p>
 
 <%= link_to 'Edit', edit_fact_path(@fact) %> |

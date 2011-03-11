@@ -1,59 +1,24 @@
 <h1 class='welcome'>Fact list</h1>
 <ul class='projects'>
-  <li class='odd'>
-    <% @facts.each do |fact| %>
-      <br/>
+  <% if @facts.size == 0 %>
+    No facts recorded.
+  <% end %>
+  <% @facts.each do |fact| %>
+    <li class='<%= cycle("even", "odd") -%>'>
       <div id="fact-<%=fact.id%>" class="fact">
-        <div class="fact-header">
-          <%= link_to 'Show', fact %>
-          <%= link_to 'Edit', edit_fact_path(fact) %>
-          <%= link_to 'Destroy', fact, :confirm => 'Are you sure?', :method => :delete %>
+        <div class="fact-left">
+          <%= gravatar_image_tag(fact.user.email) %>
         </div>
-        <div class="fact-body">
-          <div class="gravatar">
-            <%=gravatar_image_tag(fact.email)%>
+        <div class="fact-right">
+          <div class="fact-metadata">
+            <b><i>Created on <%= fact.created_at %> by <%= fact.user.name %></i></b>
           </div>
-          <div class="fact-text">
-            <h2><%= fact.title %></h2>
-            <%= get_markdown_html(fact.description, :max => 200) %>
-          </div>
-        </div>
-        <div class="fact-footer">
-          Posted on <%= fact.created_at %>
+          <h2><%= link_to fact.title, fact %></h2>
+          <%= truncate(fact.description, :length => 300) %>
         </div>
       </div>
-    <% end %>
-  </li>
-</ul>
+    </li>
+  <% end %>
+  </ul>
 <hr>
-
-
- 
-<!-- To copy -->
-<h1>Knowledge base</h1>
-
-<%= link_to 'New Fact', new_fact_path %>
-
-<% @facts.each do |fact| %>
-  <br/>
-  <div id="fact-<%=fact.id%>" class="fact">
-    <div class="fact-header">
-      <%= link_to 'Show', fact %>
-      <%= link_to 'Edit', edit_fact_path(fact) %>
-      <%= link_to 'Destroy', fact, :confirm => 'Are you sure?', :method => :delete %>
-    </div>
-    <div class="fact-body">
-      <div class="gravatar">
-        <%=gravatar_image_tag(fact.email)%>
-      </div>
-      <div class="fact-text">
-        <h2><%= fact.title %></h2>
-        <%= get_markdown_html(fact.description, :max => 200) %>
-      </div>
-    </div>
-    <div class="fact-footer">
-      Posted on <%= fact.created_at %>
-    </div>
-  </div>
-<% end %>
 

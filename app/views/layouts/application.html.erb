@@ -8,26 +8,11 @@
 </head>
 <body style="background: #EEEEEE;">
   <div class="container">
-    <div id="logo">
-      <a href="/"><img src="/images/intranet.png" alt="Logo Itnig Intranet" /></a>
-    </div>
-    <div id="header" class="span-24">
-      <h1 class='greet span-9 prepend-1 column'>
-        Knowledge Base
-      </h1>
-      <div id="menu_superior">
-        <div style="float:right">
-          <ul>
-            <li><%= link_to 'New fact', new_fact_path %></li>
-            <li><%=current_user.name%></li>
-            <li><%= link_to 'Edit', edit_user_registration_path %></li>
-            <li><%= link_to 'Signout', destroy_user_session_path %></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <% if current_user %>
+      <%= render "shared/topmenu" %>
+    <% end %>
     <div id="contentbox" class="span-22 prepend-1 append-1 column">
-        <%= yield %>
+      <%= yield %>
     </div>
   </div>
   <script src="http://www.google.com/jsapi?key=ABQIAAAAOSd9q8g3QaAV3PdMj3ACmxTouM8V7v86wSq8sRHv9OnhKYqKkRRoZmj11XpuH9QwHACeX7SrwWlPlg"></script>

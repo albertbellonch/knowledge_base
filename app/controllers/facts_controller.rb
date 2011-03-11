@@ -44,6 +44,7 @@ class FactsController < ApplicationController
   # POST /facts.xml
   def create
     @fact = Fact.new(params[:fact])
+    @fact.user = current_user
 
     respond_to do |format|
       if @fact.save
@@ -56,7 +57,7 @@ class FactsController < ApplicationController
     end
   end
 
-  # PUT /facts/1
+  # PUT /facts/1  
   # PUT /facts/1.xml
   def update
     @fact = Fact.find(params[:id])

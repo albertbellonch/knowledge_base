@@ -4,4 +4,5 @@ class Fact < ActiveRecord::Base
                     :length => { :minimum => 5 }
   has_many :fact_tags
   has_many :comments
+  belongs_to :user
 end
