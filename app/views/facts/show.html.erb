@@ -1,16 +1,36 @@
 <h1 class='welcome'><%= @fact.title %></h1>
 <div>
   <div class="gravatar"><%=gravatar_image_tag(@fact.user.email)%></div>
-  <b><i>
+  <div class="fact-metadata">
+    <b><i>
       Created on <%= @fact.created_at %> by 
       <% if @fact.user == current_user %>
         you
       <% else %>
         <%= @fact.user.name %>
       <% end %>
-  </i></b><br/>
+    </i></b>
+  </div>
+  <b><i>
+       </i></b><br/>
   <%= get_markdown_html(@fact.description) %>
 </div>
 <hr>
 
-<%= render "comments.html.erb" %>
+<h2 id="comments_count"><%= pluralize(@fact.comments.count, "Comment") %></h2>
+<ul class='projects'>
+  <% @fact.comments.each do |comment| %>
+    <%= render "comments/comment", :comment => comment %>
+  <% end %>
+  <h3>Post a comment</h3>
+  <div>
+    <div class="gravatar">
+      <%= gravatar_image_tag(current_user.email) %>
+    </div>
+    <%= form_for [@fact, Comment.new] do |f| %>
+      <%= f.text_area :text, :id => "posting_area" %>
+      <%= f.submit :id => "post_button" %>
+    <% end %>
+  </div>
+</ul>
+

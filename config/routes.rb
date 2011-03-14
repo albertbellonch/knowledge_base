@@ -1,6 +1,8 @@
 KnowledgeBase::Application.routes.draw do
   devise_for :users
-  resources :facts, :except => :index
+  resources :facts, :except => :index do
+    resources :comments
+  end
   root :to => 'facts#index'
 
   # The priority is based upon order of creation:
