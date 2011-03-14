@@ -4,7 +4,13 @@
   </div>
   <div class="fact-right">
     <div class="fact-metadata">
-      <b><i>Posted on <%= comment.created_at %> by <%= get_name_or_you(comment.user.name) %></i></b>
+      <b><i>
+          Posted on <%= comment.created_at %> by <%= get_name_or_you(comment.user.name) %>
+          <% if comment.user == current_user %>
+            <%= link_to '(delete)', fact_comment_path(comment.fact, comment),
+              :confirm => "Are you sure?", :method => :delete, :class => "delete" %>
+          <% end %>
+      </i></b>
     </div>
     <br/><br/>
     <%= comment.text %>
