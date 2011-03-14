@@ -15,7 +15,7 @@
               <b><i>
                   Created on <%= fact.created_at %> by 
                   <% if fact.user == current_user %>
-                    you     
+                    you
                   <% else %>
                     <%= fact.user.name %>
                   <% end %>
