@@ -1,6 +1,6 @@
 <h1 class='welcome'>Fact list</h1>
 <ul class='projects'>
-  <% if @facts.size == 0 %>
+  <% if @facts.empty? %>
     No facts for now.
   <% end %>
   <% @facts.each do |fact| %>
