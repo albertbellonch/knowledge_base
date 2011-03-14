@@ -4,8 +4,10 @@
   <div class="fact-metadata">
     <b><i>
         Created on <%= @fact.created_at %> by <%= get_name_or_you(@fact.user.name) %>
-        <%= link_to '(delete)', fact_path(@fact),
-          :confirm => "Are you sure?", :method => :delete, :class => "delete" %>
+        <% if @fact.user == current_user %>
+          <%= link_to '(delete)', fact_path(@fact),
+            :confirm => "Are you sure?", :method => :delete, :class => "delete" %>
+        <% end %>
     </i></b>
   </div>
   <b><i>
