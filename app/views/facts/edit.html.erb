@@ -1,20 +1,3 @@
-<%= form_for @fact do |f| %>
-  <h1 class='welcome'><%= f.text_field :title %></h1>
-  <div class="gravatar"><%=gravatar_image_tag(@fact.user.email)%></div>
-  <div class="fact-metadata">
-    <b><i>
-        Created on <%= @fact.created_at %> by <%= get_name_or_you(@fact.user.name) %>.
-      <% if @fact.user == current_user %>
-        You can
-        <%= link_to 'see', @fact, :confirm => "There are unsaved changes, are you sure?" %>
-        it or view the
-        <%= link_to 'complete list', root_path %>.
-      <% end %>
-      <br/><br/>
-    </i></b>
-  </div>
-  <%= f.text_area :description, :id => "description_area" %>
-  <%= f.submit :id => "post_button" %>
-<% end %>
-
+<h1>Edit fact</h1>
+<%= render "form" %>
 <%= render "comments" %>

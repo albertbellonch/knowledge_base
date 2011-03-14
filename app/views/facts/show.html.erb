@@ -15,6 +15,17 @@
     </i></b>
   </div>
   <br/>
+  <% if @fact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fact.errors.count, "error") %> prohibited this fact from being saved:</h2>
+
+      <ul>
+      <% @fact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%= get_markdown_html(@fact.description) %>
 </div>
 <hr>
