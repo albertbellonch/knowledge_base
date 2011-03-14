@@ -4,6 +4,8 @@
   <div class="fact-metadata">
     <b><i>
         Created on <%= @fact.created_at %> by <%= get_name_or_you(@fact.user.name) %>
+        <%= link_to '(delete)', fact_path(@fact),
+          :confirm => "Are you sure?", :method => :delete, :class => "delete" %>
     </i></b>
   </div>
   <b><i>

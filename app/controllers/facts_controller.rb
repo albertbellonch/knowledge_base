@@ -77,10 +77,12 @@ class FactsController < ApplicationController
   # DELETE /facts/1.xml
   def destroy
     @fact = Fact.find(params[:id])
-    @fact.destroy
+    if @fact.user = current_user
+      @fact.destroy
+    end
 
     respond_to do |format|
-      format.html { redirect_to(facts_url) }
+      format.html { redirect_to(root_url) }
       format.xml  { head :ok }
     end
   end
