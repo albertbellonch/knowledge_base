@@ -10,7 +10,9 @@
   <div class="container">
     <% if current_user %>
       <%= render "shared/topmenu" %>
-    <% end %>
+      <% end %>
+    <p id="notice"><%= notice %></p>
+    <p id="alert"><%= alert %></p>
     <div id="contentbox" class="span-22 prepend-1 append-1 column">
       <%= yield %>
     </div>

@@ -1,24 +1,34 @@
 <h1 class='welcome'>Fact list</h1>
 <ul class='projects'>
   <% if @facts.size == 0 %>
-    No facts recorded.
+    No facts for now.
   <% end %>
   <% @facts.each do |fact| %>
     <li class='<%= cycle("even", "odd") -%>'>
-      <div id="fact-<%=fact.id%>" class="fact">
-        <div class="fact-left">
-          <%= gravatar_image_tag(fact.user.email) %>
-        </div>
-        <div class="fact-right">
-          <div class="fact-metadata">
-            <b><i>Created on <%= fact.created_at %> by <%= fact.user.name %></i></b>
+      <%= link_to fact do %>
+        <div>
+          <div class="gravatar">
+            <%= gravatar_image_tag(fact.user.email) %>
           </div>
-          <h2><%= link_to fact.title, fact %></h2>
-          <%= truncate(fact.description, :length => 300) %>
+          <div class="fact-right">
+            <div class="fact-metadata">
+              <b><i>
+                  Created on <%= fact.created_at %> by 
+                  <% if fact.user == current_user %>
+                    you     
+                  <% else %>
+                    <%= fact.user.name %>
+                  <% end %>
+              </i></b><br/>
+              <span class="comments_count"><%=fact.comments.size%></span>
+            </div>
+            <h2><%= fact.title %></h2>
+            <%= truncate(fact.description, :length => 300) %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </li>
   <% end %>
-  </ul>
+</ul>
 <hr>
 

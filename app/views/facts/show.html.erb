@@ -1,18 +1,16 @@
-<p id="notice"><%= notice %></p>
+<h1 class='welcome'><%= @fact.title %></h1>
+<div>
+  <div class="gravatar"><%=gravatar_image_tag(@fact.user.email)%></div>
+  <b><i>
+      Created on <%= @fact.created_at %> by 
+      <% if @fact.user == current_user %>
+        you
+      <% else %>
+        <%= @fact.user.name %>
+      <% end %>
+  </i></b><br/>
+  <%= get_markdown_html(@fact.description) %>
+</div>
+<hr>
 
-<p>
-  <b>Title:</b>
-  <%= @fact.title %>
-</p>
-
-<p>
-  <b>Description:</b></br>
-  <%=get_markdown_html(@fact.description)%>
-</p>
-
-<p>
-  <%=gravatar_image_tag(@fact.user.email)%>
-</p>
-
-<%= link_to 'Edit', edit_fact_path(@fact) %> |
-<%= link_to 'Back', root_path %>
+<%= render "comments.html.erb" %>
