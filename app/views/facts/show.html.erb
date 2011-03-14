@@ -3,12 +3,7 @@
   <div class="gravatar"><%=gravatar_image_tag(@fact.user.email)%></div>
   <div class="fact-metadata">
     <b><i>
-      Created on <%= @fact.created_at %> by 
-      <% if @fact.user == current_user %>
-        you
-      <% else %>
-        <%= @fact.user.name %>
-      <% end %>
+        Created on <%= @fact.created_at %> by <%= get_name_or_you(@fact.user.name) %>
     </i></b>
   </div>
   <b><i>

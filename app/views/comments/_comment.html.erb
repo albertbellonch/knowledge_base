@@ -4,7 +4,7 @@
   </div>
   <div class="fact-right">
     <div class="fact-metadata">
-      <b><i>Posted on <%= comment.created_at %> by <%= comment.user.name %></i></b>
+      <b><i>Posted on <%= comment.created_at %> by <%= get_name_or_you(comment.user.name) %></i></b>
     </div>
     <br/><br/>
     <%= comment.text %>
