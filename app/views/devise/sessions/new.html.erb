@@ -1,17 +1,27 @@
-<h2>Sign in</h2>
+<div id="content" class="span-12">
+  <div id="logo">
+    <a href="/"><img src="/images/intranet.png" alt="Logo Itnig Intranet" /></a>
+  </div>
+  <div id="loginbox">
+    <b>Benvingut a itnig</b>
+    <hr/>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :id => "user_new" ) do |f| %>
+      <div style="margin:0;padding:0;display:inline">
+        <p>
+          <%= f.label :email %><br />
+          <%= f.text_field :email, :html => { :class => "info_form", :size => 30 } %>
+        </p>
+        <p>
+          <%= f.label :password %><br />
+          <%= f.password_field :password, :html => { :class => "info_form", :size => 30 } %>
+        </p>
+        <% if devise_mapping.rememberable? -%>
+          <p><%= f.check_box :remember_me, :class => "center" %> <%= f.label :remember_me %></p>
+        <% end -%>
+        <p><%= f.submit "Sign in" %></p>
+      </div>
+      <%= render :partial => "devise/shared/links" %>
+    <% end %>
+  </div>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
-
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
-
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
-
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
