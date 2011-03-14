@@ -8,6 +8,7 @@
   <div id="menu_superior">
     <div style="float:right">
       <ul>
+        <li><%= link_to 'Fact list', root_path %></li>
         <li><%= link_to 'New fact', new_fact_path %></li>
         <li><%=current_user.name%></li>
         <li><%= link_to 'Edit', edit_user_registration_path %></li>
