@@ -3,7 +3,6 @@
 <head>
   <title>KnowledgeBase</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body style="background: #EEEEEE;">
@@ -17,26 +16,8 @@
       <%= yield %>
     </div>
   </div>
-  <script src="http://www.google.com/jsapi?key=ABQIAAAAOSd9q8g3QaAV3PdMj3ACmxTouM8V7v86wSq8sRHv9OnhKYqKkRRoZmj11XpuH9QwHACeX7SrwWlPlg"></script>
-  <script type="text/javascript">
-        google.load("jquery", "1.4.2");
-        google.load("jqueryui", "1.8.2");
-  </script>
-  <script src="/javascripts/jquery-rails.js?1299026151" type="text/javascript"></script>
-  <script src="/javascripts/wmd/wmd.js?1299026151" type="text/javascript"></script>
-  <script src="/javascripts/jquery.purr.js?1299026151" type="text/javascript"></script>
-  <script src="/javascripts/facebox.js?1299026151" type="text/javascript"></script>
-  <script src="/javascripts/code-highlight.js?1299026151" type="text/javascript"></script>
-  <script src="/javascripts/jquery.rest_in_place.js?1299026151" type="text/javascript"></script>
-  <script src="/javascripts/crm.js?1299026151" type="text/javascript"></script>  <script type='text/javascript'>
-    //<![CDATA[
-      $(document).ready(function() {
-        $("#payment_accepted").click(function() {
-          $("#payment_alert").fadeOut("slow")
-          $("#projects_to_pay").delay(500).fadeIn("slow")
-        })
-      })
-    //]]>
-  </script>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" %>
+  <%= javascript_include_tag "jquery-rails.js" %>
 </body>
 </html>

@@ -1,15 +1,13 @@
-<li class='<%= cycle("even", "odd") -%>'>
-  <div>
-    <div class="gravatar">
-      <%= gravatar_image_tag(comment.user.email) %>
+<li class='<%= cycle("even", "odd") -%>' id="comment_<%= comment.id %>">
+  <div class="gravatar">
+    <%= gravatar_image_tag(comment.user.email) %>
+  </div>
+  <div class="fact-right">
+    <div class="fact-metadata">
+      <b><i>Posted on <%= comment.created_at %> by <%= comment.user.name %></i></b>
     </div>
-    <div class="fact-right">
-      <div class="fact-metadata">
-        <b><i>Posted on <%= comment.created_at %> by <%= comment.user.name %></i></b>
-      </div>
-      <br/><br/>
-      <%= comment.text %>
-    </div>
+    <br/><br/>
+    <%= comment.text %>
   </div>
 </li>
 
