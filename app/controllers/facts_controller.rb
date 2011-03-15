@@ -51,7 +51,7 @@ class FactsController < ApplicationController
 
     respond_to do |format|
       if @fact.save
-        format.html { redirect_to([@fact, @tags], :notice => 'Fact was successfully created.') }
+        format.html { redirect_to(@fact, :notice => 'Fact was successfully created.') }
         format.xml  { render :xml => @fact, :status => :created, :location => @fact }
       else
         format.html { render :action => "new" }
