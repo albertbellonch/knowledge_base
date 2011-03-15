@@ -30,4 +30,10 @@
 </div>
 <hr>
 
+<h2>Tags</h2>
+  <% @fact.tags.each do |tag| %>
+    <%= tag.name %>
+  <% end %>
+<hr/>
+
 <%= render "comments" %>

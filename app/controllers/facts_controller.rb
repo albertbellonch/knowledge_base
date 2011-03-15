@@ -28,6 +28,7 @@ class FactsController < ApplicationController
   # GET /facts/new.xml
   def new
     @fact = Fact.new
+    @tags = Tag.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,6 +39,7 @@ class FactsController < ApplicationController
   # GET /facts/1/edit
   def edit
     @fact = Fact.find(params[:id])
+    @tags = Tag.all
   end
 
   # POST /facts
@@ -45,10 +47,11 @@ class FactsController < ApplicationController
   def create
     @fact = Fact.new(params[:fact])
     @fact.user = current_user
+    @tags = Tag.all
 
     respond_to do |format|
       if @fact.save
-        format.html { redirect_to(@fact, :notice => 'Fact was successfully created.') }
+        format.html { redirect_to([@fact, @tags], :notice => 'Fact was successfully created.') }
         format.xml  { render :xml => @fact, :status => :created, :location => @fact }
       else
         format.html { render :action => "new" }

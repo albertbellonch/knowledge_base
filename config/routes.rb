@@ -3,6 +3,9 @@ KnowledgeBase::Application.routes.draw do
   resources :facts, :except => :index do
     resources :comments
   end
+
+  resources :tags
+
   root :to => 'facts#index'
 
   # The priority is based upon order of creation:
