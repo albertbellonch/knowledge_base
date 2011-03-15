@@ -11,12 +11,13 @@
 
 <h3><%= current_user.name %>, post a comment!</h3>
 <div>
-  <div class="gravatar">
+  <div id="newcomment-gravatar">
     <%= gravatar_image_tag(current_user.email) %>
   </div>
   <%= form_for [@fact, Comment.new], :remote => true do |f| %>
-    <%= f.text_area :text, :id => "posting_area" %>
-    <%= f.submit :id => "post_button" %>
+    <%= f.text_area :text, :id => "newcomment-area" %>
+    <br/>
+    <%= f.submit "Post", :id => "newcomment-button", :class => "button" %>
   <% end %>
 </div>
 

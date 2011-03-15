@@ -1,21 +1,15 @@
-<li class='<%= cycle("even", "odd") -%>' id="comment_<%= comment.id %>">
-  <div class="gravatar">
-    <%= gravatar_image_tag(comment.user.email) %>
+<li class="odd comment-show" id="comment_<%= comment.id %>">
+  <div class="comment-gravatar">
+    <%=gravatar_image_tag(@fact.user.email)%><br/>
+    <div class="comment-name"><%= get_name_or_you(@fact.user.name) %></div>
   </div>
-  <div class="fact-right">
-    <div class="fact-metadata">
-      <b><i>
-        Posted on <%= comment.created_at %> by <span class="info"><%= get_name_or_you(comment.user.name) %></span>.
-        <% if comment.user == current_user %>
-          You can
-          <%= link_to 'delete', fact_comment_path(comment.fact, comment),
-            :confirm => "Are you sure?", :method => :delete, :class => "delete" %>
-          it.
-        <% end %>
-      </i></b>
-    </div>
-    <br/><br/>
-    <%= comment.text %>
+  <div class="comment-actions">
+   <% if @fact.user == current_user %>
+      <%= button_to 'delete', fact_comment_path(@fact, comment),
+        :confirm => "Are you sure?", :method => :delete, :remote => true, :class => "button" %>
+    <% end %>
   </div>
+  <div class="comment-date">Created at <%= comment.created_at %></div><br/>
+  <div class="comment-text"><%= comment.text %></div><br/>
 </li>
 

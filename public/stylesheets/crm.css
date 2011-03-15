@@ -75,6 +75,7 @@ h1.greet{
 	margin-top: 20px;
 	padding-top: 30px;
 	padding-bottom: 40px;
+  border:5px solid black;
 }
 
 h2.welcome{
