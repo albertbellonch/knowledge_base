@@ -15,16 +15,12 @@
   <div class="gravatar"><%=gravatar_image_tag(@fact.new_record? ? "" : @fact.user.email)%></div>
   <div class="fact-metadata">
     <b><i>
-      <% if @fact.new_record? %>
-        View the <%= link_to 'complete list', root_path %>.
+      <% unless@fact.new_record? %>
+        Created on <%= @fact.created_at %> by <span class="info"><%= get_name_or_you(@fact.user.name) %></span>.
       <% else %>
-        Created on <%= @fact.created_at %> by <%= get_name_or_you(@fact.user.name) %>.
-        <% if @fact.user == current_user %>
-          You can
-          <%= link_to 'see', @fact, :confirm => "There are unsaved changes, are you sure?" %>
-          it or view the
-          <%= link_to 'complete list', root_path %>.
-        <% end %>
+      Check the 
+      <%= link_to 'markdown', "http://daringfireball.net/projects/markdown/syntax", { :target => "_new", :class => "info" } %>
+      syntax.
       <% end %>
       <br/><br/>
     </i></b>

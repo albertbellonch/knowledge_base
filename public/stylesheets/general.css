@@ -1,0 +1,33 @@
+#notice{
+  background-color: #00CC00;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+#alert{
+  background-color: #FFCC00;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+#error_explanation{
+  color: #880000;
+}
+
+.delete{
+  color: #880000;
+}
+
+#comments a.delete{
+  color: #880000;
+}
+
+.edit{
+  color: #FF9900;
+}
+
+.info{
+  color: #000099;
+}

@@ -3,10 +3,10 @@
   <div class="gravatar"><%=gravatar_image_tag(@fact.user.email)%></div>
   <div class="fact-metadata">
     <b><i>
-        Created on <%= @fact.created_at %> by <%= get_name_or_you(@fact.user.name) %>.
+        Created on <%= @fact.created_at %> by <span class="info"><%= get_name_or_you(@fact.user.name) %></span>.
         <% if @fact.user == current_user %>
           You can
-          <%= link_to 'edit', edit_fact_path(@fact) %>
+          <%= link_to 'edit', edit_fact_path(@fact), :class => "edit" %>
           or
           <%= link_to 'delete', fact_path(@fact),
             :confirm => "Are you sure?", :method => :delete, :class => "delete" %>
@@ -31,9 +31,10 @@
 <hr>
 
 <h2>Tags</h2>
-  <% @fact.tags.each do |tag| %>
-    <%= tag.name %>
-  <% end %>
+<% @fact.tags.each do |tag| %>
+  <span class="show_tag"><%= tag.name %></span>
+<% end %>
+<br/><br/>
 <hr/>
 
 <%= render "comments" %>

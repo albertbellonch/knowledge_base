@@ -5,7 +5,7 @@
   <div class="fact-right">
     <div class="fact-metadata">
       <b><i>
-        Posted on <%= comment.created_at %> by <%= get_name_or_you(comment.user.name) %>.
+        Posted on <%= comment.created_at %> by <span class="info"><%= get_name_or_you(comment.user.name) %></span>.
         <% if comment.user == current_user %>
           You can
           <%= link_to 'delete', fact_comment_path(comment.fact, comment),
