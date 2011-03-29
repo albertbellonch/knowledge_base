@@ -4,6 +4,7 @@ gem 'rails', '3.0.5'
 gem 'gravatar_image_tag'
 gem 'rdiscount'
 gem 'devise'
+gem 'omniauth'
 
 group :development,:test do
   gem 'sqlite3'
