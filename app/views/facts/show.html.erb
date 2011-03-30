@@ -6,7 +6,7 @@
     </div>
     <div id="fact-actions">
       <% if @fact.user == current_user %>
-        <%= button_to 'edit', edit_fact_path(@fact), :class => "button" %>
+        <%= button_to 'edit', edit_fact_path(@fact), :method => :get, :class => "button" %>
         <%= button_to 'delete', fact_path(@fact),
           :confirm => "Are you sure?", :method => :delete, :class => "button" %>
       <% end %>
