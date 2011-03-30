@@ -12,10 +12,10 @@
           return false;
         }
       });
-      $(".tag").hover(function() {
+      $(".tag").live('hover', function() {
         $(this).find(".delete-tag").show();
       });
-      $(".tag").mouseleave(function() {
+      $(".tag").live('mouseleave', function() {
         $(this).find(".delete-tag").hide();
       })
       $("#tag_name").focusout(function() {
@@ -42,12 +42,11 @@
               }
               var options = {};
               options.type = "post";
-              options.dataType = "text";
+              options.dataType = "script";
               options.data = data;
               options.url = "/tags";
-              options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "application/json"); }
+              options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "text/javascript"); }
               var ajaxRequest = jQuery.ajax(options);
-              $("#tag-cloud").append($("<div class='tag'>" + tag_name + "</div>"));
               return true;
             }
           }
@@ -60,7 +59,7 @@
           $(this).addClass("clicked");
         }
       });
-      $(".delete-tag > a").click(function() {
+      $(".delete-tag > a").live("click", function() {
           var tag_to_destroy = $(this).attr("data_tag");
           if (confirm("¿Are you sure about deleting the tag? Bear in mind that it will be deleted in every fact.")) {
             var data = "_method=delete";
@@ -75,7 +74,9 @@
             options.url = "/tags/" + tag_to_destroy;
             options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "application/json"); }
             var ajaxRequest = jQuery.ajax(options);
-            $(this).parent().parent().fadeOut();
+            $(this).parent().parent().fadeOut("slow", function(){
+              $(this).parent().parent().remove();
+            );
             return true;
         }
       });

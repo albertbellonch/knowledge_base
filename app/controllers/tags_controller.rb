@@ -5,7 +5,7 @@ class TagsController < ApplicationController
 
     respond_to do |format|
       if @tag.save
-        format.json { head :ok }
+        format.js { render :layout => false }
       else
         format.json  { render :json => @tag.errors, :status => :unprocessable_entity }
       end

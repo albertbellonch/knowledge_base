@@ -1,5 +1,5 @@
-<div class="tag <%= get_tag_class (@fact, tag) %>">
-  <div class="delete-tag">
+<div class="tag <%= @fact.nil? ? "" : get_tag_class(@fact, tag) %>">
+  <div class="delete-tag" style="display: none" >
     <%= link_to "X", "#tag-cloud", :data_tag => tag.id %>
   </div>
   <%= tag.name %>
