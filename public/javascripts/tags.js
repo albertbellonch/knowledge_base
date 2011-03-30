@@ -76,7 +76,7 @@
             var ajaxRequest = jQuery.ajax(options);
             $(this).parent().parent().fadeOut("slow", function(){
               $(this).parent().parent().remove();
-            );
+            });
             return true;
         }
       });
