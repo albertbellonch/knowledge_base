@@ -5,6 +5,7 @@ gem 'gravatar_image_tag'
 gem 'rdiscount'
 gem 'devise'
 gem 'omniauth'
+gem 'haml-rails'
 
 group :development,:test do
   gem 'sqlite3'

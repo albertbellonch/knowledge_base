@@ -1,0 +1,14 @@
+%li.odd.comment-show{:id => "comment_#{comment.id}"}
+  .comment-gravatar
+    = gravatar_image_tag(@fact.user.email)
+    %br/
+    .comment-name= get_name_or_you(@fact.user.name)
+  .comment-actions
+    - if @fact.user == current_user
+      = button_to 'delete', fact_comment_path(@fact, comment),                               |
+        :confirm => "Are you sure?", :method => :delete, :remote => true, :class => "button" |
+  .comment-date
+    Created at #{comment.created_at}
+  %br/
+  .comment-text= comment.text
+  %br/

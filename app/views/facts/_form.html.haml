@@ -1,0 +1,36 @@
+= form_for @fact, :html => { :id => "fact_form" } do |f|
+  - if @fact.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@fact.errors.count, "error")
+        prohibited this fact from being saved:
+      %ul
+        - @fact.errors.full_messages.each do |msg|
+          %li= msg
+  %h1.welcome= f.text_field :title
+  .gravatar= gravatar_image_tag(@fact.new_record? ? "" : @fact.user.email)
+  .fact-metadata
+    %b
+      %i
+        - unless@fact.new_record?
+          Created on #{@fact.created_at} by
+          = succeed "." do
+            %span.info= get_name_or_you(@fact.user.name)
+        - else
+          Check the
+          \#{link_to 'markdown', "http://daringfireball.net/projects/markdown/syntax", { :target => "_new", :class => "info" }}
+          syntax.
+        %br/
+        %br/
+  = f.text_area :description, :id => "description_area"
+  %h2 Tags
+  #tag_inputs
+  = link_to "+ New tag", "#new-label", :id => "new_tag_link"
+  #tag-form
+    = form_for Tag.new do |t|
+      = t.text_field :name, :label => false
+  #tag-cloud
+    - @tags.each do |t|
+      = render "tags/tag", :tag => t
+  %br/
+  = f.submit :id => "post_button"

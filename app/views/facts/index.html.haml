@@ -1,0 +1,21 @@
+%h1.welcome Fact list
+%ul.projects
+  - if @facts.empty?
+    No facts for now.
+  - @facts.each do |fact|
+    %li{:class => cycle("even", "odd")}
+      = link_to fact do
+        %div
+          .gravatar
+            = gravatar_image_tag(fact.user.email)
+          .fact-right
+            .fact-metadata
+              %b
+                %i
+                  Created on #{fact.created_at} by
+                  %span.info= get_name_or_you(fact.user.name)
+              %br/
+              %span.comments_count= fact.comments.size
+            %h2= fact.title
+            = truncate(fact.description, :length => 300)
+%hr/

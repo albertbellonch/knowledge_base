@@ -1,0 +1,25 @@
+#fact-show
+  #fact-header
+    #fact-gravatar
+      = gravatar_image_tag(@fact.user.email)
+      %br/
+      #fact-name= get_name_or_you(@fact.user.name)
+    #fact-actions
+      - if @fact.user == current_user
+        = button_to 'edit', edit_fact_path(@fact), :method => :get, :class => "button"
+        = button_to 'delete', fact_path(@fact),                               |
+          :confirm => "Are you sure?", :method => :delete, :class => "button" |
+    %h1#fact-title= @fact.title
+    %br/
+    %span#fact-date
+      Created at #{@fact.created_at}, updated at #{@fact.updated_at}
+  #fact-text
+    = get_markdown_html(@fact.description)
+%hr/
+%h2 Tags
+- @fact.tags.each do |tag|
+  %span.show_tag= tag.name
+%br/
+%br/
+%hr/
+= render "comments"

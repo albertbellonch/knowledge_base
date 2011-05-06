@@ -1,0 +1,4 @@
+%div{:class => "tag #{@fact.nil? ? "" : get_tag_class(@fact, tag)}"}
+  .delete-tag{:style => "display: none"}
+    = link_to "X", "#tag-cloud", :data_tag => tag.id
+  = tag.name
