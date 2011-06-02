@@ -6,6 +6,12 @@ body.one_col{
     }
     #header{
       @include span(23);
+      #logo{
+        @include span(10);
+      }
+      #links{
+        @include span(12);
+      }
     }
     #content{
       @include span(23);

@@ -72,7 +72,15 @@ body.one_col #container #login {
 body.one_col #container #header {
   width: 910px;
 }
-/* line 10, ../../app/stylesheets/partials/_one_col.scss */
+/* line 9, ../../app/stylesheets/partials/_one_col.scss */
+body.one_col #container #header #logo {
+  width: 390px;
+}
+/* line 12, ../../app/stylesheets/partials/_one_col.scss */
+body.one_col #container #header #links {
+  width: 470px;
+}
+/* line 16, ../../app/stylesheets/partials/_one_col.scss */
 body.one_col #container #content {
   width: 910px;
 }
@@ -512,32 +520,36 @@ a:hover {
   font-size: 14px;
   font-weight: bold;
   padding-right: 65px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-/* line 68, ../../app/stylesheets/partials/_page.scss */
+/* line 71, ../../app/stylesheets/partials/_page.scss */
 #header #links p {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: right;
 }
-/* line 73, ../../app/stylesheets/partials/_page.scss */
+/* line 76, ../../app/stylesheets/partials/_page.scss */
 #header #links ul {
-  display: inline;
-}
-/* line 75, ../../app/stylesheets/partials/_page.scss */
-#header #links ul li {
+  float: right;
   display: inline;
 }
 /* line 79, ../../app/stylesheets/partials/_page.scss */
+#header #links ul li {
+  display: inline;
+}
+/* line 83, ../../app/stylesheets/partials/_page.scss */
 #header #links img {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 0;
+  right: 0;
 }
 
 /* ======================================================= */
 /*                        Content                          */
 /* ======================================================= */
-/* line 90, ../../app/stylesheets/partials/_page.scss */
+/* line 94, ../../app/stylesheets/partials/_page.scss */
 #content {
   background: white;
   border: 2px solid black;
