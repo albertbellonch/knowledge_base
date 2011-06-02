@@ -10,6 +10,6 @@ module ApplicationHelper
    end
 
   def get_name_or_you(user)
-    (user == current_user.name)?"you":user
+    (user == current_user.name)?"tu":user
   end
 end

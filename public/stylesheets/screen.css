@@ -488,9 +488,23 @@ a:hover {
 }
 
 /* ======================================================= */
-/*                        Header                           */
+/*                        Content                          */
 /* ======================================================= */
 /* line 43, ../../app/stylesheets/partials/_page.scss */
+#content {
+  background: white;
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  padding: 15px 18px;
+  margin-bottom: 30px;
+}
+
+/* ======================================================= */
+/*                        Header                           */
+/* ======================================================= */
+/* line 56, ../../app/stylesheets/partials/_page.scss */
 #header {
   background: white;
   border: 2px solid black;
@@ -501,19 +515,19 @@ a:hover {
   padding: 8px 18px;
   position: relative;
 }
-/* line 52, ../../app/stylesheets/partials/_page.scss */
+/* line 65, ../../app/stylesheets/partials/_page.scss */
 #header #logo {
   display: inline;
   font-size: 35px;
   padding-left: 55px;
 }
-/* line 56, ../../app/stylesheets/partials/_page.scss */
+/* line 69, ../../app/stylesheets/partials/_page.scss */
 #header #logo img {
   position: absolute;
   top: 10px;
   left: 10px;
 }
-/* line 62, ../../app/stylesheets/partials/_page.scss */
+/* line 75, ../../app/stylesheets/partials/_page.scss */
 #header #links {
   display: inline;
   float: right;
@@ -524,22 +538,22 @@ a:hover {
   top: 10px;
   right: 10px;
 }
-/* line 71, ../../app/stylesheets/partials/_page.scss */
+/* line 84, ../../app/stylesheets/partials/_page.scss */
 #header #links p {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: right;
 }
-/* line 76, ../../app/stylesheets/partials/_page.scss */
+/* line 89, ../../app/stylesheets/partials/_page.scss */
 #header #links ul {
   float: right;
   display: inline;
 }
-/* line 79, ../../app/stylesheets/partials/_page.scss */
+/* line 92, ../../app/stylesheets/partials/_page.scss */
 #header #links ul li {
   display: inline;
 }
-/* line 83, ../../app/stylesheets/partials/_page.scss */
+/* line 96, ../../app/stylesheets/partials/_page.scss */
 #header #links img {
   position: absolute;
   top: 0;
@@ -549,14 +563,51 @@ a:hover {
 /* ======================================================= */
 /*                        Content                          */
 /* ======================================================= */
-/* line 94, ../../app/stylesheets/partials/_page.scss */
-#content {
-  background: white;
-  border: 2px solid black;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+/* line 108, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact {
+  position: relative;
+  margin-bottom: 30px;
+}
+/* line 111, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact img {
+  position: absolute;
+}
+/* line 114, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .comments-link {
+  color: #eee;
+}
+/* line 116, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .comments-link:hover {
+  color: white;
+}
+/* line 120, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .comments-wrapper {
+  background-image: url("../images/comments_50.png");
+  background-repeat: no-repeat;
   display: block;
-  padding: 8px 18px;
+  position: absolute;
+  top: 60px;
+  height: 60px;
+  width: 50px;
+}
+/* line 128, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .comments-wrapper .comments {
+  font-size: 20px;
+  margin-top: 3px;
+  text-align: center;
+}
+/* line 134, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .rest {
+  padding-left: 60px;
+}
+/* line 136, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .rest .metadata {
+  float: right;
+  font-weight: bold;
+}
+/* line 140, ../../app/stylesheets/partials/_page.scss */
+#fact-list .fact .rest .text {
+  text-align: justify;
 }
 
 /* line 1, ../../app/stylesheets/partials/_form.scss */

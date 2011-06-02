@@ -38,6 +38,19 @@
 }
 
 /* ======================================================= */
+/*                        Content                          */
+/* ======================================================= */
+#content{
+  background: white;
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  padding: 15px 18px;
+  margin-bottom: 30px;
+}
+
+/* ======================================================= */
 /*                        Header                           */
 /* ======================================================= */
 #header{
@@ -91,11 +104,42 @@
 /* ======================================================= */
 /*                        Content                          */
 /* ======================================================= */
-#content{
-  background: white;
-  border: 2px solid black;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  display: block;
-  padding: 8px 18px;
+#fact-list{
+  .fact{
+    position: relative;
+    margin-bottom: 30px;
+    img{
+      position: absolute;
+    }
+    .comments-link{
+      color: #eee;
+      &:hover{
+        color: white;
+      }
+    }
+    .comments-wrapper{
+      background-image: url('../images/comments_50.png');
+      background-repeat: no-repeat;
+      display: block;
+      position: absolute;
+      top: 60px;
+      height: 60px;
+      width: 50px;
+      .comments{
+        font-size: 20px;
+        margin-top: 3px;
+        text-align: center;
+      }
+    }
+    .rest{
+      padding-left: 60px;
+      .metadata{
+        float: right;
+        font-weight: bold;
+      }
+      .text{
+        text-align: justify;
+      }
+    }
+  }
 }

@@ -1,21 +1,21 @@
-%h1.welcome Fact list
-%ul.projects
+#fact-list
+  %h2 Llista d'entrades
   - if @facts.empty?
     No facts for now.
   - @facts.each do |fact|
-    %li{:class => cycle("even", "odd")}
+    .fact
+      = gravatar_image_tag(fact.user.email)
+      = link_to fact_path(fact, :anchor => "comments"), :class => "comments-link" do
+        .comments-wrapper
+          - nc = fact.comments.size
+          - nc = "#{99}+" if nc > 99
+          .comments= nc
       = link_to fact do
-        %div
-          .gravatar
-            = gravatar_image_tag(fact.user.email)
-          .fact-right
-            .fact-metadata
-              %b
-                %i
-                  Created on #{fact.created_at} by
-                  %span.info= get_name_or_you(fact.user.name)
-              %br/
-              %span.comments_count= fact.comments.size
-            %h2= fact.title
-            = truncate(fact.description, :length => 300)
-%hr/
+        .rest
+          .metadata
+            Creat el #{fact.created_at} per
+            = get_name_or_you(fact.user.name)
+          %h3= fact.title
+          .text= truncate(fact.description, :length => 500)
+    - if fact != @facts.last
+      %hr
