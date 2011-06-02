@@ -1,0 +1,39 @@
+/* ======================================================= */
+/*                         Login                           */
+/* ======================================================= */
+#login{
+  background: white;
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  position: relative;
+  text-align: center;
+  top: 120px;
+  width: 500px;
+  .tip{
+    margin-top: 18px;
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  #logo{
+    font-size: 35px;
+    img{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+  #form{
+    input[type=submit]{
+      margin-top: 15px;
+    }
+  }
+  #providers{
+    .provider{
+      display: inline;
+    }
+  }
+}

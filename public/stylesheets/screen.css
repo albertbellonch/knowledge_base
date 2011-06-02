@@ -65,6 +65,446 @@ body.one_col #container {
   *zoom: 1;
 }
 
+/* ======================================================= */
+/*                       Base Style                        */
+/* ======================================================= */
+/* Basic typography
+---------------------------------------------------------- */
+/* line 28, ../../app/stylesheets/partials/_base.scss */
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+  background: #eeeeee;
+}
+
+/* line 34, ../../app/stylesheets/partials/_base.scss */
+strong, th, thead td {
+  font-weight: bold;
+}
+
+/* line 37, ../../app/stylesheets/partials/_base.scss */
+cite, em, dfn {
+  font-style: italic;
+}
+
+/* line 40, ../../app/stylesheets/partials/_base.scss */
+code, kbd, samp, pre, tt, var {
+  font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+}
+
+/* line 43, ../../app/stylesheets/partials/_base.scss */
+code, pre {
+  display: block;
+  white-space: pre;
+}
+
+/* line 47, ../../app/stylesheets/partials/_base.scss */
+del {
+  text-decoration: line-through;
+  color: #666;
+}
+
+/* line 51, ../../app/stylesheets/partials/_base.scss */
+ins, dfn {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 54, ../../app/stylesheets/partials/_base.scss */
+small, sup, sub {
+  font-size: 85%;
+}
+
+/* line 57, ../../app/stylesheets/partials/_base.scss */
+abbr, acronym {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+/* line 61, ../../app/stylesheets/partials/_base.scss */
+a abbr, a acronym {
+  border: none;
+}
+
+/* line 64, ../../app/stylesheets/partials/_base.scss */
+abbr[title], acronym[title], dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted #ccc;
+}
+
+/* line 68, ../../app/stylesheets/partials/_base.scss */
+sup {
+  vertical-align: super;
+}
+
+/* line 71, ../../app/stylesheets/partials/_base.scss */
+sub {
+  vertical-align: sub;
+}
+
+/* line 74, ../../app/stylesheets/partials/_base.scss */
+p, ul, ol, dl, table, fieldset, blockquote, pre, code {
+  margin-bottom: 20px;
+}
+
+/* Basic size
+---------------------------------------------------------- */
+/* line 80, ../../app/stylesheets/partials/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.6em;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+/* line 85, ../../app/stylesheets/partials/_base.scss */
+h1 {
+  font-size: 36px;
+}
+
+/* line 88, ../../app/stylesheets/partials/_base.scss */
+h2 {
+  font-size: 30px;
+}
+
+/* line 91, ../../app/stylesheets/partials/_base.scss */
+h3 {
+  font-size: 24px;
+}
+
+/* line 94, ../../app/stylesheets/partials/_base.scss */
+h4 {
+  font-size: 18px;
+}
+
+/* line 97, ../../app/stylesheets/partials/_base.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 100, ../../app/stylesheets/partials/_base.scss */
+h6 {
+  font-size: 12px;
+}
+
+/* line 103, ../../app/stylesheets/partials/_base.scss */
+h1 .subTitle, h2 .subTitle, h3 .subTitle, h4 .subTitle, h5 .subTitle, h6 .subTitle {
+  display: block;
+  color: #999;
+  font-size: 0.65em;
+  margin: 0;
+}
+
+/* Basic lists
+---------------------------------------------------------- */
+/* line 111, ../../app/stylesheets/partials/_base.scss */
+ul {
+  margin-left: 1.5em;
+  list-style-type: disc;
+}
+
+/* line 115, ../../app/stylesheets/partials/_base.scss */
+ul li {
+  margin-left: .85em;
+}
+
+/* line 118, ../../app/stylesheets/partials/_base.scss */
+ul ul {
+  list-style-type: square;
+}
+
+/* line 121, ../../app/stylesheets/partials/_base.scss */
+ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 124, ../../app/stylesheets/partials/_base.scss */
+ol {
+  margin-left: 2.35em;
+  list-style-position: outside;
+  list-style-type: decimal;
+}
+
+/* line 129, ../../app/stylesheets/partials/_base.scss */
+dt {
+  margin-top: .8em;
+  margin-bottom: .4em;
+  font-weight: bold;
+}
+
+/* line 134, ../../app/stylesheets/partials/_base.scss */
+ol ol, ul ol {
+  margin-left: 2.5em;
+}
+
+/* line 137, ../../app/stylesheets/partials/_base.scss */
+ul ol, ol ul, ol ol, ul ul {
+  margin-bottom: 0;
+}
+
+/* Link style
+---------------------------------------------------------- */
+/* line 142, ../../app/stylesheets/partials/_base.scss */
+a:link, a:visited, a:hover, a:active, a:focus {
+  color: #666;
+  outline: 0 none;
+  text-decoration: none;
+}
+
+/* line 148, ../../app/stylesheets/partials/_base.scss */
+a:hover {
+  color: #000;
+}
+
+/* Background Colors
+---------------------------------------------------------- */
+/* line 155, ../../app/stylesheets/partials/_base.scss */
+.green {
+  background-color: #CBDB2A;
+}
+
+/* line 158, ../../app/stylesheets/partials/_base.scss */
+.orange {
+  background-color: #ff5c00;
+}
+
+/* line 161, ../../app/stylesheets/partials/_base.scss */
+.black {
+  background-color: #111111;
+}
+
+/* line 164, ../../app/stylesheets/partials/_base.scss */
+.gray {
+  background-color: #666666;
+}
+
+/* line 167, ../../app/stylesheets/partials/_base.scss */
+.soft-gray {
+  background-color: #BBB;
+}
+
+/* line 170, ../../app/stylesheets/partials/_base.scss */
+.white {
+  background-color: #FFFFFF;
+}
+/* line 172, ../../app/stylesheets/partials/_base.scss */
+.white span {
+  color: #666666;
+}
+
+/* line 176, ../../app/stylesheets/partials/_base.scss */
+.red {
+  background-color: #e62727;
+}
+
+/* line 179, ../../app/stylesheets/partials/_base.scss */
+.dark-red {
+  background-color: #e2001a;
+}
+/* line 181, ../../app/stylesheets/partials/_base.scss */
+.dark-red span {
+  color: #FFF;
+}
+
+/* line 185, ../../app/stylesheets/partials/_base.scss */
+.orange {
+  background-color: #ff5c00;
+}
+
+/* line 188, ../../app/stylesheets/partials/_base.scss */
+.magenta {
+  background-color: #A9014B;
+}
+
+/* line 191, ../../app/stylesheets/partials/_base.scss */
+.yellow {
+  background-color: #ffb515;
+}
+
+/* line 194, ../../app/stylesheets/partials/_base.scss */
+.blue {
+  background-color: #00ADEE;
+}
+
+/* line 197, ../../app/stylesheets/partials/_base.scss */
+.pink {
+  background-color: #e22092;
+}
+
+/* line 200, ../../app/stylesheets/partials/_base.scss */
+.rosy {
+  background-color: #F16C7C;
+}
+
+/* Buttons */
+/* line 206, ../../app/stylesheets/partials/_base.scss */
+.button.dark-gray, .button.dark-gray:hover {
+  background-color: #555;
+}
+/* line 208, ../../app/stylesheets/partials/_base.scss */
+.button.dark-gray span, .button.dark-gray a, .button.dark-gray:hover span, .button.dark-gray:hover a {
+  color: #FFF;
+  border-color: #CCC;
+}
+
+/* line 213, ../../app/stylesheets/partials/_base.scss */
+.button.gray, .button.gray:hover {
+  background-color: #CCC;
+}
+/* line 215, ../../app/stylesheets/partials/_base.scss */
+.button.gray span, .button.gray a, .button.gray:hover span, .button.gray:hover a {
+  color: #111;
+  border-color: #DDD;
+}
+
+/* line 220, ../../app/stylesheets/partials/_base.scss */
+.button.red, .button.red:hover {
+  background-color: #e2001a;
+}
+/* line 222, ../../app/stylesheets/partials/_base.scss */
+.button.red span, .button.red:hover span {
+  color: #FFF;
+  border-color: red;
+}
+
+/* Non-semantic helper classes
+---------------------------------------------------------- */
+/* line 230, ../../app/stylesheets/partials/_base.scss */
+.center {
+  text-align: center;
+}
+
+/* line 233, ../../app/stylesheets/partials/_base.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 237, ../../app/stylesheets/partials/_base.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 240, ../../app/stylesheets/partials/_base.scss */
+.alignright {
+  float: right;
+}
+
+/* line 243, ../../app/stylesheets/partials/_base.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 246, ../../app/stylesheets/partials/_base.scss */
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 250, ../../app/stylesheets/partials/_base.scss */
+.clearboth {
+  clear: both;
+  display: block;
+  font-size: 0px;
+  height: 0px;
+  line-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 260, ../../app/stylesheets/partials/_base.scss */
+.separator {
+  height: 15em;
+}
+
+/* line 264, ../../app/stylesheets/partials/_base.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 269, ../../app/stylesheets/partials/_base.scss */
+.underlined a, .underlined {
+  text-decoration: underline;
+}
+
+/* ======================================================= */
+/*                         Login                           */
+/* ======================================================= */
+/* line 4, ../../app/stylesheets/partials/_page.scss */
+#login {
+  background: white;
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  position: relative;
+  text-align: center;
+  top: 120px;
+  width: 500px;
+}
+/* line 15, ../../app/stylesheets/partials/_page.scss */
+#login .tip {
+  margin-top: 18px;
+  color: #666;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+/* line 21, ../../app/stylesheets/partials/_page.scss */
+#login #logo {
+  font-size: 35px;
+}
+/* line 23, ../../app/stylesheets/partials/_page.scss */
+#login #logo img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* line 30, ../../app/stylesheets/partials/_page.scss */
+#login #form input[type=submit] {
+  margin-top: 15px;
+}
+/* line 35, ../../app/stylesheets/partials/_page.scss */
+#login #providers .provider {
+  display: inline;
+}
+
+/* line 1, ../../app/stylesheets/partials/_form.scss */
+fieldset {
+  margin: 0 auto;
+  padding: 4px;
+  font-size: 15px;
+}
+/* line 5, ../../app/stylesheets/partials/_form.scss */
+fieldset label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin-right: 0;
+  text-align: right;
+  width: 15em;
+}
+/* line 13, ../../app/stylesheets/partials/_form.scss */
+fieldset input, fieldset textarea {
+  font-size: 15px;
+  margin-left: 0px;
+  padding-right: 20px;
+  width: 180px;
+}
+/* line 19, ../../app/stylesheets/partials/_form.scss */
+fieldset input[type=submit] {
+  background: black;
+  border: 0;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: white;
+  width: 150px;
+}
+/* line 26, ../../app/stylesheets/partials/_form.scss */
+fieldset input[type=submit]:hover {
+  color: #eeeeee;
+  cursor: pointer;
+}
+
 /* Purr Flash Notices and Errors */
 /* line 3, ../../app/stylesheets/partials/_purr.scss */
 .flash, #error_explanation {
@@ -77,7 +517,7 @@ body.one_col #container {
   position: fixed;
   width: 14em;
   top: 20em;
-  right: 37%;
+  right: 40%;
   padding: 3em;
   background-color: #111;
   color: #DDD;

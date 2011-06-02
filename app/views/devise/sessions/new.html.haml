@@ -1,0 +1,21 @@
+#login
+  #logo
+    Knowledge Base
+    = image_tag "intranet_40.png", :alt => "Logo Itnig Intranet"
+  %hr
+  #form
+    .tip Introdueix les teves dades
+    = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %fieldset
+        = f.input :email, :label => "Correu", :required => false
+        = f.input :password, :label => "Contrasenya", :required => false
+        - if devise_mapping.rememberable?
+          = f.input :remember_me, :as => :boolean, :label => "Recorda'm"
+        = f.submit "Entrar"
+    %hr
+  #providers
+    .tip O entra a través de
+    - ["twitter","facebook"].each do |provider|
+      .provider
+        = link_to "/auth/#{provider}" do
+          = image_tag "#{provider}_64.png", :alt => provider
