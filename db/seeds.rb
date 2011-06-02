@@ -1,3 +1,9 @@
 # Some users
 User.delete_all
-User.create! :email => "albert@itnig.net", :password => "password"
+u = User.create! :email => "albert@itnig.net", :password => "password"
+
+# Some facts
+Fact.delete_all
+10.times.each do |i|
+  Fact.create! :title => "Fact #{i}", :description => "Loremipsumital", :user => u
+end
