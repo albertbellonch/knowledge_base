@@ -1,0 +1,6 @@
+- flash = {} unless flash
+- flash[:notice] = notice if notice
+- flash[:alert] = alert if alert
+- if flash
+  - flash.each do |msg|
+    .flash= msg[1]
