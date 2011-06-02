@@ -1,6 +1,6 @@
 # Some users
 User.delete_all
-u = User.create! :email => "albert@itnig.net", :password => "password"
+u = User.create! :name => "Albert", :email => "albert@itnig.net", :password => "password"
 
 # Some facts
 Fact.delete_all
