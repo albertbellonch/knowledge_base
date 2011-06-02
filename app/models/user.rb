@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :authentications
 
+  validates_presence_of :name
+
   def apply_omniauth(omniauth)
     self.name = omniauth['user_info']['name'] if name.blank?
     self.email = omniauth['user_info']['email'] if email.blank?

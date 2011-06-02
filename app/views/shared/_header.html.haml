@@ -1,0 +1,13 @@
+#header
+  #logo
+    Knowledge Base
+    = image_tag "intranet_50.png", :alt => "Logo Itnig Intranet"
+  #links
+    %p Albert
+    %ul
+      %li= link_to "Llista d'entrades", root_path
+      |
+      %li= link_to "Preferències", authentications_path
+      |
+      %li= link_to "Sortir", destroy_user_session_path
+    = gravatar_image_tag(current_user.email)

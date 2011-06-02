@@ -64,6 +64,18 @@ body.one_col #container {
   overflow: hidden;
   *zoom: 1;
 }
+/* line 4, ../../app/stylesheets/partials/_one_col.scss */
+body.one_col #container #login {
+  width: 470px;
+}
+/* line 7, ../../app/stylesheets/partials/_one_col.scss */
+body.one_col #container #header {
+  width: 910px;
+}
+/* line 10, ../../app/stylesheets/partials/_one_col.scss */
+body.one_col #container #content {
+  width: 910px;
+}
 
 /* ======================================================= */
 /*                       Base Style                        */
@@ -439,33 +451,100 @@ a:hover {
   padding: 15px 30px;
   position: relative;
   text-align: center;
-  top: 120px;
-  width: 500px;
+  margin-top: 120px;
 }
-/* line 15, ../../app/stylesheets/partials/_page.scss */
+/* line 14, ../../app/stylesheets/partials/_page.scss */
 #login .tip {
   margin-top: 18px;
   color: #666;
   font-size: 20px;
   margin-bottom: 5px;
 }
-/* line 21, ../../app/stylesheets/partials/_page.scss */
+/* line 20, ../../app/stylesheets/partials/_page.scss */
 #login #logo {
   font-size: 35px;
 }
-/* line 23, ../../app/stylesheets/partials/_page.scss */
+/* line 22, ../../app/stylesheets/partials/_page.scss */
 #login #logo img {
   position: absolute;
   top: 10px;
   left: 10px;
 }
-/* line 30, ../../app/stylesheets/partials/_page.scss */
+/* line 29, ../../app/stylesheets/partials/_page.scss */
 #login #form input[type=submit] {
   margin-top: 15px;
 }
-/* line 35, ../../app/stylesheets/partials/_page.scss */
+/* line 34, ../../app/stylesheets/partials/_page.scss */
 #login #providers .provider {
   display: inline;
+}
+
+/* ======================================================= */
+/*                        Header                           */
+/* ======================================================= */
+/* line 43, ../../app/stylesheets/partials/_page.scss */
+#header {
+  background: white;
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  margin: 30px 0;
+  padding: 8px 18px;
+  position: relative;
+}
+/* line 52, ../../app/stylesheets/partials/_page.scss */
+#header #logo {
+  display: inline;
+  font-size: 35px;
+  padding-left: 55px;
+}
+/* line 56, ../../app/stylesheets/partials/_page.scss */
+#header #logo img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* line 62, ../../app/stylesheets/partials/_page.scss */
+#header #links {
+  display: inline;
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 65px;
+}
+/* line 68, ../../app/stylesheets/partials/_page.scss */
+#header #links p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+/* line 73, ../../app/stylesheets/partials/_page.scss */
+#header #links ul {
+  display: inline;
+}
+/* line 75, ../../app/stylesheets/partials/_page.scss */
+#header #links ul li {
+  display: inline;
+}
+/* line 79, ../../app/stylesheets/partials/_page.scss */
+#header #links img {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* ======================================================= */
+/*                        Content                          */
+/* ======================================================= */
+/* line 90, ../../app/stylesheets/partials/_page.scss */
+#content {
+  background: white;
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  padding: 8px 18px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_form.scss */

@@ -1,5 +1,14 @@
 body.one_col{
   #container {
     @include container;
+    #login{
+      @include span(12);
+    }
+    #header{
+      @include span(23);
+    }
+    #content{
+      @include span(23);
+    }
   }
 }

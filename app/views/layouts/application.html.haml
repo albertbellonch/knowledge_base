@@ -4,12 +4,12 @@
     %title KnowledgeBase
     = stylesheet_link_tag "screen"
     = csrf_meta_tag
-  %body
-    .container
-      - if current_user
-        = render "shared/topmenu"
+  %body.one_col
+    #container
       = render "shared/flash"
-      = yield
+      - if current_user
+        = render "shared/header"
+      #content= yield
     = javascript_include_tag "jquery-1.5.1.min", "jquery-rails.js", "jquery.purr"
     = javascript_include_tag "application"
     = javascript_include_tag "tags.js"
