@@ -1,0 +1,55 @@
+es:
+  errors:
+    messages:
+      expired: "ha expirado, por favor solicita uno nuevo"
+      not_found: "no encontrado"
+      already_confirmed: "ya estaba confirmado"
+      not_locked: "no estaba bloqueado"
+      not_saved:
+        one: "1 error ha evitado que éste %{resource} se guardara:"
+        other: "%{count} errores han evitado que éste %{resource} se guardara:"
+
+  devise:
+    failure:
+      already_authentication: 'Ya has entrado'
+      unauthenticated: 'Para continuar deberías identificarte o registrate en Camaloon.'
+      unconfirmed: 'Tienes que confirmar tu cuenta antes de continuar.'
+      locked: 'Tu cuenta está bloqueada.'
+      invalid: 'Email o contraseña inválidos.'
+      invalid_token: 'Token de autenticación inválido'
+      timeout: 'Tu sessión ha caducado, por favor vuelve a identificarte.'
+      inactive: 'Tu cuenta no ha sido activada todavía.'
+    sessions:
+      signed_in: 'Identificado correctamente'
+      signed_out: 'Sesion terminada correctamente'
+    passwords:
+      send_instructions: 'Recibirás un email con las instrucciones para re-establecer tu contraseña en unos minutos.'
+      updated: 'Tu contraseña ha sido modificada correctamente. Ahora estas logueado.'
+    confirmations:
+      send_instructions: 'Recibirás un email con las instrucciones acerca de como confirmar tu cuenta en unos minutos.'
+      confirmed: 'Tu cuenta ha sido confirmada correctamente. Ahora estas logueado.'
+    registrations:
+      signed_up: 'Te has identificado correctamente. Si está activado recibirás una confirmación via e-mail.'
+      inactive_signed_up: 'Gracias por registrarte en Camaloon, recibirás un e-mail de confirmación en breves momentos.'
+      updated: 'Has actualitzado tu cuenta correctamente.'
+      destroyed: 'Hasta pronto! Tu cuenta ha sido borrada correctamente.'
+    unlocks:
+      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
+      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+    omniauth_callbacks:
+      success: 'Autorizado correctamente des de la cuenta de %{kind}.'
+      failure: 'No se te ha podido autorizar desde %{kind} debido a "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        subject: 'Instrucciones de confirmación'
+      reset_password_instructions:
+        subject: 'Instrucciones para resetear los passwords'
+      unlock_instructions:
+        subject: 'Instrucciones para el desbloqueo'
+    authentications:
+      successful: 'Autenticación externa añadida'
+      other_bind: 'Tu cuenta de %{provider} ya está associada con otra cuenta de este sitio web'
+      already_bind: 'Tu cuenta de %{provider} ya está associada con tu cuenta de este sitio web'
+      unique_auth: "No puedes eliminar esta autenticación si no tienes password para tu cuenta"
+      remove_bind: "Autenticación externa eliminada correctamente"
+      sure: "Estás seguro de borrar esta autenticación externa?"
