@@ -9,7 +9,10 @@ class Fact < ActiveRecord::Base
   has_many :comments
   belongs_to :user
 
-  scope :new_first, order("created_at DESC")
+  default_scope order("created_at DESC")
+
+  # All posts for that tag (remember a tag name is unique)
+  scope :for_tag, lambda {|tag_name| joins(:tags).where(:tags => {:name => tag_name}) }
 
   def to_s
     title

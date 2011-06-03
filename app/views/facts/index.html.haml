@@ -21,4 +21,4 @@
           .text= truncate(fact.description, :length => 500)
         .tags
           - fact.tags.each do |tag|
-            .tag= link_to tag.name, tag
+            .tag= link_to tag, root_path(:tag => tag.name)
