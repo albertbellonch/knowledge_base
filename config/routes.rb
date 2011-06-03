@@ -2,7 +2,7 @@ KnowledgeBase::Application.routes.draw do
   resources :authentications
   match '/auth/:provider/callback' => 'authentications#create'
 
-  devise_for :users, :controllers => {:registrations => 'registrations'}
+  devise_for :users, :controllers => {:registrations => 'registrations', :sessions => "sessions"}
   resources :facts, :except => :index do
     resources :comments
   end

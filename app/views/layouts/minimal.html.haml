@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title KnowledgeBase
+    = stylesheet_link_tag "screen"
+    = csrf_meta_tag
+  %body.one_col
+    #container
+      = render "shared/flash"
+      = yield
+    = javascript_include_tag "jquery-1.5.1.min", "jquery-rails.js", "jquery.purr"
+    = javascript_include_tag "application"
+    = yield :custom_js
