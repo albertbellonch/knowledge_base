@@ -108,9 +108,23 @@
   #pagination{
     font-size: 15px;
     padding: 5px;
-    em{
-      font-style: normal;
-      font-weight: bold;
+    .pagination{
+      text-align: center;
+      a,em{
+        padding: 2px;
+      }
+      em{
+        background: #eee;
+        border: 2px solid #eee;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        color: black;
+        font-style: normal;
+        padding: 2px 6px;
+      }
+      .disabled{
+        color: #eee;
+      }
     }
   }
   .fact{
