@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment.fact = @fact
     @comment.user = current_user
 
-    flash[:notice] = "Thanks for commenting"
+    flash[:notice] = "Gràcies per comentar!"
 
     respond_to do |format|
       if @comment.save

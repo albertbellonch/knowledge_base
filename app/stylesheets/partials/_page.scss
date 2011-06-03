@@ -46,7 +46,7 @@
   -moz-border-radius: 20px;
   border-radius: 20px;
   display: block;
-  padding: 15px 18px;
+  padding: 20px 18px;
   margin-bottom: 30px;
 }
 
@@ -102,7 +102,7 @@
 }
 
 /* ======================================================= */
-/*                        Content                          */
+/*                       Fact list                         */
 /* ======================================================= */
 #fact-list{
   .fact{
@@ -139,6 +139,117 @@
       }
       .text{
         text-align: justify;
+      }
+    }
+  }
+}
+
+/* ======================================================= */
+/*                       Fact show                         */
+/* ======================================================= */
+#fact-show{
+  position: relative;
+  #gravatar{
+    position: absolute;
+  }
+  #comments-wrapper{
+    background-image: url('../images/comments_50.png');
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    left: 55px;
+    height: 60px;
+    width: 50px;
+    #comments{
+      color: #eee;
+      font-size: 20px;
+      margin-top: 3px;
+      text-align: center;
+    }
+  }
+  #links{
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    form{
+      display: inline;
+      padding: 0;
+      input{
+        display: inline;
+      }
+    }
+  }
+  #head{
+    padding-left: 120px;
+    font-weight: bold;
+    #metadata{
+      margin-top: -10px;
+    }
+  }
+  #text{
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  #tags{
+    margin-bottom: 30px;
+    .tag{
+      background: black;
+      display: inline;
+      padding: 6px 10px;
+      a{
+        color: #eee;
+        font-size: 15px;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+  #comments{
+    #comment-list{
+      .comment{
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+        .gravatar{
+          position: absolute;
+        }
+        .delete{
+          float: right;
+        }
+        .metadata{
+          font-weight: bold;
+          padding-left: 60px;
+          .sent{
+            margin-top: -10px;
+          }
+        }
+        .text{
+          font-size: 14px;
+          margin-top: 25px;
+          text-align: justify;
+        }
+      }
+    }
+    #newcomment{
+      position: relative;
+      #gravatar{
+        position: absolute;
+        top: 5px;
+      }
+      form{
+        margin-bottom: 25px;
+        padding-left: 60px;
+        textarea{
+          display: block;
+          height: 120px;
+          width: 97%;
+        }
+        input[type=submit]{
+          float: right;
+          margin-top: 10px;
+        }
       }
     }
   }

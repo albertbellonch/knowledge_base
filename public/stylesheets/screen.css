@@ -497,7 +497,7 @@ a:hover {
   -moz-border-radius: 20px;
   border-radius: 20px;
   display: block;
-  padding: 15px 18px;
+  padding: 20px 18px;
   margin-bottom: 30px;
 }
 
@@ -561,7 +561,7 @@ a:hover {
 }
 
 /* ======================================================= */
-/*                        Content                          */
+/*                       Fact list                         */
 /* ======================================================= */
 /* line 108, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact {
@@ -610,14 +610,146 @@ a:hover {
   text-align: justify;
 }
 
+/* ======================================================= */
+/*                       Fact show                         */
+/* ======================================================= */
+/* line 150, ../../app/stylesheets/partials/_page.scss */
+#fact-show {
+  position: relative;
+}
+/* line 152, ../../app/stylesheets/partials/_page.scss */
+#fact-show #gravatar {
+  position: absolute;
+}
+/* line 155, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments-wrapper {
+  background-image: url("../images/comments_50.png");
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  left: 55px;
+  height: 60px;
+  width: 50px;
+}
+/* line 163, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments-wrapper #comments {
+  color: #eee;
+  font-size: 20px;
+  margin-top: 3px;
+  text-align: center;
+}
+/* line 170, ../../app/stylesheets/partials/_page.scss */
+#fact-show #links {
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 174, ../../app/stylesheets/partials/_page.scss */
+#fact-show #links form {
+  display: inline;
+  padding: 0;
+}
+/* line 177, ../../app/stylesheets/partials/_page.scss */
+#fact-show #links form input {
+  display: inline;
+}
+/* line 182, ../../app/stylesheets/partials/_page.scss */
+#fact-show #head {
+  padding-left: 120px;
+  font-weight: bold;
+}
+/* line 185, ../../app/stylesheets/partials/_page.scss */
+#fact-show #head #metadata {
+  margin-top: -10px;
+}
+/* line 189, ../../app/stylesheets/partials/_page.scss */
+#fact-show #text {
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: justify;
+}
+/* line 194, ../../app/stylesheets/partials/_page.scss */
+#fact-show #tags {
+  margin-bottom: 30px;
+}
+/* line 196, ../../app/stylesheets/partials/_page.scss */
+#fact-show #tags .tag {
+  background: black;
+  display: inline;
+  padding: 6px 10px;
+}
+/* line 200, ../../app/stylesheets/partials/_page.scss */
+#fact-show #tags .tag a {
+  color: #eee;
+  font-size: 15px;
+}
+/* line 203, ../../app/stylesheets/partials/_page.scss */
+#fact-show #tags .tag a:hover {
+  color: white;
+}
+/* line 211, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #comment-list .comment {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+/* line 215, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #comment-list .comment .gravatar {
+  position: absolute;
+}
+/* line 218, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #comment-list .comment .delete {
+  float: right;
+}
+/* line 221, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #comment-list .comment .metadata {
+  font-weight: bold;
+  padding-left: 60px;
+}
+/* line 224, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #comment-list .comment .metadata .sent {
+  margin-top: -10px;
+}
+/* line 228, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #comment-list .comment .text {
+  font-size: 14px;
+  margin-top: 25px;
+  text-align: justify;
+}
+/* line 235, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #newcomment {
+  position: relative;
+}
+/* line 237, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #newcomment #gravatar {
+  position: absolute;
+  top: 5px;
+}
+/* line 241, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #newcomment form {
+  margin-bottom: 25px;
+  padding-left: 60px;
+}
+/* line 244, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #newcomment form textarea {
+  display: block;
+  height: 120px;
+  width: 97%;
+}
+/* line 249, ../../app/stylesheets/partials/_page.scss */
+#fact-show #comments #newcomment form input[type=submit] {
+  float: right;
+  margin-top: 10px;
+}
+
 /* line 1, ../../app/stylesheets/partials/_form.scss */
-fieldset {
+form {
   margin: 0 auto;
   padding: 4px;
   font-size: 15px;
 }
 /* line 5, ../../app/stylesheets/partials/_form.scss */
-fieldset label {
+form label {
   display: block;
   float: left;
   font-weight: bold;
@@ -626,23 +758,24 @@ fieldset label {
   width: 15em;
 }
 /* line 13, ../../app/stylesheets/partials/_form.scss */
-fieldset input, fieldset textarea {
+form input, form textarea {
   font-size: 15px;
   margin-left: 0px;
   padding-right: 20px;
   width: 180px;
 }
 /* line 19, ../../app/stylesheets/partials/_form.scss */
-fieldset input[type=submit] {
+form input[type=submit] {
   background: black;
   border: 0;
   -moz-border-radius: 10px;
   border-radius: 10px;
   color: white;
-  width: 150px;
+  padding-right: 0;
+  width: 120px;
 }
-/* line 26, ../../app/stylesheets/partials/_form.scss */
-fieldset input[type=submit]:hover {
+/* line 27, ../../app/stylesheets/partials/_form.scss */
+form input[type=submit]:hover {
   color: #eeeeee;
   cursor: pointer;
 }
