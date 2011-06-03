@@ -1,9 +1,4 @@
 class FactsController < ApplicationController
-  # Require Devise authentication
-  before_filter :authenticate_user!
-
-  # GET /facts
-  # GET /facts.xml
   def index
     @facts = Fact.all
 
@@ -13,8 +8,6 @@ class FactsController < ApplicationController
     end
   end
 
-  # GET /facts/1
-  # GET /facts/1.xml
   def show
     @fact = Fact.find(params[:id])
 
@@ -24,8 +17,6 @@ class FactsController < ApplicationController
     end
   end
 
-  # GET /facts/new
-  # GET /facts/new.xml
   def new
     @fact = Fact.new
     @tags = Tag.all
@@ -36,14 +27,11 @@ class FactsController < ApplicationController
     end
   end
 
-  # GET /facts/1/edit
   def edit
     @fact = Fact.find(params[:id])
     @tags = Tag.all
   end
 
-  # POST /facts
-  # POST /facts.xml
   def create
     @fact = Fact.new(params[:fact])
     @fact.user = current_user
@@ -60,8 +48,6 @@ class FactsController < ApplicationController
     end
   end
 
-  # PUT /facts/1  
-  # PUT /facts/1.xml
   def update
     @fact = Fact.find(params[:id])
 
@@ -76,8 +62,6 @@ class FactsController < ApplicationController
     end
   end
 
-  # DELETE /facts/1
-  # DELETE /facts/1.xml
   def destroy
     @fact = Fact.find(params[:id])
     if @fact.user = current_user

@@ -1,6 +1,4 @@
 class CommentsController < ApplicationController
-
-  # POST /facts/:fact_id/comments
   def create
     @comment = Comment.new(params[:comment])
     @fact = Fact.find(params[:fact_id])
@@ -30,5 +28,4 @@ class CommentsController < ApplicationController
       format.js
     end
   end
-
 end

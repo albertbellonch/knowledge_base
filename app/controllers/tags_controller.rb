@@ -1,5 +1,4 @@
 class TagsController < ApplicationController
-
   def create
     @tag = Tag.new params[:tag]
 
@@ -20,5 +19,4 @@ class TagsController < ApplicationController
       format.js { head :ok }
     end
   end
-
 end

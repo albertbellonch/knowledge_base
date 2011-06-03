@@ -1,7 +1,7 @@
 # Utils
 def random_text (min,max,type)
   n = min + rand(max-min+1)
-  `lorem #{n} #{type}`
+  Lorem::Base.new(type,n).output
 end
 
 # Some users
