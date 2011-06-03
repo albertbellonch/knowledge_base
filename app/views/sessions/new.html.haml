@@ -6,12 +6,11 @@
   #form
     .tip Introdueix les teves dades
     = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-      %fieldset
-        = f.input :email, :label => "Correu", :required => false
-        = f.input :password, :label => "Contrasenya", :required => false
-        - if devise_mapping.rememberable?
-          = f.input :remember_me, :as => :boolean, :label => "Recorda'm"
-        = f.submit "Entrar"
+      = f.input :email, :label => "Correu", :required => false
+      = f.input :password, :label => "Contrasenya", :required => false
+      - if devise_mapping.rememberable?
+        = f.input :remember_me, :as => :boolean, :label => "Recorda'm"
+      = f.submit "Entrar"
     %hr
   #providers
     .tip O entra a través de

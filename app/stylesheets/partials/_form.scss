@@ -1,4 +1,4 @@
-fieldset{
+form{
   margin: 0 auto;
   padding: 4px;
   font-size: 15px;
@@ -22,7 +22,8 @@ fieldset{
     -moz-border-radius: 10px;
     border-radius: 10px;
     color: white;
-    width: 150px;
+    padding-right: 0;
+    width: 120px;
     &:hover{
       color: #eeeeee;
       cursor: pointer;
