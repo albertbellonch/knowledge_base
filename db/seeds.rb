@@ -29,7 +29,7 @@ Tag.create! :name => "Cucamonga"
 # Some facts
 puts "Adding facts and comments..."
 Fact.delete_all
-10.times.each_with_index do |f,i| # facts
+100.times.each_with_index do |f,i| # facts
   puts "  Creating fact #{i+1}..."
   f = Fact.create! :title => random_text(2,5,"words"), :description => random_text(2,5,"paragraphs"), :user => User.all.sample
   puts "    Linking to some tags..."
