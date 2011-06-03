@@ -9,6 +9,8 @@ gem 'compass'
 gem 'haml-rails'
 gem 'hpricot'
 gem 'ruby_parser'
+
+gem 'will_paginate'
 gem 'simple_form'
 gem 'gravatar_image_tag'
 
