@@ -1,8 +1,10 @@
 #fact-list
   %h2 Llista d'entrades
+  #pagination= will_paginate @facts, :previous_label => "← Anterior", :next_label => "Següent →"
   - if @facts.empty?
-    No facts for now.
+    Encara no hi ha entrades.
   - @facts.each do |fact|
+    %hr
     .fact
       = gravatar_image_tag(fact.user.email)
       = link_to fact_path(fact, :anchor => "comments"), :class => "comments-link" do
@@ -17,5 +19,3 @@
             = get_name_or_you(fact.user)
           %h3= fact.title
           .text= truncate(fact.description, :length => 500)
-    - if fact != @facts.last
-      %hr

@@ -105,6 +105,14 @@
 /*                       Fact list                         */
 /* ======================================================= */
 #fact-list{
+  #pagination{
+    font-size: 15px;
+    padding: 5px;
+    em{
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
   .fact{
     position: relative;
     margin-bottom: 30px;

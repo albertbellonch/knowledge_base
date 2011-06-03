@@ -1,6 +1,7 @@
 class FactsController < ApplicationController
   def index
-    @facts = Fact.all
+    @page = params[:page] || 1
+    @facts = Fact.new_first.paginate :page => @page, :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
