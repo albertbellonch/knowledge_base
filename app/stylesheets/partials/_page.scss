@@ -163,6 +163,22 @@
         text-align: justify;
       }
     }
+    .tags{
+      display: inline;
+      float: right;
+      .tag{
+        background: black;
+        display: inline;
+        padding: 3px 5px;
+        a{
+          color: #eee;
+          font-size: 12px;
+          &:hover{
+            color: white;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,0 +1,23 @@
+#fact-list
+  #pagination= will_paginate @facts, :previous_label => "← Anterior", :next_label => "Següent →"
+  - if @facts.empty?
+    Encara no hi ha entrades.
+  - @facts.each do |fact|
+    %hr
+    .fact
+      = gravatar_image_tag(fact.user.email)
+      = link_to fact_path(fact, :anchor => "comments"), :class => "comments-link" do
+        .comments-wrapper
+          - nc = fact.comments.size
+          - nc = "#{99}+" if nc > 99
+          .comments= nc
+      = link_to fact do
+        .rest
+          .metadata
+            Creat el #{fact.created_at} per
+            = get_name_or_you(fact.user)
+          %h3= fact.title
+          .text= truncate(fact.description, :length => 500)
+        .tags
+          - fact.tags.each do |tag|
+            .tag= link_to tag.name, tag
