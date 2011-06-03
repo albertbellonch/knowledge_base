@@ -10,4 +10,8 @@ class Fact < ActiveRecord::Base
   belongs_to :user
 
   scope :new_first, order("created_at DESC")
+
+  def to_s
+    title
+  end
 end
