@@ -167,12 +167,12 @@
       display: inline;
       float: right;
       .tag{
-        background: black;
+        background: #666;
         display: inline;
-        padding: 3px 5px;
+        padding: 1px 5px;
         a{
           color: #eee;
-          font-size: 12px;
+          font-size: 10px;
           &:hover{
             color: white;
           }

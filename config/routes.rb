@@ -7,7 +7,7 @@ KnowledgeBase::Application.routes.draw do
     resources :comments
   end
 
-  resources :tags
+  resources :tags, :only => [:create, :destroy]
 
   root :to => 'facts#index'
 end

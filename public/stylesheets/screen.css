@@ -643,14 +643,14 @@ a:hover {
 }
 /* line 169, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag {
-  background: black;
+  background: #666;
   display: inline;
-  padding: 3px 5px;
+  padding: 1px 5px;
 }
 /* line 173, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag a {
   color: #eee;
-  font-size: 12px;
+  font-size: 10px;
 }
 /* line 176, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag a:hover {
