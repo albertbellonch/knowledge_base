@@ -1,13 +1,13 @@
 #comments
-  %h3#comments-count= pluralize(@fact.comments.count, "comentari")
+  %h3#comments-count= pluralize(comments.count, "comentari")
   %ul#comment-list
-    - @fact.comments.each do |comment|
+    - comments.each do |comment|
       = render "comments/comment", :comment => comment
   %hr
   #comment-notice
   %h3 #{current_user.name}, deixa un comentari!
   #newcomment
     #gravatar= gravatar_image_tag(current_user.email)
-    = simple_form_for [@fact, Comment.new], :remote => true do |f|
+    = simple_form_for [fact, Comment.new], :remote => true do |f|
       = f.text_area :text, :id => "newcomment-area"
       = f.submit "Envia", :id => "newcomment-button", :class => "button"

@@ -17,6 +17,6 @@
   #text
     = get_markdown_html(@fact.description)
   %hr
-  = render "tags"
+  = render "tags", :tags => @fact.tags
   %hr
-  = render "comments"
+  = render "comments", :comments => @fact.comments, :fact => @fact
