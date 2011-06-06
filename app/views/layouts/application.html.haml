@@ -11,6 +11,7 @@
         = render "shared/header"
       #content= yield
     = javascript_include_tag "jquery-1.5.1.min", "jquery-ui-1.8.13.custom.min", "jquery-rails", "jquery.purr"
+    = javascript_include_tag "facebox"
     = javascript_include_tag "application"
-    = javascript_include_tag "tags.js"
+    = javascript_include_tag "tags"
     = yield :custom_js
