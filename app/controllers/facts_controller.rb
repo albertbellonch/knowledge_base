@@ -1,8 +1,19 @@
 class FactsController < ApplicationController
   def index
+    # Search params
+    @is_search = params[:search]
+    @search = Fact.search(params[:search])
+
+    # Get base
+    if @is_search
+      @base = @search.all
+    else
+      @tag = params[:tag]
+      @base = @tag.present? ? Fact.for_tag(@tag) : Fact.all
+    end
+
+    # And paginate!
     @page = params[:page] || 1
-    @tag = params[:tag]
-    @base = @tag.present? ? Fact.for_tag(@tag) : Fact.all
     @facts = @base.paginate :page => @page, :per_page => 10
 
     respond_to do |format|

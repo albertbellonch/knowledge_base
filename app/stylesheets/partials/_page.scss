@@ -105,6 +105,20 @@
 /*                       Fact list                         */
 /* ======================================================= */
 #fact-list{
+  position: relative;
+  #search-img{
+    h3, img{
+      position: absolute;
+    }
+    h3{
+      top: -5px;
+      right: 40px;
+    }
+    img{
+      top: -10px;
+      right: -10px;
+    }
+  }
   #pagination{
     font-size: 15px;
     padding: 5px;
@@ -184,12 +198,40 @@
       }
     }
   }
+  #search{
+    display: none;
+  }
+}
+
+#facebox{
+  width: 600px;
+  .content{
+    width: 600px !important;
+  }
+  h2{
+    padding: 10px;
+  }
+  form{
+    input, textarea, select{
+      margin-left: 20px;
+      width: 250px;
+    }
+    textarea{
+    }
+    input[type=submit]{
+      float: right;
+      margin-top: 10px;
+      margin-right: 50px;
+      width: 100px;
+    }
+  }
 }
 
 /* ======================================================= */
 /*                       Fact show                         */
 /* ======================================================= */
 #fact-show{
+  padding: 10px;
   position: relative;
   #gravatar{
     position: absolute;
@@ -199,7 +241,7 @@
     background-repeat: no-repeat;
     display: block;
     position: absolute;
-    left: 55px;
+    left: 70px;
     height: 60px;
     width: 50px;
     #comments{
