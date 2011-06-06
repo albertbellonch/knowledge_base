@@ -4,4 +4,7 @@ $(document).ready(function(){
 
   // Activate facebox
   $("a[rel*=facebox]").facebox();
+
+  /* Activate datepicker */
+  $(".date").datepicker($.datepicker.regional['ca']);
 });
