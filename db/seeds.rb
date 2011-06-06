@@ -33,7 +33,7 @@ Fact.delete_all
   puts "  Creating fact #{i+1}..."
   f = Fact.create! :title => random_text(2,5,"words"), :description => random_text(2,5,"paragraphs"), :user => User.all.sample
   puts "    Linking to some tags..."
-  f.tags << Tag.all.sample
+  f.tags << Tag.all.sample(1+rand(Tag.all.size))
   (rand(10)+1).times.each_with_index do |c,j| # from 1 to 10 random comments
     puts "    Creating comment #{j+1}..."
     Comment.create! :text => random_text(1,3,"paragraphs"), :user => User.all.sample, :fact => f
