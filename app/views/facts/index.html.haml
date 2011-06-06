@@ -26,7 +26,8 @@
       = link_to fact do
         .rest
           .metadata
-            Creat el #{fact.created_at} per
+            Creat
+            fa #{time_ago_in_words(fact.created_at)} per
             = get_name_or_you(fact.user)
           %h3= fact.title
           .text= truncate(fact.description, :length => 500)
