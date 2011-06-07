@@ -7,10 +7,10 @@ body.one_col{
     #header{
       @include span(23);
       #logo{
-        @include span(10);
+        @include span(8);
       }
       #links{
-        @include span(12);
+        @include span(14);
       }
     }
     #content{

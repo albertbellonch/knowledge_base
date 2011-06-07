@@ -1,36 +1,146 @@
-= form_for @fact, :html => { :id => "fact_form" } do |f|
-  - if @fact.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@fact.errors.count, "error")
-        prohibited this fact from being saved:
-      %ul
-        - @fact.errors.full_messages.each do |msg|
-          %li= msg
-  %h1.welcome= f.text_field :title
-  .gravatar= gravatar_image_tag(@fact.new_record? ? "" : @fact.user.email)
-  .fact-metadata
-    %b
-      %i
-        - unless@fact.new_record?
-          Created on #{@fact.created_at} by
-          = succeed "." do
-            %span.info= get_name_or_you(@fact.user.name)
-        - else
-          Check the
-          \#{link_to 'markdown', "http://daringfireball.net/projects/markdown/syntax", { :target => "_new", :class => "info" }}
-          syntax.
-        %br/
-        %br/
-  = f.text_area :description, :id => "description_area"
-  %h2 Tags
-  #tag_inputs
-  = link_to "+ New tag", "#new-label", :id => "new_tag_link"
-  #tag-form
-    = form_for Tag.new do |t|
-      = t.text_field :name, :label => false
-  #tag-cloud
-    - @tags.each do |t|
-      = render "tags/tag", :tag => t
-  %br/
-  = f.submit :id => "post_button"
+#fact-form
+  = simple_form_for @fact, :html => { :id => "fact_form" } do |f|
+    -# HEADER
+    = gravatar_image_tag(current_user.email)
+    = f.text_field :title
+    #metadata
+      - unless @fact.new_record?
+        -# metadata
+
+    -# DESCRIPTION
+    %hr
+    Pots comprovar #{link_to 'aquí', "http://daringfireball.net/projects/markdown/syntax", { :target => "_new" }} la sintaxi de #{link_to 'Markdown', "http://daringfireball.net/projects/markdown", { :target => "_new" }}.
+    %br
+    = f.text_area :description, :id => "description_area"
+
+    -# TAGS
+    %hr
+    #tags
+      %h3 Etiquetes
+      #tag_inputs
+        -# The real thing will be held here inside!
+      #new_tag
+        = text_field_tag :tag_name, "Nou tag aquí..."
+        = link_to "#", :id => "new_tag_link" do
+          = image_tag "add.png"
+      #tag_cloud
+        - @tags.each do |t|
+          = render "tags/tag", :tag => t
+
+    -# LINKS
+    = f.submit "Crear entrada"
+
+- content_for :custom_js do
+  :javascript
+    // Label to show when nothing is written there
+    var blank_label = "Nou tag aquí..."
+
+    $(document).ready(function() {
+      // Cross-site request forgery params
+      var csrf_token = $('meta[name=csrf-token]').attr('content');
+      var csrf_param = $('meta[name=csrf-param]').attr('content');
+
+      // Delete tag class management
+      $(".tag").live('hover', function() {
+        $(this).find(".delete-tag").show();
+      });
+      $(".tag").live('mouseleave', function() {
+        $(this).find(".delete-tag").hide();
+      })
+
+      // Focus out on tag form
+      $("#tag_name").focusout(function() {
+        if ($(this).val() == "") {
+          $(this).val(blank_label);
+          $(this).css("color", "#AAA");
+        }
+      });
+
+      // Focus on tag form
+      $("#tag_name").focus(function() {
+        var tag_input = $(this);
+        if ($(this).val() == blank_label) {
+          $(this).val("");
+        }
+      });
+
+      // Keydown on tag form
+      $("#tag_name").keydown(function(e) {
+        if (e.keyCode == 13){
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      });
+
+      // Keyup on tag form
+      $("#tag_name").keyup(function(e) {
+        e.preventDefault();
+        if (e.keyCode == 13) {
+          var tag_input = $(this);
+          var tag_name = tag_input.val();
+          if (tag_name != ""){
+            tag_input.val("");
+            var data = "_method=post";
+            data += "&tag[name]=" + encodeURIComponent(tag_name);
+            if (csrf_param !== undefined && csrf_token !== undefined) {
+              data += "&" + csrf_param + "=" + encodeURIComponent(csrf_token);
+            }
+            var options = {};
+            options.type = "post";
+            options.dataType = "script";
+            options.data = data;
+            options.url = "/tags";
+            options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "text/javascript"); }
+            var ajaxRequest = jQuery.ajax(options);
+          }
+        }
+        return false;
+      });
+
+      // Add or remove "selected" class to tags
+      $(".tag").live('click', function() {
+        if ($(this).hasClass("selected")) {
+          $(this).removeClass("selected");
+        } else {
+          $(this).addClass("selected");
+        }
+      });
+
+      // Allow tag deleting
+      $(".delete-tag > a").live("click", function() {
+          var tag_to_destroy = $(this).attr("data_tag");
+          if (confirm("¿Segur que vols esborrar el tag? Si ho fas, serà esborrat de totes els entrades.")) {
+            var data = "_method=delete";
+            data += "&tag[id]=" + encodeURIComponent(tag_to_destroy);
+            if (csrf_param !== undefined && csrf_token !== undefined) {
+              data += "&" + csrf_param + "=" + encodeURIComponent(csrf_token);
+            }
+            var options = {};
+            options.type = "post";
+            options.dataType = "text";
+            options.data = data;
+            options.url = "/tags/" + tag_to_destroy;
+            options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "application/json"); }
+            var ajaxRequest = jQuery.ajax(options);
+            $(this).parent().parent().fadeOut();
+            return false;
+        }
+      });
+
+      // Gather selected tags and send them
+      $("#fact_submit").click(function(e) {
+        var tag_inputs = "";
+        var i = 0;
+        $(".selected > .delete-tag > a").each(function() {
+          tag_inputs += "<input id='fact_tag_ids_" + $(this).attr("data_tag");
+          tag_inputs += "' name='fact[tag_ids][]' type='hidden' value='";
+          tag_inputs += $(this).attr("data_tag");
+          tag_inputs += "'>";
+          i++;
+        });
+        if(i==0)
+          tag_inputs = "<input name='fact[tag_ids][]' type='hidden' value=''>";
+        $("#tag_inputs").html(tag_inputs);
+        $("#fact_submit").submit();
+      });
+    });

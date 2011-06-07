@@ -40,25 +40,22 @@ class FactsController < ApplicationController
     end
   end
 
-  def edit
-    @fact = Fact.find(params[:id])
-    @tags = Tag.all
-  end
-
   def create
     @fact = Fact.new(params[:fact])
     @fact.user = current_user
     @tags = Tag.all
 
-    respond_to do |format|
-      if @fact.save
-        format.html { redirect_to(@fact, :notice => 'Fact was successfully created.') }
-        format.xml  { render :xml => @fact, :status => :created, :location => @fact }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @fact.errors, :status => :unprocessable_entity }
-      end
+    if @fact.save
+      redirect_to(root_path, :notice => "L'entrada ha estat creada satisfactòriament")
+    else
+      flash[:alert] = "Assegura't d'introduir el títol i el text abans de crear l'entrada, siusplau"
+      render :action => "new"
     end
+  end
+
+  def edit
+    @fact = Fact.find(params[:id])
+    @tags = Tag.all
   end
 
   def update

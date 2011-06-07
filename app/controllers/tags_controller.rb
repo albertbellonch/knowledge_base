@@ -16,7 +16,7 @@ class TagsController < ApplicationController
     @tag.destroy
 
     respond_to do |format|
-      format.js { head :ok }
+      format.json { head :ok }
     end
   end
 end

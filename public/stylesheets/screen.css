@@ -74,11 +74,11 @@ body.one_col #container #header {
 }
 /* line 9, ../../app/stylesheets/partials/_one_col.scss */
 body.one_col #container #header #logo {
-  width: 390px;
+  width: 310px;
 }
 /* line 12, ../../app/stylesheets/partials/_one_col.scss */
 body.one_col #container #header #links {
-  width: 470px;
+  width: 550px;
 }
 /* line 16, ../../app/stylesheets/partials/_one_col.scss */
 body.one_col #container #content {
@@ -828,6 +828,100 @@ a:hover {
 #fact-show #comments #newcomment form input[type=submit] {
   float: right;
   margin-top: 10px;
+}
+
+/* ======================================================= */
+/*                       Fact form                         */
+/* ======================================================= */
+/* line 333, ../../app/stylesheets/partials/_page.scss */
+#fact-form {
+  padding: 0 10px 10px 10px;
+  position: relative;
+}
+/* line 337, ../../app/stylesheets/partials/_page.scss */
+#fact-form form img {
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+/* line 342, ../../app/stylesheets/partials/_page.scss */
+#fact-form form input#fact_title {
+  font-size: 24px;
+  margin-top: -5px;
+  margin-left: 65px;
+  margin-bottom: 20px;
+  width: 500px;
+}
+/* line 349, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #metadata {
+  margin-top: 5px;
+}
+/* line 352, ../../app/stylesheets/partials/_page.scss */
+#fact-form form textarea {
+  width: 97%;
+}
+/* line 355, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags {
+  position: relative;
+}
+/* line 357, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #new_tag {
+  position: absolute;
+  top: -2px;
+  right: 0;
+}
+/* line 361, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #new_tag input#tag_name {
+  position: absolute;
+  right: 25px;
+  text-align: center;
+  color: #999;
+}
+/* line 366, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #new_tag input#tag_name:focus {
+  color: black;
+}
+/* line 370, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #new_tag a#new_tag_link {
+  position: absolute;
+  top: 2px;
+  right: 40px;
+}
+/* line 376, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #tag_cloud {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+/* line 380, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #tag_cloud .tag {
+  background: #999;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 6px 10px 6px 10px;
+  position: relative;
+}
+/* line 388, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #tag_cloud .tag.selected {
+  background: black;
+  color: #eee;
+}
+/* line 393, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #tag_cloud .delete-tag {
+  display: inline;
+}
+/* line 395, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #tag_cloud .delete-tag a {
+  position: absolute;
+  top: -4px;
+  right: 1px;
+  color: white;
+}
+/* line 404, ../../app/stylesheets/partials/_page.scss */
+#fact-form form input#fact_submit {
+  float: right;
 }
 
 /* line 1, ../../app/stylesheets/partials/_form.scss */

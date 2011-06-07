@@ -326,3 +326,83 @@
     }
   }
 }
+
+/* ======================================================= */
+/*                       Fact form                         */
+/* ======================================================= */
+#fact-form{
+  padding: 0 10px 10px 10px;
+  position: relative;
+  form{
+    img{
+      position: absolute;
+      top: 0;
+      left: 15px;
+    }
+    input#fact_title{
+      font-size: 24px;
+      margin-top: -5px;
+      margin-left: 65px;
+      margin-bottom: 20px;
+      width: 500px;
+    }
+    #metadata{
+      margin-top: 5px;
+    }
+    textarea{
+      width: 97%;
+    }
+    #tags{
+      position: relative;
+      #new_tag{
+        position: absolute;
+        top: -2px;
+        right: 0;
+        input#tag_name{
+          position: absolute;
+          right: 25px;
+          text-align: center;
+          color: #999;
+          &:focus{
+            color: black;
+          }
+        }
+        a#new_tag_link{
+          position: absolute;
+          top: 2px;
+          right: 40px;
+        }
+      }
+      #tag_cloud{
+        display: block;
+        margin-bottom: 20px;
+        padding: 10px 0;
+        .tag{
+          background: #999;
+          cursor: pointer;
+          display: inline-block;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          padding: 6px 10px 6px 10px;
+          position: relative;
+          &.selected{
+            background: black;
+            color: #eee;
+          }
+        }
+        .delete-tag{
+          display: inline;
+          a{
+            position: absolute;
+            top: -4px;
+            right: 1px;
+            color: white;
+          }
+        }
+      }
+    }
+    input#fact_submit{
+      float: right;
+    }
+  }
+}
