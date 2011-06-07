@@ -15,6 +15,8 @@ gem 'meta_search'
 gem 'simple_form'
 gem 'gravatar_image_tag'
 
+gem 'thinking-sphinx'
+
 gem 'lorem'
 
 gem "rake", "0.8.7"
