@@ -11,7 +11,6 @@ gem 'hpricot'
 gem 'ruby_parser'
 
 gem 'will_paginate'
-gem 'meta_search'
 gem 'simple_form'
 gem 'gravatar_image_tag'
 
