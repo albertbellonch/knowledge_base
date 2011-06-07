@@ -26,5 +26,7 @@ class Fact < ActiveRecord::Base
     indexes user.name
     indexes user.email
     indexes tags.name
+
+    has created_at
   end
 end

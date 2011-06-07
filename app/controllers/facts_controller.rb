@@ -5,7 +5,7 @@ class FactsController < ApplicationController
 
     # Get base
     if @is_search
-      @base = Fact.search(params[:search])
+      @base = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc)
     else
       @tag = params[:tag]
       @base = @tag.present? ? Fact.for_tag(@tag) : Fact.all
