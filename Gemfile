@@ -21,9 +21,11 @@ gem 'lorem'
 gem "rake", "0.8.7"
 
 group :development,:test do
-  gem 'mysql2', :git => "git://github.com/brianmario/mysql2.git", :branch => "0.2.x"
+  #gem 'mysql2', :git => "git://github.com/brianmario/mysql2.git", :branch => "0.2.x"
+  gem 'mysql2', "0.2.7"
 end
 
 group :production do
-  gem 'mysql2', :git => "git://github.com/brianmario/mysql2.git", :branch => "0.2.x"
+  #gem 'mysql2', :git => "git://github.com/brianmario/mysql2.git", :branch => "0.2.x"
+  gem 'mysql2', "0.2.7"
 end
