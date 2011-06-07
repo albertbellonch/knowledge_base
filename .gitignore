@@ -21,4 +21,4 @@ public/javascripts/cache/*
 
 config/app.yml
 config/database.yml
-config/development.sphinx.conf
+config/*.sphinx.conf
