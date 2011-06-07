@@ -12,7 +12,7 @@ class TagsController < ApplicationController
   end
 
   def destroy
-    @tag = Tag.find params[:id]
+    @tag = Tag.includes(:fact_tags).find params[:id]
     @tag.destroy
 
     respond_to do |format|

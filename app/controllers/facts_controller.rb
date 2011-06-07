@@ -5,15 +5,16 @@ class FactsController < ApplicationController
 
     # Get base
     if @is_search
-      @base = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc)
+      @total = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc, :include => [:user,:comments,:tags])
     else
       @tag = params[:tag]
-      @base = @tag.present? ? Fact.for_tag(@tag) : Fact.all
+      @base = Fact.includes(:user,:comments,:tags)
+      @total = @tag.present? ? @base.for_tag(@tag) : @base.all
     end
 
     # And paginate!
     @page = params[:page] || 1
-    @facts = @base.paginate :page => @page, :per_page => 10
+    @facts = @total.paginate :page => @page, :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
@@ -22,7 +23,7 @@ class FactsController < ApplicationController
   end
 
   def show
-    @fact = Fact.find(params[:id])
+    @fact = Fact.includes(:user,[:comments => :user]).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -32,7 +33,7 @@ class FactsController < ApplicationController
 
   def new
     @fact = Fact.new
-    @tags = Tag.all
+    @tags = Tag.includes(:fact_tags)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -54,7 +55,7 @@ class FactsController < ApplicationController
   end
 
   def edit
-    @fact = Fact.find(params[:id])
+    @fact = Fact.includes(:tags).find(params[:id])
     @tags = Tag.all
 
     unless @fact.user == current_user
