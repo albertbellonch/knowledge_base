@@ -4,8 +4,10 @@
 .swp
 *.swp
 db/*.sqlite3
+db/sphinx/*
 tmp/**/*
 log/*.log
+log/*.pid
 vendor/cache
 bin/*.pid
 .sass-cache/*
@@ -19,3 +21,4 @@ public/javascripts/cache/*
 
 config/app.yml
 config/database.yml
+config/development.sphinx.conf
