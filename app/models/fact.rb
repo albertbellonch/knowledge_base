@@ -17,4 +17,14 @@ class Fact < ActiveRecord::Base
   def to_s
     title
   end
+
+  # Sphinx
+  define_index do
+    # fields
+    indexes title
+    indexes description
+    indexes user.name
+    indexes user.email
+    indexes tags.name
+  end
 end

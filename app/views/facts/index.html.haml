@@ -7,13 +7,14 @@
         Entrades del tag '#{@tag.capitalize}'
       - else
         Llista d'entrades
-  #search-img
-    = link_to "#search", :rel => "facebox" do
-      %h3 Cerca
-      = image_tag "magnifier.png"
+  #search-bar
+    = form_tag root_path, :method => "get" do
+      = text_field_tag :search, @is_search || "Cerca aquí..."
+    = link_to "javascript:doSearch();" do
+      = image_tag "magnifier-search.png"
   #pagination= will_paginate @facts, :previous_label => "← Anterior", :next_label => "Següent →"
   - if @facts.empty?
-    Encara no hi ha entrades.
+    No hi ha entrades.
   - @facts.each do |fact|
     %hr
     .fact
@@ -34,15 +35,17 @@
         .tags
           - fact.tags.each do |tag|
             .tag= link_to tag, root_path(:tag => tag.name)
-  #search
-    %h2 Cerca d'entrades
-    = simple_form_for @search, :url => root_path, :html => {:method => :get} do |f|
-      = f.input :title_contains, :label => "Títol", :required => false
-      = f.input :user_name_equals, :label => "Autor", :collection => User.all.map{|u|u.name}, :required => false
-      = f.input :description_contains, :label => "Text", :as => :text, :required => false
-      = f.input :created_at_greater_than_or_equal_to, :label => "Creat entre", :input_html => { :class => "date" }, :required => false
-      = f.input :created_at_less_than_or_equal_to, :label => "i", :input_html => { :class => "date" }, :required => false
-      = f.input :updated_at_greater_than_or_equal_to, :label => "Actualitzat entre", :input_html => { :class => "date" }, :required => false
-      = f.input :updated_at_less_than_or_equal_to, :label => "i", :input_html => { :class => "date" }, :required => false
-      -# TODO: search by tags
-      = f.submit "Cerca"
+
+- content_for :custom_js do
+  :javascript
+    $("#search").focus(function(){
+      if ($(this).val()=="Cerca aquí..."){
+        $(this).val("");
+      }
+    });
+
+    $("#search").blur(function(){
+      if ($(this).val()==""){
+        $(this).val("Cerca aquí...");
+      }
+    });

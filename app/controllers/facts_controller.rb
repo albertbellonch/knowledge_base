@@ -2,11 +2,10 @@ class FactsController < ApplicationController
   def index
     # Search params
     @is_search = params[:search]
-    @search = Fact.search(params[:search])
 
     # Get base
     if @is_search
-      @base = @search.all
+      @base = Fact.search(params[:search])
     else
       @tag = params[:tag]
       @base = @tag.present? ? Fact.for_tag(@tag) : Fact.all
