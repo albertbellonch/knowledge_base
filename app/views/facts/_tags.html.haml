@@ -1,5 +1,5 @@
 #tags
   %h3 Tags
   - tags.each do |tag|
-    .tag= link_to tag.name, tag
+    .tag= link_to tag.name, root_path(:tag => tag.name)
   .clear

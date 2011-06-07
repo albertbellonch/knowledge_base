@@ -56,31 +56,36 @@ class FactsController < ApplicationController
   def edit
     @fact = Fact.find(params[:id])
     @tags = Tag.all
+
+    unless @fact.user == current_user
+      redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
+    end
   end
 
   def update
     @fact = Fact.find(params[:id])
 
-    respond_to do |format|
-      if @fact.update_attributes(params[:fact])
-        format.html { redirect_to(@fact, :notice => 'Fact was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @fact.errors, :status => :unprocessable_entity }
-      end
+    unless @fact.user == current_user
+      redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
+    end
+
+    if @fact.update_attributes(params[:fact])
+      redirect_to(root_path, :notice => "L'entrada ha estat actualitzada satisfactòriament")
+    else
+      flash[:alert] = "Assegura't d'introduir el títol i el text abans d'actualitzar l'entrada, siusplau"
+      render :action => "edit"
     end
   end
 
   def destroy
     @fact = Fact.find(params[:id])
-    if @fact.user = current_user
+    if @fact.user == current_user
       @fact.destroy
+      flash[:notice] = "L'entrada s'ha eliminat satisfactòriament"
+    else
+      flash[:alert] = "No pots eliminar una entrada que no sigui teva"
     end
 
-    respond_to do |format|
-      format.html { redirect_to(root_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to root_path
   end
 end

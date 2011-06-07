@@ -28,7 +28,8 @@
           = render "tags/tag", :tag => t
 
     -# LINKS
-    = f.submit "Crear entrada"
+    = f.submit (@fact.new_record? ? "Crear entrada" : "Actualitzar entrada")
+    %br
 
 - content_for :custom_js do
   :javascript
@@ -122,7 +123,9 @@
             options.url = "/tags/" + tag_to_destroy;
             options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "application/json"); }
             var ajaxRequest = jQuery.ajax(options);
-            $(this).parent().parent().fadeOut();
+            $(this).parent().parent().fadeOut(function(){
+              $(this).remove();
+            });
             return false;
         }
       });

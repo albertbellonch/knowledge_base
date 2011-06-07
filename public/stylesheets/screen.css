@@ -922,6 +922,8 @@ a:hover {
 /* line 404, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_submit {
   float: right;
+  padding: 7px;
+  width: 180px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_form.scss */
