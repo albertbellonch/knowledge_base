@@ -1,5 +1,6 @@
 #comments
-  %h3#comments-count= pluralize(comments.count, "comentari")
+  %h3
+    #comments-count= pluralize(comments.count, "comentari")
   %ul#comment-list
     - comments.each do |comment|
       = render "comments/comment", :comment => comment

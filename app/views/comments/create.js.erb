@@ -4,6 +4,7 @@ $("#comment-notice").html('<div id='+ts+' class="flash"><%= escape_javascript(fl
 $("#"+ts+".flash").purr();
 
 /* Replace the count of comments */
+$("#comments").html("<%= @comment.fact.comments.count %>");
 $("#comments-count").html("<%= pluralize(@comment.fact.comments.count, 'comentari') %>");
 
 /* Add the new comment to the bottom of the comments list */
