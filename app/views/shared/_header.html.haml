@@ -4,7 +4,7 @@
       Knowledge Base
       = image_tag "intranet_50.png", :alt => "Logo Itnig Intranet"
   #links
-    %p Albert
+    %p= current_user.name
     %ul
       %li= link_to "Nova entrada", new_fact_path
       |
