@@ -22,7 +22,7 @@ gem 'lorem'
 gem "rake", "0.8.7"
 
 group :development,:test do
-  gem 'sqlite3'
+  gem 'mysql2'
 end
 
 group :production do
