@@ -153,7 +153,8 @@
   }
   .fact{
     position: relative;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     img{
       position: absolute;
     }
@@ -177,16 +178,16 @@
         text-align: center;
       }
     }
-    .rest{
+    .metadata{
       padding-left: 115px;
-      .metadata{
+      .dates{
         font-size: 11px;
         margin-top: -10px;
       }
-      .text{
-        margin-top: 20px;
-        text-align: justify;
-      }
+    }
+    .text{
+      margin-top: 20px;
+      text-align: justify;
     }
     .tags{
       position: absolute;

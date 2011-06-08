@@ -25,13 +25,13 @@
           - nc = "#{99}+" if nc > 99
           .comments= nc
       = link_to fact do
-        .rest
+        .metadata
           %h3= fact.title
-          .metadata
-            Creat
-            fa #{time_ago_in_words(fact.created_at)} per
-            = get_name_or_you(fact.user)
-          .text= to_md(fact.description, :length => 500)
+          .dates
+            Creat fa #{time_ago_in_words(fact.created_at)} per #{get_name_or_you(fact.user)}
+            - if fact.created_at != fact.updated_at
+              | Actualitzat per últim cop fa #{time_ago_in_words(fact.updated_at)}
+        .text= to_md(fact.description, :length => 600)
         .tags
           - fact.tags.each do |tag|
             .tag= link_to tag, facts_path(:tag => tag.name)

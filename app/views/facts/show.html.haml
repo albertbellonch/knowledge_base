@@ -13,8 +13,9 @@
   #head
     %h2= @fact.title
     #metadata
-      Creat fa #{time_ago_in_words(@fact.created_at)} per
-      = get_name_or_you(@fact.user)
+      Creat fa #{time_ago_in_words(@fact.created_at)} per #{get_name_or_you(@fact.user)}
+      - if @fact.created_at != @fact.updated_at
+        | Actualitzat per últim cop fa #{time_ago_in_words(@fact.updated_at)}
   #text
     = to_md @fact.description
   %hr
