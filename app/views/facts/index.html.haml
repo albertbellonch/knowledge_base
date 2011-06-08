@@ -31,7 +31,7 @@
             Creat
             fa #{time_ago_in_words(fact.created_at)} per
             = get_name_or_you(fact.user)
-          .text= truncate(fact.description, :length => 500)
+          .text= to_md(fact.description, :length => 500)
         .tags
           - fact.tags.each do |tag|
             .tag= link_to tag, facts_path(:tag => tag.name)

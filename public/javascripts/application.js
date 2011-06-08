@@ -12,6 +12,6 @@ $(document).ready(function(){
   $("textarea.elastic").elastic();
 
   // Activate hightlight
-  hljs.tabReplace = "    ";
+  hljs.tabReplace = "  ";
   hljs.initHighlightingOnLoad();
 });
