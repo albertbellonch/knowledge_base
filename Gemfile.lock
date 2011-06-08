@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    aaronh-chronic (0.3.9)
     abstract (1.0.0)
     actionmailer (3.0.7)
       actionpack (= 3.0.7)
@@ -154,6 +155,9 @@ GEM
     tzinfo (0.3.27)
     warden (1.0.4)
       rack (>= 1.0)
+    whenever (0.6.7)
+      aaronh-chronic (>= 0.3.9)
+      activesupport (>= 2.3.4)
     will_paginate (2.3.15)
 
 PLATFORMS
@@ -174,4 +178,5 @@ DEPENDENCIES
   ruby_parser
   simple_form
   thinking-sphinx (= 2.0.3)
+  whenever
   will_paginate
