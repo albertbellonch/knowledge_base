@@ -47,7 +47,7 @@ class FactsController < ApplicationController
     @tags = Tag.all
 
     if @fact.save
-      redirect_to(root_path, :notice => "L'entrada ha estat creada satisfactòriament")
+      redirect_to(facts_path, :notice => "L'entrada ha estat creada satisfactòriament")
     else
       flash[:alert] = "Assegura't d'introduir el títol i el text abans de crear l'entrada, siusplau"
       render :action => "new"
@@ -59,7 +59,7 @@ class FactsController < ApplicationController
     @tags = Tag.all
 
     unless @fact.user == current_user
-      redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
+      redirect_to(facts_path, :alert => "No pots editar una entrada que no sigui teva")
     end
   end
 
@@ -67,11 +67,11 @@ class FactsController < ApplicationController
     @fact = Fact.find(params[:id])
 
     unless @fact.user == current_user
-      redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
+      redirect_to(facts_path, :alert => "No pots editar una entrada que no sigui teva")
     end
 
     if @fact.update_attributes(params[:fact])
-      redirect_to(root_path, :notice => "L'entrada ha estat actualitzada satisfactòriament")
+      redirect_to(facts_path, :notice => "L'entrada ha estat actualitzada satisfactòriament")
     else
       flash[:alert] = "Assegura't d'introduir el títol i el text abans d'actualitzar l'entrada, siusplau"
       render :action => "edit"
@@ -87,6 +87,6 @@ class FactsController < ApplicationController
       flash[:alert] = "No pots eliminar una entrada que no sigui teva"
     end
 
-    redirect_to root_path
+    redirect_to facts_path
   end
 end

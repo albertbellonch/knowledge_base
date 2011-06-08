@@ -8,7 +8,7 @@
       - else
         Llista d'entrades
   #search-bar
-    = form_tag root_path, :method => "get" do
+    = form_tag facts_path, :method => "get" do
       = text_field_tag :search, @is_search || "Cerca aquí..."
     = link_to "javascript:doSearch();" do
       = image_tag "magnifier-search.png"
@@ -34,7 +34,7 @@
           .text= truncate(fact.description, :length => 500)
         .tags
           - fact.tags.each do |tag|
-            .tag= link_to tag, root_path(:tag => tag.name)
+            .tag= link_to tag, facts_path(:tag => tag.name)
 
 - content_for :custom_js do
   :javascript

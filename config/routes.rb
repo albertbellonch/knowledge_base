@@ -3,11 +3,11 @@ KnowledgeBase::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
 
   devise_for :users, :controllers => {:registrations => 'registrations', :sessions => "sessions"}
-  resources :facts, :except => :index do
+  resources :facts do
     resources :comments
   end
 
   resources :tags, :only => [:create, :destroy]
 
-  root :to => 'facts#index'
+  root :to => 'static#index'
 end
