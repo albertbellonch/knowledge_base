@@ -5,6 +5,9 @@ $(document).ready(function(){
   // Activate facebox
   $("a[rel*=facebox]").facebox();
 
-  /* Activate datepicker */
+  // Activate datepicker
   $(".date").datepicker($.datepicker.regional['ca']);
+
+  // Add elastic to specific textareas
+  $("textarea.elastic").elastic();
 });
