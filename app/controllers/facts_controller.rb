@@ -1,4 +1,6 @@
 class FactsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     # Search params
     @is_search = params[:search]

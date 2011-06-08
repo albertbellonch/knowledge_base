@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  load_and_authorize_resource
+
   def create
     @tag = Tag.new params[:tag]
 

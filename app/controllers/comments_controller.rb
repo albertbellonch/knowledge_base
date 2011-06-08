@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def create
     @comment = Comment.new(params[:comment])
     @fact = Fact.find(params[:fact_id])

@@ -7,8 +7,7 @@
   %body.one_col
     #container
       = render "shared/flash"
-      - if current_user
-        = render "shared/header"
+      = render "shared/header"
       #content= yield
     -#= auto_discovery_link_tag(:rss, rss_url) # RSS
     = javascript_include_tag "jquery-1.5.1.min", "jquery-ui-1.8.13.custom.min", "jquery-rails", "jquery.purr", "jquery-datepicker-ca"

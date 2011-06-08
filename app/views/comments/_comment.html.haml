@@ -2,7 +2,7 @@
   %hr
   .gravatar= gravatar_image_tag(comment.user.email)
   .delete
-    - if comment.user == current_user || @fact.user == current_user
+    - if can? :destroy, comment
       = button_to 'Elimina', fact_comment_path(@fact, comment), :confirm => "N'estas segur?", :method => :delete, :remote => true, :class => "button" |
   .metadata
     %h3= comment.user.name

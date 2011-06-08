@@ -6,8 +6,9 @@
       - nc = "#{99}+" if nc > 99
       #comments= nc
   #links
-    - if @fact.user == current_user
+    - if can? :edit, @fact
       = button_to 'Edita', edit_fact_path(@fact), :method => :get, :class => "button"
+    - if can? :destroy, @fact
       = button_to 'Elimina', fact_path(@fact), :confirm => "Are you sure?", :method => :delete, :class => "button" |
   #head
     %h2= @fact.title

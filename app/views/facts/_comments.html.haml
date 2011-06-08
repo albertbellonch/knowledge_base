@@ -5,9 +5,10 @@
     - comments.each do |comment|
       = render "comments/comment", :comment => comment
   #comment-notice
-  %h4 #{current_user.name}, deixa un comentari!
-  #newcomment
-    #gravatar= gravatar_image_tag(current_user.email)
-    = simple_form_for [fact, Comment.new], :remote => true do |f|
-      = f.text_area :text, :id => "newcomment-area"
-      = f.submit "Envia", :id => "newcomment-button", :class => "button"
+  - if can? :create, fact
+    %h4 #{current_user.name}, deixa un comentari!
+    #newcomment
+      #gravatar= gravatar_image_tag(current_user.email)
+      = simple_form_for [fact, Comment.new], :remote => true do |f|
+        = f.text_area :text, :id => "newcomment-area"
+        = f.submit "Envia", :id => "newcomment-button", :class => "button"
