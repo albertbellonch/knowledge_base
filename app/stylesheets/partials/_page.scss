@@ -76,7 +76,6 @@
     display: inline;
     float: right;
     font-size: 14px;
-    font-weight: bold;
     padding-right: 65px;
     position: absolute;
     top: 10px;
@@ -182,7 +181,6 @@
       padding-left: 115px;
       .metadata{
         float: right;
-        font-weight: bold;
       }
       .text{
         text-align: justify;
@@ -238,7 +236,6 @@
   #links{
     float: right;
     font-size: 14px;
-    font-weight: bold;
     form{
       display: inline;
       padding: 0;
@@ -249,7 +246,6 @@
   }
   #head{
     padding-left: 120px;
-    font-weight: bold;
     #metadata{
       margin-top: -10px;
     }
@@ -291,7 +287,6 @@
           float: right;
         }
         .metadata{
-          font-weight: bold;
           padding-left: 60px;
           .sent{
             margin-top: -10px;

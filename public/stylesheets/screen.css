@@ -532,28 +532,27 @@ a:hover {
   display: inline;
   float: right;
   font-size: 14px;
-  font-weight: bold;
   padding-right: 65px;
   position: absolute;
   top: 10px;
   right: 10px;
 }
-/* line 84, ../../app/stylesheets/partials/_page.scss */
+/* line 83, ../../app/stylesheets/partials/_page.scss */
 #header #links p {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: right;
 }
-/* line 89, ../../app/stylesheets/partials/_page.scss */
+/* line 88, ../../app/stylesheets/partials/_page.scss */
 #header #links ul {
   float: right;
   display: inline;
 }
-/* line 92, ../../app/stylesheets/partials/_page.scss */
+/* line 91, ../../app/stylesheets/partials/_page.scss */
 #header #links ul li {
   display: inline;
 }
-/* line 96, ../../app/stylesheets/partials/_page.scss */
+/* line 95, ../../app/stylesheets/partials/_page.scss */
 #header #links img {
   position: absolute;
   top: 0;
@@ -563,15 +562,15 @@ a:hover {
 /* ======================================================= */
 /*                       Fact list                         */
 /* ======================================================= */
-/* line 107, ../../app/stylesheets/partials/_page.scss */
+/* line 106, ../../app/stylesheets/partials/_page.scss */
 #fact-list {
   position: relative;
 }
-/* line 110, ../../app/stylesheets/partials/_page.scss */
+/* line 109, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar input, #fact-list #search-bar img {
   position: absolute;
 }
-/* line 113, ../../app/stylesheets/partials/_page.scss */
+/* line 112, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar input {
   top: -10px;
   right: 30px;
@@ -586,58 +585,58 @@ a:hover {
   text-align: center;
   padding: 4px 10px 4px 10px;
 }
-/* line 126, ../../app/stylesheets/partials/_page.scss */
+/* line 125, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar input:focus {
   border-color: #666;
   color: black;
   outline: none;
 }
-/* line 132, ../../app/stylesheets/partials/_page.scss */
+/* line 131, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar img {
   top: -10px;
   right: -10px;
 }
-/* line 137, ../../app/stylesheets/partials/_page.scss */
+/* line 136, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination {
   font-size: 15px;
   padding: 5px;
 }
-/* line 140, ../../app/stylesheets/partials/_page.scss */
+/* line 139, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination {
   text-align: center;
 }
-/* line 142, ../../app/stylesheets/partials/_page.scss */
+/* line 141, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination a, #fact-list #pagination .pagination em {
   padding: 2px;
 }
-/* line 145, ../../app/stylesheets/partials/_page.scss */
+/* line 144, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination em {
   color: black;
   font-style: normal;
   padding: 2px 6px;
 }
-/* line 150, ../../app/stylesheets/partials/_page.scss */
+/* line 149, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination .disabled {
   color: #bbb;
 }
-/* line 155, ../../app/stylesheets/partials/_page.scss */
+/* line 154, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact {
   position: relative;
   margin-bottom: 30px;
 }
-/* line 158, ../../app/stylesheets/partials/_page.scss */
+/* line 157, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact img {
   position: absolute;
 }
-/* line 161, ../../app/stylesheets/partials/_page.scss */
+/* line 160, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-link {
   color: #eee;
 }
-/* line 163, ../../app/stylesheets/partials/_page.scss */
+/* line 162, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-link:hover {
   color: white;
 }
-/* line 167, ../../app/stylesheets/partials/_page.scss */
+/* line 166, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-wrapper {
   background-image: url("../images/comments_50.png");
   background-repeat: no-repeat;
@@ -647,47 +646,46 @@ a:hover {
   height: 60px;
   width: 50px;
 }
-/* line 175, ../../app/stylesheets/partials/_page.scss */
+/* line 174, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-wrapper .comments {
   font-size: 20px;
   margin-top: 3px;
   text-align: center;
 }
-/* line 181, ../../app/stylesheets/partials/_page.scss */
+/* line 180, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .rest {
   padding-left: 115px;
 }
-/* line 183, ../../app/stylesheets/partials/_page.scss */
+/* line 182, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .rest .metadata {
   float: right;
-  font-weight: bold;
 }
-/* line 187, ../../app/stylesheets/partials/_page.scss */
+/* line 185, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .rest .text {
   text-align: justify;
 }
-/* line 191, ../../app/stylesheets/partials/_page.scss */
+/* line 189, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags {
   display: inline;
   float: right;
 }
-/* line 194, ../../app/stylesheets/partials/_page.scss */
+/* line 192, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag {
   background: #666;
   display: inline;
   padding: 1px 5px;
 }
-/* line 198, ../../app/stylesheets/partials/_page.scss */
+/* line 196, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag:hover {
   background: black;
   cursor: pointer;
 }
-/* line 202, ../../app/stylesheets/partials/_page.scss */
+/* line 200, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag a {
   color: #eee;
   font-size: 10px;
 }
-/* line 205, ../../app/stylesheets/partials/_page.scss */
+/* line 203, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag a:hover {
   color: white;
 }
@@ -695,16 +693,16 @@ a:hover {
 /* ======================================================= */
 /*                       Fact show                         */
 /* ======================================================= */
-/* line 217, ../../app/stylesheets/partials/_page.scss */
+/* line 215, ../../app/stylesheets/partials/_page.scss */
 #fact-show {
   padding: 10px;
   position: relative;
 }
-/* line 220, ../../app/stylesheets/partials/_page.scss */
+/* line 218, ../../app/stylesheets/partials/_page.scss */
 #fact-show #gravatar {
   position: absolute;
 }
-/* line 223, ../../app/stylesheets/partials/_page.scss */
+/* line 221, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments-wrapper {
   background-image: url("../images/comments_50.png");
   background-repeat: no-repeat;
@@ -714,117 +712,114 @@ a:hover {
   height: 60px;
   width: 50px;
 }
-/* line 231, ../../app/stylesheets/partials/_page.scss */
+/* line 229, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments-wrapper #comments {
   color: #eee;
   font-size: 20px;
   margin-top: 3px;
   text-align: center;
 }
-/* line 238, ../../app/stylesheets/partials/_page.scss */
+/* line 236, ../../app/stylesheets/partials/_page.scss */
 #fact-show #links {
   float: right;
   font-size: 14px;
-  font-weight: bold;
 }
-/* line 242, ../../app/stylesheets/partials/_page.scss */
+/* line 239, ../../app/stylesheets/partials/_page.scss */
 #fact-show #links form {
   display: inline;
   padding: 0;
 }
-/* line 245, ../../app/stylesheets/partials/_page.scss */
+/* line 242, ../../app/stylesheets/partials/_page.scss */
 #fact-show #links form input {
   display: inline;
 }
-/* line 250, ../../app/stylesheets/partials/_page.scss */
+/* line 247, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head {
   padding-left: 120px;
-  font-weight: bold;
 }
-/* line 253, ../../app/stylesheets/partials/_page.scss */
+/* line 249, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head #metadata {
   margin-top: -10px;
 }
-/* line 257, ../../app/stylesheets/partials/_page.scss */
+/* line 253, ../../app/stylesheets/partials/_page.scss */
 #fact-show #text {
   font-size: 14px;
   margin-top: 20px;
   text-align: justify;
 }
-/* line 262, ../../app/stylesheets/partials/_page.scss */
+/* line 258, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags {
   margin-bottom: 30px;
 }
-/* line 264, ../../app/stylesheets/partials/_page.scss */
+/* line 260, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag {
   background: #666;
   display: inline;
   padding: 6px 10px;
 }
-/* line 268, ../../app/stylesheets/partials/_page.scss */
+/* line 264, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag:hover {
   background: black;
   cursor: pointer;
 }
-/* line 272, ../../app/stylesheets/partials/_page.scss */
+/* line 268, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag a {
   color: #eee;
   font-size: 15px;
 }
-/* line 275, ../../app/stylesheets/partials/_page.scss */
+/* line 271, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag a:hover {
   color: white;
 }
-/* line 283, ../../app/stylesheets/partials/_page.scss */
+/* line 279, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment {
   display: block;
   margin-bottom: 20px;
   position: relative;
 }
-/* line 287, ../../app/stylesheets/partials/_page.scss */
+/* line 283, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .gravatar {
   position: absolute;
 }
-/* line 290, ../../app/stylesheets/partials/_page.scss */
+/* line 286, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .delete {
   float: right;
 }
-/* line 293, ../../app/stylesheets/partials/_page.scss */
+/* line 289, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .metadata {
-  font-weight: bold;
   padding-left: 60px;
 }
-/* line 296, ../../app/stylesheets/partials/_page.scss */
+/* line 291, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .metadata .sent {
   margin-top: -10px;
 }
-/* line 300, ../../app/stylesheets/partials/_page.scss */
+/* line 295, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .text {
   font-size: 14px;
   margin-top: 25px;
   text-align: justify;
 }
-/* line 307, ../../app/stylesheets/partials/_page.scss */
+/* line 302, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment {
   position: relative;
 }
-/* line 309, ../../app/stylesheets/partials/_page.scss */
+/* line 304, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment #gravatar {
   position: absolute;
   top: 5px;
 }
-/* line 313, ../../app/stylesheets/partials/_page.scss */
+/* line 308, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment form {
   margin-bottom: 25px;
   padding-left: 60px;
 }
-/* line 316, ../../app/stylesheets/partials/_page.scss */
+/* line 311, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment form textarea {
   display: block;
   height: 120px;
   width: 97%;
 }
-/* line 321, ../../app/stylesheets/partials/_page.scss */
+/* line 316, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment form input[type=submit] {
   float: right;
   margin-top: 10px;
@@ -833,18 +828,18 @@ a:hover {
 /* ======================================================= */
 /*                       Fact form                         */
 /* ======================================================= */
-/* line 333, ../../app/stylesheets/partials/_page.scss */
+/* line 328, ../../app/stylesheets/partials/_page.scss */
 #fact-form {
   padding: 0 10px 10px 10px;
   position: relative;
 }
-/* line 337, ../../app/stylesheets/partials/_page.scss */
+/* line 332, ../../app/stylesheets/partials/_page.scss */
 #fact-form form img {
   position: absolute;
   top: 0;
   left: 15px;
 }
-/* line 342, ../../app/stylesheets/partials/_page.scss */
+/* line 337, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_title {
   font-size: 24px;
   margin-top: -5px;
@@ -852,48 +847,48 @@ a:hover {
   margin-bottom: 20px;
   width: 500px;
 }
-/* line 349, ../../app/stylesheets/partials/_page.scss */
+/* line 344, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #metadata {
   margin-top: 5px;
 }
-/* line 352, ../../app/stylesheets/partials/_page.scss */
+/* line 347, ../../app/stylesheets/partials/_page.scss */
 #fact-form form textarea {
   width: 97%;
 }
-/* line 355, ../../app/stylesheets/partials/_page.scss */
+/* line 350, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags {
   position: relative;
 }
-/* line 357, ../../app/stylesheets/partials/_page.scss */
+/* line 352, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag {
   position: absolute;
   top: -2px;
   right: 0;
 }
-/* line 361, ../../app/stylesheets/partials/_page.scss */
+/* line 356, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag input#tag_name {
   position: absolute;
   right: 25px;
   text-align: center;
   color: #999;
 }
-/* line 366, ../../app/stylesheets/partials/_page.scss */
+/* line 361, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag input#tag_name:focus {
   color: black;
 }
-/* line 370, ../../app/stylesheets/partials/_page.scss */
+/* line 365, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag a#new_tag_link {
   position: absolute;
   top: 2px;
   right: 40px;
 }
-/* line 376, ../../app/stylesheets/partials/_page.scss */
+/* line 371, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud {
   display: block;
   margin-bottom: 20px;
   padding: 10px 0;
 }
-/* line 380, ../../app/stylesheets/partials/_page.scss */
+/* line 375, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag {
   background: #999;
   cursor: pointer;
@@ -903,23 +898,23 @@ a:hover {
   padding: 6px 10px 6px 10px;
   position: relative;
 }
-/* line 388, ../../app/stylesheets/partials/_page.scss */
+/* line 383, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag.selected {
   background: black;
   color: #eee;
 }
-/* line 393, ../../app/stylesheets/partials/_page.scss */
+/* line 388, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag {
   display: inline;
 }
-/* line 395, ../../app/stylesheets/partials/_page.scss */
+/* line 390, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag a {
   position: absolute;
   top: -4px;
   right: 1px;
   color: white;
 }
-/* line 404, ../../app/stylesheets/partials/_page.scss */
+/* line 399, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_submit {
   float: right;
   padding: 7px;
