@@ -180,18 +180,23 @@
     .rest{
       padding-left: 115px;
       .metadata{
-        float: right;
+        font-size: 11px;
+        margin-top: -10px;
       }
       .text{
+        margin-top: 20px;
         text-align: justify;
       }
     }
     .tags{
-      display: inline;
-      float: right;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       .tag{
         background: #666;
-        display: inline;
+        display: inline-block;
         padding: 1px 5px;
         &:hover{
           background: black;
