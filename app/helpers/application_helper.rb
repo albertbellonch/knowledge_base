@@ -10,8 +10,8 @@ module ApplicationHelper
    end
 
   def transform_fence_code text
-    open = "<pre><code>\n"
-    close = "</code></pre>\n"
+    open = "<pre><code>"
+    close = "</code></pre>"
     n = 0
     text = text.gsub(/^```/) { |match|
       n = n+=1 # update counter
