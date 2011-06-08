@@ -2,8 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 gem 'rdiscount'
+
 gem 'devise'
 gem 'omniauth'
+gem 'cancan'
 
 gem 'compass'
 gem 'haml-rails'
