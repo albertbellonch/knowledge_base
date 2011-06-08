@@ -10,4 +10,8 @@ $(document).ready(function(){
 
   // Add elastic to specific textareas
   $("textarea.elastic").elastic();
+
+  // Activate hightlight
+  hljs.tabReplace = "    ";
+  hljs.initHighlightingOnLoad();
 });
