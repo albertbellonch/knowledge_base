@@ -553,7 +553,7 @@ a:hover {
   display: inline;
 }
 /* line 95, ../../app/stylesheets/partials/_page.scss */
-#header #links img {
+#header #links img.pic {
   position: absolute;
   top: 0;
   right: 0;

@@ -12,5 +12,10 @@
       |
       %li= link_to "Nova entrada", new_fact_path
       |
+      -#%li
+      -#  = link_to rss_path(:format => "rss") do
+      -#    RSS
+      -#    = image_tag "rss-header.png"
+      -#|
       %li= link_to "Sortir", destroy_user_session_path
-    = gravatar_image_tag(current_user.email)
+    = gravatar_image_tag current_user.email, :class => "pic"
