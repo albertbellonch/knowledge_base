@@ -9,6 +9,6 @@ KnowledgeBase::Application.routes.draw do
 
   resources :tags, :only => [:create, :destroy]
 
-  #match "/rss" => "static#rss"
+  match "/feed" => "static#feed"
   root :to => 'static#index'
 end
