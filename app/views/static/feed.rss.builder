@@ -8,7 +8,7 @@ xml.rss :version => "2.0" do
     for fact in @facts
       xml.item do
         xml.title fact.title
-        xml.description fact.description
+        xml.description to_md(fact.description)
         xml.publication fact.created_at.to_s(:rfc822)
         xml.author fact.user.name
         xml.link fact_url(fact)
