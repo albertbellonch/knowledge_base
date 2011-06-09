@@ -16,6 +16,8 @@
       - if current_user
         %li= link_to "Nova entrada", new_fact_path
         |
+        %li= link_to "Preferències", edit_user_registration_path
+        |
         %li= link_to "Sortir", destroy_user_session_path
         |
       - else

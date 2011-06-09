@@ -459,7 +459,7 @@ a:hover {
   padding: 15px 30px;
   position: relative;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 90px;
 }
 /* line 14, ../../app/stylesheets/partials/_page.scss */
 #login .tip {
@@ -925,6 +925,64 @@ a:hover {
   float: right;
   padding: 7px;
   width: 180px;
+}
+
+/* ======================================================= */
+/*                      Preferences                        */
+/* ======================================================= */
+/* line 419, ../../app/stylesheets/partials/_page.scss */
+#preferences form fieldset label {
+  width: 45%;
+  margin-right: 30px;
+}
+/* line 423, ../../app/stylesheets/partials/_page.scss */
+#preferences form fieldset .hint {
+  font-size: 12px;
+  font-style: italic;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* line 430, ../../app/stylesheets/partials/_page.scss */
+#preferences form fieldset input[type=submit] {
+  float: right;
+}
+/* line 435, ../../app/stylesheets/partials/_page.scss */
+#preferences #existant, #preferences #available {
+  margin-bottom: 25px;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 439, ../../app/stylesheets/partials/_page.scss */
+#preferences #existant .data, #preferences #available .data {
+  position: absolute;
+  top: -5px;
+  left: 120px;
+}
+/* line 443, ../../app/stylesheets/partials/_page.scss */
+#preferences #existant .data .auth, #preferences #available .data .auth {
+  display: inline-block;
+}
+
+/* ======================================================= */
+/*                       Register                          */
+/* ======================================================= */
+/* line 456, ../../app/stylesheets/partials/_page.scss */
+#register form fieldset label {
+  width: 45%;
+  margin-right: 30px;
+}
+/* line 460, ../../app/stylesheets/partials/_page.scss */
+#register form fieldset .hint {
+  font-size: 12px;
+  font-style: italic;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* line 467, ../../app/stylesheets/partials/_page.scss */
+#register form fieldset input[type=submit] {
+  float: right;
 }
 
 /* line 1, ../../app/stylesheets/partials/_form.scss */

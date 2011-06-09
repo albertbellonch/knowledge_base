@@ -4,14 +4,18 @@
     = image_tag "intranet_40.png", :alt => "Logo Itnig Intranet"
   %hr
   #form
-    .tip Introdueix les teves dades
+    .tip JIntrodueix les teves dades
     = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       = f.input :email, :label => "Correu", :required => false
       = f.input :password, :label => "Contrasenya", :required => false
       - if devise_mapping.rememberable?
         = f.input :remember_me, :as => :boolean, :label => "Recorda'm"
       = f.submit "Entrar"
-    %hr
+  %hr
+  #register
+    .tip També pots registrar-te:
+    = button_to "Registra'm!", new_user_registration_path, :method => :get
+  %hr
   #providers
     .tip O entra a través de
     - ["twitter","facebook"].each do |provider|
