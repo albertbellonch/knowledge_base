@@ -1,7 +1,4 @@
 class StaticController < ApplicationController
-  def index
-  end
-
   def feed
     @facts = Fact.includes(:user).all
 
