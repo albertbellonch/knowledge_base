@@ -27,3 +27,6 @@
         = link_to "http://feeds.feedburner.com/itnig/knowledge" do
           = image_tag "rss-header.png"
     = gravatar_image_tag email, :class => "pic"
+- unless current_user
+  #notconnected
+    No has entrat com a usuari. Pots #{ link_to "registrar-te", new_user_registration_path} o #{ link_to "entrar", new_user_session_path}. Així podràs crear entrades o comentar-ne d'altres!

@@ -100,6 +100,22 @@
   }
 }
 
+#notconnected{
+  border: 2px solid black;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  padding: 4px 10px;
+  vertical-align: middle;
+  background: black;
+  color: white;
+  text-align: center;
+  a{
+    color: #ccc;
+  }
+}
+
 /* ======================================================= */
 /*                       Fact list                         */
 /* ======================================================= */
