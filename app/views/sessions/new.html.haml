@@ -4,7 +4,7 @@
     = image_tag "intranet_40.png", :alt => "Logo Itnig Intranet"
   %hr
   #form
-    .tip JIntrodueix les teves dades
+    .tip Introdueix les teves dades
     = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       = f.input :email, :label => "Correu", :required => false
       = f.input :password, :label => "Contrasenya", :required => false
