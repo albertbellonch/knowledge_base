@@ -1,5 +1,6 @@
 class FactsController < ApplicationController
-  load_and_authorize_resource
+  load_resource :find_by => :title_url
+  authorize_resource
 
   def index
     # Search params
@@ -25,7 +26,7 @@ class FactsController < ApplicationController
   end
 
   def show
-    @fact = Fact.includes(:user,[:comments => :user]).find(params[:id])
+    @fact = Fact.includes(:user,[:comments => :user]).find_by_title_url!(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -57,7 +58,7 @@ class FactsController < ApplicationController
   end
 
   def edit
-    @fact = Fact.includes(:tags).find(params[:id])
+    @fact = Fact.includes(:tags).find_by_title_url!(params[:id])
     @tags = Tag.all
 
     unless @fact.user == current_user
@@ -66,7 +67,7 @@ class FactsController < ApplicationController
   end
 
   def update
-    @fact = Fact.find(params[:id])
+    @fact = Fact.find_by_title_url!(params[:id])
 
     unless @fact.user == current_user
       redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
@@ -81,7 +82,7 @@ class FactsController < ApplicationController
   end
 
   def destroy
-    @fact = Fact.find(params[:id])
+    @fact = Fact.find_by_title_url!(params[:id])
     if @fact.user == current_user
       @fact.destroy
       flash[:notice] = "L'entrada s'ha eliminat satisfactòriament"

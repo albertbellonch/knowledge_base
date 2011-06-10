@@ -154,6 +154,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.27)
+    unicode (0.4.0)
     warden (1.0.4)
       rack (>= 1.0)
     whenever (0.6.7)
@@ -180,5 +181,6 @@ DEPENDENCIES
   ruby_parser
   simple_form
   thinking-sphinx (= 2.0.3)
+  unicode
   whenever
   will_paginate

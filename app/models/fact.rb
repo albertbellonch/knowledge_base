@@ -1,5 +1,6 @@
 class Fact < ActiveRecord::Base
   validates :title,  :presence => true
+  validates_uniqueness_of :title
   validates :description, :presence => true,
                     :length => { :minimum => 5 }
   validates_presence_of :user
@@ -18,10 +19,15 @@ class Fact < ActiveRecord::Base
     title
   end
 
+  def to_param
+    title_url
+  end
+
   # Sphinx
   define_index do
     # fields
     indexes title
+    indexes title_url
     indexes description
     indexes user.name
     indexes user.email

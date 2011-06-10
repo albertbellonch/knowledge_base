@@ -19,6 +19,7 @@ gem 'gravatar_image_tag'
 gem 'thinking-sphinx', '2.0.3'
 
 gem 'lorem'
+gem 'unicode'
 
 gem "rake", "0.8.7"
 gem "whenever", :require => false
