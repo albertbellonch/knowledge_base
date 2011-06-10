@@ -47,12 +47,13 @@ class FactsController < ApplicationController
   def create
     @fact = Fact.new(params[:fact])
     @fact.user = current_user
-    @tags = Tag.all
 
     if @fact.save
+      @fact.reload
       redirect_to(root_path, :notice => "L'entrada ha estat creada satisfactòriament")
     else
-      flash[:alert] = "Assegura't d'introduir el títol i el text abans de crear l'entrada, siusplau"
+      @tags = Tag.all
+      flash[:alert] = "Assegura't d'introduir el títol (ha de ser únic!) i el text abans de crear l'entrada, siusplau"
       render :action => "new"
     end
   end

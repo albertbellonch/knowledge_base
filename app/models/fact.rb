@@ -10,6 +10,8 @@ class Fact < ActiveRecord::Base
   has_many :comments
   belongs_to :user
 
+  before_create :calculate_title_url
+
   default_scope order("created_at DESC")
 
   # All posts for that tag (remember a tag name is unique)
@@ -21,6 +23,10 @@ class Fact < ActiveRecord::Base
 
   def to_param
     title_url
+  end
+
+  def calculate_title_url
+    self.title_url = title.downcase.to_ascii.gsub(/[^[:alnum:]]/,'-')
   end
 
   # Sphinx
