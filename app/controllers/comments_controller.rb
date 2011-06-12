@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(params[:comment])
-    @fact = Fact.find(params[:fact_id])
+    @fact = Fact.find_by_title_url!(params[:fact_id])
     @comment.fact = @fact
     @comment.user = current_user
 
