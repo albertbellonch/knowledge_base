@@ -10,7 +10,7 @@ class Fact < ActiveRecord::Base
   has_many :comments
   belongs_to :user
 
-  before_create :calculate_title_url
+  before_save :calculate_title_url
 
   default_scope order("created_at DESC")
 
