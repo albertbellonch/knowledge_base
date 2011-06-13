@@ -7,4 +7,4 @@
   .metadata
     %h3= comment.user.name
     .sent Enviat fa #{time_ago_in_words(comment.created_at)}
-  .text= comment.text
+  .text= to_md comment.text

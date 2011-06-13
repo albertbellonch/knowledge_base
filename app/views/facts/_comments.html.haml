@@ -9,6 +9,7 @@
     %h4 #{current_user.name}, deixa un comentari!
     #newcomment
       #gravatar= gravatar_image_tag(current_user.email)
+      .tip Aquest text es formatarà amb #{link_to 'Markdown', "http://daringfireball.net/projects/markdown/syntax", { :target => "_new" }}. A més, pots assenyalar codi envoltant-lo de "```".
       = simple_form_for [fact, Comment.new], :remote => true do |f|
         = f.text_area :text, :id => "newcomment-area"
         = f.submit "Envia", :id => "newcomment-button", :class => "button"
