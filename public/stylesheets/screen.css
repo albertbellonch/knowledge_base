@@ -862,7 +862,7 @@ a:hover {
   position: relative;
 }
 /* line 357, ../../app/stylesheets/partials/_page.scss */
-#fact-form form img {
+#fact-form form img#plus {
   position: absolute;
   top: 0;
   left: 15px;
@@ -910,13 +910,17 @@ a:hover {
   top: 2px;
   right: 40px;
 }
-/* line 396, ../../app/stylesheets/partials/_page.scss */
+/* line 394, ../../app/stylesheets/partials/_page.scss */
+#fact-form form #tags #new_tag a#new_tag_link img {
+  display: block;
+}
+/* line 399, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud {
   display: block;
   margin-bottom: 20px;
   padding: 10px 0;
 }
-/* line 400, ../../app/stylesheets/partials/_page.scss */
+/* line 403, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag {
   background: #999;
   cursor: pointer;
@@ -926,23 +930,23 @@ a:hover {
   padding: 6px 10px 6px 10px;
   position: relative;
 }
-/* line 408, ../../app/stylesheets/partials/_page.scss */
+/* line 411, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag.selected {
   background: black;
   color: #eee;
 }
-/* line 413, ../../app/stylesheets/partials/_page.scss */
+/* line 416, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag {
   display: inline;
 }
-/* line 415, ../../app/stylesheets/partials/_page.scss */
+/* line 418, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag a {
   position: absolute;
   top: -4px;
   right: 1px;
   color: white;
 }
-/* line 424, ../../app/stylesheets/partials/_page.scss */
+/* line 427, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_submit {
   float: right;
   padding: 7px;
@@ -952,12 +956,12 @@ a:hover {
 /* ======================================================= */
 /*                      Preferences                        */
 /* ======================================================= */
-/* line 438, ../../app/stylesheets/partials/_page.scss */
+/* line 441, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset label {
   width: 45%;
   margin-right: 30px;
 }
-/* line 442, ../../app/stylesheets/partials/_page.scss */
+/* line 445, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset .hint {
   font-size: 12px;
   font-style: italic;
@@ -965,23 +969,23 @@ a:hover {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 449, ../../app/stylesheets/partials/_page.scss */
+/* line 452, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset input[type=submit] {
   float: right;
 }
-/* line 454, ../../app/stylesheets/partials/_page.scss */
+/* line 457, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant, #preferences #available {
   margin-bottom: 25px;
   position: relative;
   vertical-align: middle;
 }
-/* line 458, ../../app/stylesheets/partials/_page.scss */
+/* line 461, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant .data, #preferences #available .data {
   position: absolute;
   top: -5px;
   left: 120px;
 }
-/* line 462, ../../app/stylesheets/partials/_page.scss */
+/* line 465, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant .data .auth, #preferences #available .data .auth {
   display: inline-block;
 }
@@ -989,12 +993,12 @@ a:hover {
 /* ======================================================= */
 /*                       Register                          */
 /* ======================================================= */
-/* line 475, ../../app/stylesheets/partials/_page.scss */
+/* line 478, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset label {
   width: 45%;
   margin-right: 30px;
 }
-/* line 479, ../../app/stylesheets/partials/_page.scss */
+/* line 482, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset .hint {
   font-size: 12px;
   font-style: italic;
@@ -1002,7 +1006,7 @@ a:hover {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 486, ../../app/stylesheets/partials/_page.scss */
+/* line 489, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset input[type=submit] {
   float: right;
 }

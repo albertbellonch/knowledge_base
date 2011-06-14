@@ -22,7 +22,7 @@
       #new_tag
         = text_field_tag :tag_name, "Nou tag aquí..."
         = link_to "#", :id => "new_tag_link" do
-          = image_tag "add.png"
+          = image_tag "add.png", :id => "plus"
       #tag_cloud
         - @tags.each do |t|
           = render "tags/tag", :tag => t

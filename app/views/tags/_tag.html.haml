@@ -1,5 +1,6 @@
 - selected = @fact && @fact.tags.include?(tag)
 %div{:class => "tag #{selected ? "selected" : ""}"}
   .delete-tag{:style => "display: none"}
-    = link_to "X", "#tag-cloud", :data_tag => tag.id
+    = link_to "#tag-cloud", :data_tag => tag.id do
+      = image_tag "cross.png"
   = tag.name

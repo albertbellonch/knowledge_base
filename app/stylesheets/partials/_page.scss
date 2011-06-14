@@ -354,7 +354,7 @@
   padding: 0 10px 10px 10px;
   position: relative;
   form{
-    img{
+    img#plus{
       position: absolute;
       top: 0;
       left: 15px;
@@ -391,6 +391,9 @@
           position: absolute;
           top: 2px;
           right: 40px;
+          img{
+            display: block;
+          }
         }
       }
       #tag_cloud{
