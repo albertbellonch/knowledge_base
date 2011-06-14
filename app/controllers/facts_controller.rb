@@ -26,7 +26,7 @@ class FactsController < ApplicationController
   end
 
   def show
-    @fact = Fact.includes(:user,[:comments => :user]).find_by_title_url!(params[:id])
+    @fact = Fact.includes(:user,[:comments => [:user,:fact]]).find_by_title_url!(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
