@@ -41,5 +41,8 @@ class Fact < ActiveRecord::Base
 
     # attributes
     has created_at
+
+    # delta indexing
+    set_property :delta => true
   end
 end

@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
 
+  after_save :set_facts_delta_flag
+
   def apply_omniauth(omniauth)
     self.name = omniauth['user_info']['name'] if name.blank?
     self.email = omniauth['user_info']['email'] if email.blank?
@@ -25,5 +27,16 @@ class User < ActiveRecord::Base
 
   def to_s
     name
+  end
+
+  private
+
+  def set_facts_delta_flag
+    if name_changed? || email_changed?
+      facts.each do |fact|
+        fact.delta = true
+        fact.save
+      end
+    end
   end
 end
