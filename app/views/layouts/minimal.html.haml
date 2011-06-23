@@ -1,7 +1,11 @@
 !!!
 %html
   %head
-    %title KnowledgeBase
+    %title
+      - if content_for?(:custom_title)
+        = yield :custom_title
+        \|
+      Knowledge Base
     = stylesheet_link_tag "screen"
     = csrf_meta_tag
   %body.one_col

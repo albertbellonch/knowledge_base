@@ -1,3 +1,5 @@
+- content_for :custom_title do
+  = @fact.title
 #fact-show
   #gravatar= gravatar_image_tag(@fact.user.email)
   = link_to "#comments" do

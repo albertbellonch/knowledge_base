@@ -1,7 +1,11 @@
 !!!
 %html
   %head
-    %title KnowledgeBase
+    %title
+      - if content_for?(:custom_title)
+        = yield :custom_title
+        \|
+      KnowledgeBase
     = stylesheet_link_tag "screen"
     = csrf_meta_tag
   %body.one_col
@@ -9,6 +13,10 @@
       = render "shared/flash"
       = render "shared/header"
       #content= yield
+    = link_to "Date", "#test", :rel => "facebox"
+    #test{:style => "display: none"}
+      = text_field_tag :blabla, "", :class => "date"
+    %p
     = auto_discovery_link_tag(:rss, feed_url(:format => :rss)) # RSS
     = javascript_include_tag "jquery-1.5.1.min", "jquery-ui-1.8.13.custom.min", "jquery-rails", "jquery.purr", "jquery-datepicker-ca"
     = javascript_include_tag "facebox"
@@ -16,3 +24,10 @@
     = javascript_include_tag "highlight.pack"
     = javascript_include_tag "application"
     = yield :custom_js
+    :javascript
+      $(document).bind('reveal.facebox', function() {
+        //$('#facebox .date').each( function(intIndex){
+        //  $(this).attr('id',jQuery(this).attr('id') + '-boxed')
+        //}
+        //$('#blabla-boxed').datepicker($.datepicker.regional['ca']);
+      })
