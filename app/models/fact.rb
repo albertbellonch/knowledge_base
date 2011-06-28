@@ -14,8 +14,11 @@ class Fact < ActiveRecord::Base
 
   default_scope order("created_at DESC")
 
-  # All posts for that tag (remember a tag name is unique)
+  # All facts for that tag (remember a tag name is unique)
   scope :for_tag, lambda {|tag_name| joins(:tags).where(:tags => {:name => tag_name}) }
+
+  # All facts for that user name (remember a user name is also unique!)
+  scope :for_user, lambda {|user_name| joins(:user).where(:users => {:name => user_name}) }
 
   def to_s
     title

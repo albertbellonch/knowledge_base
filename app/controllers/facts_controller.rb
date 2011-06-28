@@ -6,13 +6,21 @@ class FactsController < ApplicationController
     # Search params
     @is_search = params[:search]
 
-    # Get base
     if @is_search
+      # Search directly
       @total = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc, :include => [:user,:comments,:tags])
     else
-      @tag = params[:tag]
+      # Get base
       @base = Fact.includes(:user,:comments,:tags)
-      @total = @tag.present? ? @base.for_tag(@tag) : @base.all
+
+      # Get total
+      if @tag = params[:tag]
+        @total = @base.for_tag(@tag)
+      elsif @user = params[:user]
+        @total = @base.for_user(@user)
+      else
+        @total = @base.all
+      end
     end
 
     # And paginate!

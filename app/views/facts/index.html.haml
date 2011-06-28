@@ -1,14 +1,18 @@
+-# get title, to be used both in the page title and as H2
+- if @is_search
+  - title = "Resultats de cerca"
+- else
+  - if @tag
+    - title = "Entrades del tag '#{@tag.capitalize}'"
+  - elsif @user
+    - title = "Entrades de l'usuari '#{@user}'"
+  - else
+    - title = "Llista d'entrades"
+
 - content_for :custom_title do
-  = "Llista d'entrades"
+  = title
 #fact-list
-  %h2
-    - if @is_search
-      Resultats de cerca
-    - else
-      - if @tag
-        Entrades del tag '#{@tag.capitalize}'
-      - else
-        Llista d'entrades
+  %h2= title
   #search-bar
     = form_tag root_path, :method => "get" do
       = text_field_tag :search, @is_search || "Cerca aquí..."
@@ -20,7 +24,8 @@
   - @facts.each do |fact|
     %hr
     .fact
-      = gravatar_image_tag(fact.user.email)
+      = link_to root_path(:user => fact.user.name) do
+        = gravatar_image_tag(fact.user.email)
       = link_to fact_path(fact, :anchor => "comments"), :class => "comments-link" do
         .comments-wrapper
           - nc = fact.comments.size
