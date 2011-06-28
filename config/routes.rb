@@ -10,5 +10,5 @@ KnowledgeBase::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create'
 
   match "/feed" => "static#feed"
-  root :to => 'facts#index'
+  match "/(:page)" => "facts#index", :as => :root
 end
