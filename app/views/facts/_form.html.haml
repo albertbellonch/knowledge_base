@@ -6,15 +6,22 @@
     #metadata
       - unless @fact.new_record?
         -# metadata
+    %hr
 
     -# DESCRIPTION
-    %hr
     Aquest text es formatarà amb #{link_to 'Markdown', "http://daringfireball.net/projects/markdown/syntax", { :target => "_new" }}. A més, pots assenyalar codi envoltant-lo de "```".
     %br
     = f.text_area :description, :id => "description_area", :class => "elastic"
 
-    -# TAGS
     %hr
+
+    -# CATEGORY
+    #category
+      %h3 Categoria
+      #category_picker= f.input :category, :as => :radio, :collection => Fact::CATEGORIES
+
+    -# TAGS
+    %br
     #tags
       %h3 Etiquetes
       #tag_inputs

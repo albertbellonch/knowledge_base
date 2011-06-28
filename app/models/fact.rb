@@ -1,9 +1,12 @@
 class Fact < ActiveRecord::Base
+  CATEGORIES = ["Enginyeria","Màrqueting","Disseny"]
+
   validates :title,  :presence => true
   validates_uniqueness_of :title
   validates :description, :presence => true,
                     :length => { :minimum => 5 }
   validates_presence_of :user
+  validate :adequate_category
 
   has_many :fact_tags
   has_many :tags, :through => :fact_tags
@@ -26,6 +29,10 @@ class Fact < ActiveRecord::Base
 
   def to_param
     title_url
+  end
+
+  def adequate_category
+    errors.add(:category, "Not valid") unless CATEGORIES.include?(category)
   end
 
   def calculate_title_url

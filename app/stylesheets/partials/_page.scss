@@ -372,6 +372,26 @@
     textarea{
       width: 97%;
     }
+    #category{
+      position: relative;
+      label[for=fact_category]{
+        display: none; // hide label!
+      }
+      #category_picker{
+        position: absolute;
+        top: 0;
+        left: 250px;
+        input{
+          width: 20px;
+        }
+        span label{
+          display: inline;
+          float: none;
+          text-align: left;
+          padding-right: 30px;
+        }
+      }
+    }
     #tags{
       position: relative;
       #new_tag{
