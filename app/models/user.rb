@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :authentications
 
   validates_presence_of :name
+  validates_uniqueness_of :name
 
   after_save :set_facts_delta_flag
 
