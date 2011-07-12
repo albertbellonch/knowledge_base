@@ -1,4 +1,6 @@
 class FactsController < ApplicationController
+  before_filter :show_find, :only => :show
+  before_filter :edit_find, :only => :edit
   load_resource :find_by => :title_url
   authorize_resource
 
@@ -34,8 +36,6 @@ class FactsController < ApplicationController
   end
 
   def show
-    @fact = Fact.includes(:user,[:comments => [:user,:fact]]).find_by_title_url!(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @fact }
@@ -67,7 +67,6 @@ class FactsController < ApplicationController
   end
 
   def edit
-    @fact = Fact.includes(:tags).find_by_title_url!(params[:id])
     @tags = Tag.all
 
     unless @fact.user == current_user
@@ -100,5 +99,15 @@ class FactsController < ApplicationController
     end
 
     redirect_to root_path
+  end
+
+  private
+
+  def show_find
+    @fact = Fact.includes(:user,[:comments => [:user,:fact]]).find_by_title_url!(params[:id])
+  end
+
+  def edit_find
+    @fact = Fact.includes(:tags).find_by_title_url!(params[:id])
   end
 end
