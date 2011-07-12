@@ -28,28 +28,14 @@ class FactsController < ApplicationController
     # And paginate!
     @page = params[:page] || 1
     @facts = @total.paginate :page => @page, :per_page => 10
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @facts }
-    end
   end
 
   def show
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @fact }
-    end
   end
 
   def new
     @fact = Fact.new
     @tags = Tag.includes(:fact_tags)
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @fact }
-    end
   end
 
   def create
