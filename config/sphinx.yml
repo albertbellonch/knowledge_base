@@ -1,0 +1,11 @@
+defaults: &defaults
+  port: 23761
+
+production:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
