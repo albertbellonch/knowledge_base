@@ -1,12 +1,12 @@
-/* line 4, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* line 18, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote, q, th, td, caption, table,
+/* line 18, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
 div, span, object, iframe, p,
 pre, a, abbr, acronym, address,
 code, del, dfn, em, img,
@@ -23,21 +23,21 @@ caption, tbody, tfoot, thead, tr {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
-article, aside, dialog, figure, footer, header, hgroup, nav, section {
+/* line 20, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 21, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 21, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   quotes: "" "";
 }
-/* line 67, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 67, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 22, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   float: none !important;
   text-align: left;
@@ -45,14 +45,14 @@ th, td, caption {
   vertical-align: middle;
 }
 
-/* line 23, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 23, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ree-1.8.7-2011.03/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none;
 }
