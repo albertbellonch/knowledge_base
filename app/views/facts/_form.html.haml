@@ -31,8 +31,13 @@
         = link_to "#", :id => "new_tag_link" do
           = image_tag "add.png", :id => "plus"
       #tag_cloud
-        - @tags.each do |t|
-          = render "tags/tag", :tag => t
+        - @tags.each do |tag|
+          - selected = @fact && @fact.tags.map{|t|t.id}.include?(tag.id)
+          %div{:class => "tag #{selected ? "selected" : ""}"}
+            .delete-tag{:style => "display: none"}
+              = link_to "#tag-cloud", :data_tag => tag.id do
+                = image_tag "cross.png"
+            = tag.name
 
     -# LINKS
     = f.submit (@fact.new_record? ? "Crear entrada" : "Actualitzar entrada")

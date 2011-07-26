@@ -94,6 +94,6 @@ class FactsController < ApplicationController
   end
 
   def edit_find
-    @fact = Fact.includes(:tags).find_by_title_url!(params[:id])
+    @fact = Fact.includes(:fact_tags).find_by_title_url!(params[:id])
   end
 end
