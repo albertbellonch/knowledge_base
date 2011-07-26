@@ -1,8 +1,9 @@
 -# Calculate name and mail
 - name = current_user ? current_user.name : "Desconegut"
 - email = current_user ? current_user.email : ""
-- key = email=="" ? "-" : email
-- cache "header_lang_#{I18n.locale}_user_#{key}_at_#{current_user.updated_at}" do
+- user_key = current_user ? email : "-"
+- user_upd = current_user ? current_user.updated_at : "-"
+- cache "header_lang_#{I18n.locale}_user_#{user_key}_at_#{user_upd}" do
   #header
     #logo
       = link_to root_path do
