@@ -1,0 +1,25 @@
+package_assets:         on      # (on, off, always)
+embed_assets:           datauri     # (on, off, datauri)
+compress_assets:        on          # (on, off)
+gzip_assets:            on          # (on, off)
+template_function:      _.template  # (defaults to the built-in micro-templating)
+package_path:           packages    # (defaults to assets)
+javascript_compressor:  yui     # (yui, closure)
+# compressor_options:
+#   compilation_level: ADVANCED_OPTIMIZATIONS
+
+javascripts:
+  frontend:
+    - public/javascripts/jquery-1.5.1.min.js
+    - public/javascripts/jquery-ui-1.8.13.custom.min.js
+    - public/javascripts/jquery-rails.js
+    - public/javascripts/jquery.purr.js
+    - public/javascripts/jquery-datepicker-ca.js
+    - public/javascripts/facebox.js
+    - public/javascripts/elastic.js
+    - public/javascripts/highlight.pack.js
+    - public/javascripts/application.js
+
+stylesheets:
+  screen:
+    - public/stylesheets/screen.css
