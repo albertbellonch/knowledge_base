@@ -23,4 +23,8 @@ module ApplicationHelper
   def get_name_or_you(user)
     (user == current_user)?"tu":user.name
   end
+
+  def cached_timestamp(datetime)
+    "<span class='relative_time' title='#{datetime.iso8601}'>#{datetime}</span>".html_safe
+  end
 end

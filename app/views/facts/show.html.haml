@@ -18,10 +18,13 @@
     #head
       %h2= @fact.title
       #metadata
-        Creat fa #{time_ago_in_words(@fact.created_at)} per
+        Creat
+        = cached_timestamp(@fact.created_at)
+        per
         = link_to get_name_or_you(@fact.user), root_path(:user => @fact.user.name)
         - if @fact.created_at != @fact.updated_at
-          | Actualitzat per últim cop fa #{time_ago_in_words(@fact.updated_at)}
+          | Actualitzat per últim cop
+          = cached_timestamp(@fact.updated_at)
     #text
       = to_md @fact.description
     %hr
