@@ -1,27 +1,29 @@
 - content_for :custom_title do
   = @fact.title
-#fact-show
-  #gravatar= gravatar_image_tag(@fact.user.email)
-  = link_to "#comments" do
-    #comments-wrapper
-      - nc = @fact.comments.size
-      - nc = "#{99}+" if nc > 99
-      #comments= nc
-  #links
-    - if can? :edit, @fact
-      = button_to 'Edita', edit_fact_path(@fact), :method => :get, :class => "button"
-    - if can? :destroy, @fact
-      = button_to 'Elimina', fact_path(@fact), :confirm => "Are you sure?", :method => :delete, :class => "button" |
-  #head
-    %h2= @fact.title
-    #metadata
-      Creat fa #{time_ago_in_words(@fact.created_at)} per
-      = link_to get_name_or_you(@fact.user), root_path(:user => @fact.user.name)
-      - if @fact.created_at != @fact.updated_at
-        | Actualitzat per últim cop fa #{time_ago_in_words(@fact.updated_at)}
-  #text
-    = to_md @fact.description
-  %hr
-  = render "tags", :tags => @fact.tags
-  %hr
-  = render "comments", :comments => @fact.comments, :fact => @fact
+
+- cache "fact-show_lang_#{I18n.locale}_fact_#{@fact.id}_at_#{@fact.updated_at}_for_#{current_user.email}" do
+  #fact-show
+    #gravatar= gravatar_image_tag(@fact.user.email)
+    = link_to "#comments" do
+      #comments-wrapper
+        - nc = @fact.comments.size
+        - nc = "#{99}+" if nc > 99
+        #comments= nc
+    #links
+      - if can? :edit, @fact
+        = button_to 'Edita', edit_fact_path(@fact), :method => :get, :class => "button"
+      - if can? :destroy, @fact
+        = button_to 'Elimina', fact_path(@fact), :confirm => "Are you sure?", :method => :delete, :class => "button" |
+    #head
+      %h2= @fact.title
+      #metadata
+        Creat fa #{time_ago_in_words(@fact.created_at)} per
+        = link_to get_name_or_you(@fact.user), root_path(:user => @fact.user.name)
+        - if @fact.created_at != @fact.updated_at
+          | Actualitzat per últim cop fa #{time_ago_in_words(@fact.updated_at)}
+    #text
+      = to_md @fact.description
+    %hr
+    = render "tags", :tags => @fact.tags
+    %hr
+    = render "comments", :comments => @fact.comments, :fact => @fact
