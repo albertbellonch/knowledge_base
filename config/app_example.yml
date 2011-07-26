@@ -1,0 +1,20 @@
+defaults: &defaults
+  name: "Knowledge Base"
+  mail:
+    smtp:
+      address: "smtp.gmail.com"
+      port: 587
+      domain: "itnig.net"
+    account:
+      user_name: "notifier@itnig.net"
+      password: "3UnTrhWj"
+  hostname: "localhost:3000"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
