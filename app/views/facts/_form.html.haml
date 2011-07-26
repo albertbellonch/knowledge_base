@@ -1,7 +1,7 @@
 #fact-form
   = simple_form_for @fact, :html => { :id => "fact_form" } do |f|
     -# HEADER
-    = gravatar_image_tag(current_user.email)
+    = gravatar_image_tag(current_user.email, :class => "plus")
     = f.text_field :title
     #metadata
       - unless @fact.new_record?

@@ -862,7 +862,7 @@ a:hover {
   position: relative;
 }
 /* line 357, ../../app/stylesheets/partials/_page.scss */
-#fact-form form img#plus {
+#fact-form form img.plus {
   position: absolute;
   top: 0;
   left: 15px;
