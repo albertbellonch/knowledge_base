@@ -1,32 +1,33 @@
-#header
-  #logo
-    = link_to root_path do
-      Knowledge Base
-      = image_tag "intranet_50.png", :alt => "Logo Itnig Intranet"
-  #links
-    -# Calculate name and mail
-    - name = current_user ? current_user.name : "Desconegut"
-    - email = current_user ? current_user.email : ""
-
-    -# Render
-    %p= name
-    %ul
-      %li= link_to "Llista d'entrades", root_path
-      |
-      - if current_user
-        %li= link_to "Nova entrada", new_fact_path
+-# Calculate name and mail
+- name = current_user ? current_user.name : "Desconegut"
+- email = current_user ? current_user.email : ""
+- key = email=="" ? "-" : email
+- cache "header_lang_#{I18n.locale}_user_#{key}_at_#{current_user.updated_at}" do
+  #header
+    #logo
+      = link_to root_path do
+        Knowledge Base
+        = image_tag "intranet_50.png", :alt => "Logo Itnig Intranet"
+    #links
+      -# Render
+      %p= name
+      %ul
+        %li= link_to "Llista d'entrades", root_path
         |
-        %li= link_to "Preferències", edit_user_registration_path
-        |
-        %li= link_to "Sortir", destroy_user_session_path
-        |
-      - else
-        %li= link_to "Entrar", new_user_session_path
-        |
-      %li
-        = link_to "http://feeds.feedburner.com/itnig/knowledge" do
-          = image_tag "rss-header.png"
-    = gravatar_image_tag email, :class => "pic"
-- unless current_user
-  #notconnected
-    No has entrat com a usuari. Pots #{ link_to "registrar-te", new_user_registration_path} o #{ link_to "entrar", new_user_session_path}. Així podràs crear entrades o comentar-ne d'altres!
+        - if current_user
+          %li= link_to "Nova entrada", new_fact_path
+          |
+          %li= link_to "Preferències", edit_user_registration_path
+          |
+          %li= link_to "Sortir", destroy_user_session_path
+          |
+        - else
+          %li= link_to "Entrar", new_user_session_path
+          |
+        %li
+          = link_to "http://feeds.feedburner.com/itnig/knowledge" do
+            = image_tag "rss-header.png"
+      = gravatar_image_tag email, :class => "pic"
+  - unless current_user
+    #notconnected
+      No has entrat com a usuari. Pots #{ link_to "registrar-te", new_user_registration_path} o #{ link_to "entrar", new_user_session_path}. Així podràs crear entrades o comentar-ne d'altres!
