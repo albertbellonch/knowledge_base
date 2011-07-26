@@ -1,6 +1,10 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    POpen4 (0.1.4)
+      Platform (>= 0.4.0)
+      open4
+    Platform (0.4.0)
     aaronh-chronic (0.3.9)
     abstract (1.0.0)
     actionmailer (3.0.7)
@@ -59,6 +63,8 @@ GEM
       railties (~> 3.0)
     hpricot (0.8.4)
     i18n (0.5.0)
+    jammit (0.6.3)
+      yui-compressor (>= 0.9.3)
     lorem (0.1.2)
     mail (2.2.19)
       activesupport (>= 2.3.6)
@@ -109,6 +115,7 @@ GEM
       oa-more (= 0.2.6)
       oa-oauth (= 0.2.6)
       oa-openid (= 0.2.6)
+    open4 (1.1.0)
     orm_adapter (0.0.5)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.3)
@@ -161,6 +168,8 @@ GEM
       aaronh-chronic (>= 0.3.9)
       activesupport (>= 2.3.4)
     will_paginate (2.3.15)
+    yui-compressor (0.9.6)
+      POpen4 (>= 0.1.4)
 
 PLATFORMS
   ruby
@@ -172,6 +181,7 @@ DEPENDENCIES
   gravatar_image_tag
   haml-rails
   hpricot
+  jammit
   lorem
   mysql2 (= 0.2.7)
   omniauth

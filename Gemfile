@@ -18,6 +18,8 @@ gem 'gravatar_image_tag'
 
 gem 'thinking-sphinx', '2.0.3'
 
+gem 'jammit'
+
 gem 'lorem'
 gem 'unicode'
 
