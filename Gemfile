@@ -29,3 +29,7 @@ gem "rake", "0.8.7"
 gem "whenever", :require => false
 
 gem 'mysql2', "0.2.7"
+
+group :production do
+  gem "exception_notification", :require => 'exception_notifier'
+end
