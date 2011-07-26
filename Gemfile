@@ -23,6 +23,8 @@ gem 'jammit'
 gem 'lorem'
 gem 'unicode'
 
+gem "dalli"
+
 gem "rake", "0.8.7"
 gem "whenever", :require => false
 
