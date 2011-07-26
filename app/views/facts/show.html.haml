@@ -1,7 +1,8 @@
 - content_for :custom_title do
   = @fact.title
 
-- cache "fact-show_lang_#{I18n.locale}_fact_#{@fact.id}_at_#{@fact.updated_at}_for_#{current_user.email}" do
+- user_key = current_user ? current_user.email : "-"
+- cache "fact-show_lang_#{I18n.locale}_fact_#{@fact.id}_at_#{@fact.updated_at}_for_#{user_key}" do
   #fact-show
     #gravatar= gravatar_image_tag(@fact.user.email)
     = link_to "#comments" do
