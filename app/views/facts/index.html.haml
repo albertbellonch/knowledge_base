@@ -35,21 +35,21 @@
             - nc = fact.comments.size
             - nc = "#{99}+" if nc > 99
             .comments= nc
-        = link_to fact do
-          .metadata
+        .metadata
+          = link_to fact do
             %h3= fact.title
-            .dates
-              Creat
-              = cached_timestamp(fact.created_at)
-              per
-              = get_name_or_you(fact.user)
-              - if fact.created_at != fact.updated_at
-                | Actualitzat per últim cop
-                = cached_timestamp(fact.updated_at)
-          .text= to_md(fact.description, :length => 600)
-          .tags
-            - fact.tags.each do |tag|
-              .tag= link_to tag, root_path(:tag => tag.name)
+          .dates
+            Creat
+            = cached_timestamp(fact.created_at)
+            per
+            = get_name_or_you(fact.user)
+            - if fact.created_at != fact.updated_at
+              | Actualitzat per últim cop
+              = cached_timestamp(fact.updated_at)
+        .text= to_md(fact.description, :length => 600)
+        .tags
+          - fact.tags.each do |tag|
+            .tag= link_to tag, root_path(:tag => tag.name)
 
 - content_for :custom_js do
   :javascript
