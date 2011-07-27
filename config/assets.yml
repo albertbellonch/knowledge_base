@@ -4,7 +4,7 @@ compress_assets:        on          # (on, off)
 gzip_assets:            on          # (on, off)
 template_function:      _.template  # (defaults to the built-in micro-templating)
 package_path:           packages    # (defaults to assets)
-javascript_compressor:  yui     # (yui, closure)
+javascript_compressor:  closure     # (yui, closure)
 # compressor_options:
 #   compilation_level: ADVANCED_OPTIMIZATIONS
 
