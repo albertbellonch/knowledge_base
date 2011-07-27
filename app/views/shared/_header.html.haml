@@ -6,10 +6,12 @@
 - cache "header_lang_#{I18n.locale}_user_#{user_key}_at_#{user_upd}" do
   #header
     #logo
-      = link_to root_path do
-        Knowledge Base
-      = link_to "http://itnig.net" do
+      = link_to "http://itnig.net", :id => "img" do
         = image_tag "intranet_50.png", :alt => "Logo Itnig Intranet"
+      = link_to root_path, :id => "title" do
+        Knowledge Base
+      #social
+        
     #links
       -# Render
       %p= name
@@ -29,7 +31,7 @@
         %li
           = link_to "http://feeds.feedburner.com/itnig/knowledge" do
             = image_tag "rss-header.png"
-      = gravatar_image_tag email, :class => "pic"
+      = gravatar_image_tag(email, :class => "pic", :gravatar => {:size => 65})
   - unless current_user
     #notconnected
       No has entrat com a usuari. Pots #{ link_to "registrar-te", new_user_registration_path} o #{ link_to "entrar", new_user_session_path}. Així podràs crear entrades o comentar-ne d'altres!
