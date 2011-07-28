@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include TweetButton
+
   def to_md(html, options = {})
     html = transform_fence_code html # transform ``` stuff
     html = RDiscount.new(html).to_html # get html
