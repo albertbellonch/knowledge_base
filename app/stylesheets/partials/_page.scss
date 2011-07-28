@@ -291,10 +291,22 @@
       margin-top: -10px;
     }
   }
-  #text{
-    font-size: 14px;
-    margin-top: 20px;
-    text-align: justify;
+  #body{
+    #social{
+      float: left;
+      width: 120px;
+      .facebook, .twitter, .google{
+        left: 0px;
+      }
+      .twitter{
+        margin-top: 5px;
+      }
+    }
+    #text{
+      font-size: 14px;
+      margin-top: 20px;
+      text-align: justify;
+    }
   }
   #tags{
     margin-bottom: 30px;

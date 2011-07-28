@@ -25,8 +25,18 @@
         - if @fact.created_at != @fact.updated_at
           | Actualitzat per últim cop
           = cached_timestamp(@fact.updated_at)
-    #text
-      = to_md @fact.description
+    #body
+      #social
+        .facebook
+          %script{:src => "http://connect.facebook.net/ca_ES/all.js#xfbml=1"}
+          %fb:like{:href => request.url, :layout => "button_count", :show_faces => "true"}
+        .twitter
+          = tweet_button(:via => "itnig", :url => request.url, :text => "Checkout the awesome Knowledge Base!", :count => "horizontal")
+        .google
+          %script{:type => "text/javascript", :src => "https://apis.google.com/js/plusone.js"}
+            {lang: 'ca'}
+          %g:plusone{:size => "medium"}
+      #text= to_md @fact.description
     %hr
     = render "tags", :tags => @fact.tags
     %hr
