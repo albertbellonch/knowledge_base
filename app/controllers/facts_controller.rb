@@ -26,7 +26,8 @@ class FactsController < ApplicationController
     end
 
     # And paginate!
-    @page = params[:page] || 1
+    @page = params[:page].to_i
+    @page = 1 if @page == 0
     @facts = @total.paginate :page => @page, :per_page => 10
   end
 
