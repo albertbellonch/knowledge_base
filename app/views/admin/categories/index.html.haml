@@ -1,0 +1,12 @@
+%h1 Llistat de categories
+%table
+  %tr
+    %th Nom
+    %th Entrades
+  - @categories.each do |category|
+    %tr
+      %td= category.name
+      %td= category.facts.count
+  %tr
+    %td Sense categoria
+    %td= @uncategorized_count
