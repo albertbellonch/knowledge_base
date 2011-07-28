@@ -21,6 +21,7 @@ gem 'thinking-sphinx', '2.0.3'
 gem 'jammit'
 gem "dalli"
 
+gem 'best_in_place'
 gem 'lorem'
 gem 'unicode'
 

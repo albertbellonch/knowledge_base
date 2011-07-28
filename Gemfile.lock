@@ -36,6 +36,8 @@ GEM
     addressable (2.2.4)
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
+    best_in_place (0.1.9)
+      rails (~> 3.0.0)
     builder (2.1.2)
     cancan (1.6.5)
     chunky_png (1.2.0)
@@ -183,6 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  best_in_place
   cancan
   compass
   dalli

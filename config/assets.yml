@@ -26,6 +26,7 @@ javascripts:
     - public/javascripts/jquery-rails.js
     - public/javascripts/jquery.purr.js
     - public/javascripts/jquery-datepicker-ca.js
+    - public/javascripts/best_in_place.js
     - public/javascripts/facebox.js
     - public/javascripts/backoffice.js
 

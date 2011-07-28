@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // Active Best in Place
+  $(".best_in_place").best_in_place();
+
   // Activate purr
   $(".flash").purr();
 
