@@ -1,5 +1,13 @@
 KnowledgeBase::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'registrations', :sessions => "sessions"}
+
+  # Administration
+  namespace :admin do
+    resources :categories, :only => :index
+
+    root :to => "overview#index"
+  end
+
   resources :facts, :except => :index do
     resources :comments
   end

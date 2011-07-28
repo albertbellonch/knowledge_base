@@ -1,0 +1,8 @@
+#header
+  #preheader
+    #center-preheader Panell d'administració (#{link_to "Sortir", destroy_user_session_path})
+    #right-preheader= link_to "Tornar a #{APP_CONFIG['hostname']} ->", root_url
+  .inner
+    #menu
+      %ul
+        %li= link_to "Categories", admin_categories_path

@@ -31,6 +31,9 @@
           |
           %li= link_to "Preferències", edit_user_registration_path
           |
+          - if current_user.admin?
+            %li= link_to "Backoffice", admin_root_path
+            |
           %li= link_to "Sortir", destroy_user_session_path
           |
         - else

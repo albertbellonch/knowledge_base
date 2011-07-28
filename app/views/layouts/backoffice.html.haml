@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Backoffice | Knowledge Base
+    = include_stylesheets :backoffice, :media => :screen
+    = csrf_meta_tag
+  %body
+    #container
+      = render "shared/flash"
+      = render "shared/admin_header"
+      #main= yield
+    = include_javascripts :backoffice
+    = yield :custom_js
