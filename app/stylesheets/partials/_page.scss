@@ -225,11 +225,9 @@
       text-align: justify;
     }
     .tags{
-      position: absolute;
-      top: 0px;
-      right: 0px;
       margin-top: 10px;
       margin-bottom: 10px;
+      text-align: right;
       .tag{
         background: #666;
         display: inline-block;
