@@ -78,6 +78,14 @@
     }
     #social{
       bottom: 0px;
+      .facebook, .google, .twitter{
+        display: inline-block;
+      }
+      .fb_iframe_widget{
+        position: relative;
+        top: -5px;
+        left: 0px;
+      }
     }
   }
   #right{
