@@ -37,6 +37,7 @@ class FactsController < ApplicationController
   def new
     @fact = Fact.new
     @tags = Tag.includes(:fact_tags)
+    @categories = Category.all
   end
 
   def create
@@ -48,6 +49,7 @@ class FactsController < ApplicationController
       redirect_to(root_path, :notice => "L'entrada ha estat creada satisfactòriament")
     else
       @tags = Tag.all
+      @categories = Category.all
       flash[:alert] = "Assegura't d'introduir el títol (ha de ser únic!) i el text abans de crear l'entrada, siusplau"
       render :action => "new"
     end
@@ -55,6 +57,7 @@ class FactsController < ApplicationController
 
   def edit
     @tags = Tag.all
+    @categories = Category.all
 
     unless @fact.user == current_user
       redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
@@ -71,6 +74,8 @@ class FactsController < ApplicationController
     if @fact.update_attributes(params[:fact])
       redirect_to(root_path, :notice => "L'entrada ha estat actualitzada satisfactòriament")
     else
+      @tags = Tag.all
+      @categories = Category.all
       flash[:alert] = "Assegura't d'introduir el títol i el text abans d'actualitzar l'entrada, siusplau"
       render :action => "edit"
     end
