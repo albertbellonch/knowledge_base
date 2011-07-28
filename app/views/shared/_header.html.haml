@@ -5,14 +5,16 @@
 - user_upd = current_user ? current_user.updated_at : "-"
 - cache "header_lang_#{I18n.locale}_user_#{user_key}_at_#{user_upd}" do
   #header
-    #logo
+    #left
       = link_to "http://itnig.net", :id => "img" do
         = image_tag "intranet_50.png", :alt => "Logo Itnig Intranet"
       = link_to root_path, :id => "title" do
         Knowledge Base
       #social
-        
-    #links
+        .facebook
+          %script{:src => "http://connect.facebook.net/ca_ES/all.js#xfbml=1"}
+          %fb:like{:href => APP_CONFIG["hostname"], :layout => "button_count", :show_faces => "true"}
+    #right
       -# Render
       %p= name
       %ul
