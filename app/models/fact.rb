@@ -15,6 +15,7 @@ class Fact < ActiveRecord::Base
   belongs_to :category
 
   before_save :calculate_title_url
+  before_save :assign_category
 
   default_scope order("created_at DESC")
 
@@ -34,6 +35,11 @@ class Fact < ActiveRecord::Base
 
   def calculate_title_url
     self.title_url = title.downcase.to_ascii.gsub(/[^[:alnum:]]/,'-')
+  end
+
+  def assign_category
+    self.category = Category.first
+    self.save!
   end
 
   # Sphinx
