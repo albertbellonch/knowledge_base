@@ -45,6 +45,7 @@ class Fact < ActiveRecord::Base
     indexes user.name
     indexes user.email
     indexes tags.name
+    indexes category.name
 
     # attributes
     has created_at
