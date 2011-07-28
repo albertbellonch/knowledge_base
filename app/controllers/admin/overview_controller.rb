@@ -1,5 +1,5 @@
 class Admin::OverviewController < Admin::AdminController
   def index
-    redirect_to admin_categories_path
+    redirect_to admin_facts_path
   end
 end

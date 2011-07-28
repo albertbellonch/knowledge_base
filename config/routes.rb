@@ -3,6 +3,7 @@ KnowledgeBase::Application.routes.draw do
 
   # Administration
   namespace :admin do
+    resources :facts, :only => [:index, :update, :destroy]
     resources :categories, :only => [:index, :update, :destroy]
 
     root :to => "overview#index"

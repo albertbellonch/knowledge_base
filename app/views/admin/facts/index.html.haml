@@ -1,0 +1,18 @@
+- categories = @categories.map{|c|[c.id, c.name]} + [[nil,"-"]]
+%h1 Llistat d'entrades
+%table
+  %tr
+    %th Títol
+    %th Categoria
+    %th Comentaris
+    %th Creació
+    %th Última edició
+    %th
+  - @facts.each do |fact|
+    %tr
+      %td= fact.title
+      %td= best_in_place fact, :category_id, :type => :select, :collection => categories, :path => admin_fact_path(fact)
+      %td= fact.comments.count
+      %td= fact.created_at
+      %td= fact.updated_at
+      %td= button_to "Eliminar", admin_fact_path(fact), :method => :delete, :confirm => "N'estas segur?"
