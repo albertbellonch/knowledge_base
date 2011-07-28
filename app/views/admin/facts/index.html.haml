@@ -1,5 +1,7 @@
 - categories = @categories.map{|c|[c.id, c.name]} + [[nil,"-"]]
+
 %h1 Llistat d'entrades
+= will_paginate @facts, :previous_label => "← Anterior", :next_label => "Següent →"
 %table
   %tr
     %th Títol
