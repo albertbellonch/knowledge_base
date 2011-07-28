@@ -25,6 +25,7 @@ gem 'lorem'
 gem 'unicode'
 
 gem 'fb-localizer'
+gem 'tweet-button'
 
 gem "rake", "0.8.7"
 gem "whenever", :require => false
