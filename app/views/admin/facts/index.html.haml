@@ -4,6 +4,7 @@
 = will_paginate @facts, :previous_label => "← Anterior", :next_label => "Següent →"
 %table
   %tr
+    %th Autor
     %th Títol
     %th Categoria
     %th Comentaris
@@ -12,6 +13,7 @@
     %th
   - @facts.each do |fact|
     %tr
+      %td= fact.user
       %td= fact.title
       %td= best_in_place fact, :category_id, :type => :select, :collection => categories, :path => admin_fact_path(fact)
       %td= fact.comments.count
