@@ -3,10 +3,13 @@
   %tr
     %th Nom
     %th Entrades
+    %th
   - @categories.each do |category|
     %tr
-      %td= category.name
+      %td= best_in_place category, :name, :type => :input, :path => admin_category_path(category)
       %td= category.facts.count
+      %td= button_to "Eliminar", admin_category_path(category), :method => :delete, :confirm => "N'estas segur?"
   %tr
     %td Sense categoria
     %td= @uncategorized_count
+    %td
