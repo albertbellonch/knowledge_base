@@ -213,6 +213,16 @@
         text-align: center;
       }
     }
+    .category{
+      position: absolute;
+      border: 1px solid #999;
+      right: 0;
+      top: 0;
+      width: 140px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
     .metadata{
       padding-left: 115px;
       .dates{
@@ -271,6 +281,15 @@
       margin-top: 3px;
       text-align: center;
     }
+  }
+  #category{
+    position: absolute;
+    border: 1px solid #999;
+    top: 70px;
+    width: 110px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
   }
   #links{
     float: right;
