@@ -1,7 +1,8 @@
 #fact-form
   = simple_form_for @fact, :html => { :id => "fact_form" } do |f|
     -# HEADER
-    = gravatar_image_tag(current_user.email, :class => "plus")
+    - user = @fact.new_record? ? current_user : @fact.user
+    = gravatar_image_tag(user.email, :class => "plus")
     = f.text_field :title
     #metadata
       - unless @fact.new_record?
@@ -27,7 +28,7 @@
       #tag_inputs
         -# The real thing will be held here inside!
       #new_tag
-        = text_field_tag :tag_name, "Nou tag aquí..."
+        = text_field_tag :tag_name, "Introdueix tag...", "data-autocomplete" => autocomplete_tag_name_facts_path
         = link_to "#", :id => "new_tag_link" do
           = image_tag "add.png", :id => "plus"
       #tag_cloud
@@ -46,7 +47,7 @@
 - content_for :custom_js do
   :javascript
     // Label to show when nothing is written there
-    var blank_label = "Nou tag aquí..."
+    var blank_label = "Introdueix tag..."
 
     $(document).ready(function() {
       // Cross-site request forgery params

@@ -995,7 +995,7 @@ a:hover {
 #fact-form form #tags #new_tag a#new_tag_link {
   position: absolute;
   top: 2px;
-  right: 40px;
+  right: 20px;
 }
 /* line 465, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag a#new_tag_link img {
