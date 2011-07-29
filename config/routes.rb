@@ -10,6 +10,7 @@ KnowledgeBase::Application.routes.draw do
   end
 
   resources :facts, :except => :index do
+    get :autocomplete_tag_name, :on => :collection
     resources :comments
   end
 

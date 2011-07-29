@@ -1,4 +1,6 @@
 class FactsController < ApplicationController
+  autocomplete :tag, :name, :full => true
+
   before_filter :show_find, :only => :show
   before_filter :edit_find, :only => :edit
   load_resource :find_by => :title_url
