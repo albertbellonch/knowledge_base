@@ -192,14 +192,13 @@ a.gray {
 }
 
 /////////////////////////////////////////////
-// Show views                              //
+// Category management                     //
 /////////////////////////////////////////////
 
-#event-show{
-  .pagination{
-    width: 98%;
-    span.current{
-      font-weight: bold;
-    }
-  }
+#facebox{
+  top: 200px !important;
+}
+
+.create_category{
+  text-align: center;
 }

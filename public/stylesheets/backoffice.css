@@ -541,22 +541,23 @@ a.gray {
   color: #FFF;
 }
 
-/* line 199, ../../app/stylesheets/backoffice_partials/_page.scss */
-#event-show .pagination {
-  width: 98%;
+/* line 198, ../../app/stylesheets/backoffice_partials/_page.scss */
+#facebox {
+  top: 200px !important;
 }
-/* line 201, ../../app/stylesheets/backoffice_partials/_page.scss */
-#event-show .pagination span.current {
-  font-weight: bold;
+
+/* line 202, ../../app/stylesheets/backoffice_partials/_page.scss */
+.create_category {
+  text-align: center;
 }
 
 /* Purr Flash Notices and Errors */
-/* line 3, ../../app/stylesheets/partials/_purr.scss */
+/* line 3, ../../app/stylesheets/backoffice_partials/_purr.scss */
 .flash, #error_explanation {
   display: none;
 }
 
-/* line 7, ../../app/stylesheets/partials/_purr.scss */
+/* line 7, ../../app/stylesheets/backoffice_partials/_purr.scss */
 .purr {
   text-align: center;
   position: fixed;
@@ -576,7 +577,7 @@ a.gray {
   -moz-opacity: 0.9;
 }
 
-/* line 25, ../../app/stylesheets/partials/_purr.scss */
+/* line 25, ../../app/stylesheets/backoffice_partials/_purr.scss */
 .purr:hover .close {
   position: absolute;
   top: 5px;
@@ -586,4 +587,101 @@ a.gray {
   height: 25px;
   text-indent: -9999px;
   background: url("/images/close-button.gif") no-repeat;
+}
+
+/* line 1, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: left;
+}
+
+/* line 10, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .popup {
+  position: relative;
+  border: 3px solid rgba(0, 0, 0, 0);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+
+/* line 21, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .content {
+  display: table;
+  width: 370px;
+  padding: 10px;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 31, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .content > p:first-child {
+  margin-top: 0;
+}
+
+/* line 34, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .content > p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 38, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 2px;
+  background: #fff;
+}
+
+/* line 45, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .close img {
+  opacity: 0.3;
+}
+
+/* line 48, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .close:hover img {
+  opacity: 1.0;
+}
+
+/* line 52, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .loading {
+  text-align: center;
+}
+
+/* line 56, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox .image {
+  text-align: center;
+}
+
+/* line 60, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox img {
+  border: 0;
+  margin: 0;
+}
+
+/* line 65, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+#facebox_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 73, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+.facebox_hide {
+  z-index: -100;
+}
+
+/* line 77, ../../app/stylesheets/backoffice_partials/_facebox.scss */
+.facebox_overlayBG {
+  background-color: #000;
+  z-index: 99;
 }

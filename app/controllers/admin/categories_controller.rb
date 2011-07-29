@@ -4,6 +4,12 @@ class Admin::CategoriesController < Admin::AdminController
     @uncategorized_count = Fact.where(:category_id => nil).count
   end
 
+  def create
+    @category = Category.new(params[:category])
+    @category.save
+    redirect_to admin_categories_path
+  end
+
   def update
     @category = Category.find(params[:id])
     @category.update_attributes(params[:category])
