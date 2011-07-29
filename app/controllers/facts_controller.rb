@@ -58,10 +58,6 @@ class FactsController < ApplicationController
   def edit
     @tags = Tag.all
     @categories = Category.all
-
-    unless @fact.user == current_user
-      redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
-    end
   end
 
   def update
@@ -83,8 +79,7 @@ class FactsController < ApplicationController
 
   def destroy
     @fact = Fact.find_by_title_url!(params[:id])
-    if @fact.user == current_user
-      @fact.destroy
+    if @fact.destroy
       flash[:notice] = "L'entrada s'ha eliminat satisfactòriament"
     else
       flash[:alert] = "No pots eliminar una entrada que no sigui teva"
