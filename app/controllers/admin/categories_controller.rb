@@ -1,7 +1,7 @@
 class Admin::CategoriesController < Admin::AdminController
   def index
     @categories = Category.all
-    @uncategorized_count = Fact.where(:category_id => nil).count
+    @uncategorized_count = Fact.where(:category_id => 0).count
   end
 
   def create

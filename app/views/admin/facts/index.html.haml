@@ -1,4 +1,4 @@
-- categories = @categories.map{|c|[c.id, c.name]} + [[nil,"-"]]
+- categories = @categories.map{|c|[c.id, c.name]} + [[0,"-"]]
 
 %h1 Llistat d'entrades
 = will_paginate @facts, :previous_label => "← Anterior", :next_label => "Següent →"
