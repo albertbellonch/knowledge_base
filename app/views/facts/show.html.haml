@@ -10,7 +10,8 @@
         - nc = @fact.comments.size
         - nc = "#{99}+" if nc > 99
         #comments= nc
-    #category= @fact.category
+    - if @fact.category.present?
+      #category= @fact.category
     #links
       - if can? :edit, @fact
         = button_to 'Edita', edit_fact_path(@fact), :method => :get, :class => "button"

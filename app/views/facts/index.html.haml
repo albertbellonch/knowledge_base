@@ -35,7 +35,8 @@
             - nc = fact.comments.size
             - nc = "#{99}+" if nc > 99
             .comments= nc
-        .category= fact.category
+        - if fact.category.present?
+          .category= fact.category
         .metadata
           = link_to fact do
             %h3= fact.title
