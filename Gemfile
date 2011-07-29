@@ -22,6 +22,8 @@ gem 'jammit'
 gem "dalli"
 
 gem 'best_in_place'
+gem 'rails3-jquery-autocomplete'
+
 gem 'lorem'
 gem 'unicode'
 
