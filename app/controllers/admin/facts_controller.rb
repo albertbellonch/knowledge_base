@@ -1,7 +1,7 @@
 class Admin::FactsController < Admin::AdminController
   def index
     @page = params[:page] || 1
-    @facts = Fact.all.paginate :page => @page, :per_page => 20
+    @facts = Fact.includes(:user).all.paginate :page => @page, :per_page => 20
     @categories = Category.all
   end
 
