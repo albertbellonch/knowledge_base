@@ -16,6 +16,7 @@ javascripts:
     - public/javascripts/jquery.purr.js
     - public/javascripts/jquery-datepicker-ca.js
     - public/javascripts/jquery.timeago.js
+    - public/javascripts/autocomplete-rails.js
     - public/javascripts/facebox.js
     - public/javascripts/elastic.js
     - public/javascripts/highlight.pack.js
