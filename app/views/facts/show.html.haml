@@ -25,7 +25,6 @@
         - if @fact.created_at != @fact.updated_at
           | Actualitzat per últim cop
           = cached_timestamp(@fact.updated_at)
-    #body
       #social
         .facebook
           %script{:src => "http://connect.facebook.net/ca_ES/all.js#xfbml=1"}
@@ -36,7 +35,8 @@
           %script{:type => "text/javascript", :src => "https://apis.google.com/js/plusone.js"}
             {lang: 'ca'}
           %g:plusone{:size => "medium"}
-      #text= to_md @fact.description
+    #text
+      = to_md @fact.description
     %hr
     = render "tags", :tags => @fact.tags
     %hr
