@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
 
+  after_create :assign_all_categories
   after_save :set_facts_delta_flag
 
   def apply_omniauth(omniauth)
@@ -33,6 +34,12 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def assign_all_categories
+    Category.all.each do |category|
+      UserCategory.create! :user => self, :category => category
+    end
+  end
 
   def set_facts_delta_flag
     if name_changed? || email_changed?
