@@ -11,6 +11,7 @@ class Ability
         # Facts
         can [:edit,:update,:destroy], Fact, :user_id => user.id
         can [:new,:create], Fact
+        can :autocomplete_tag_name, Fact
 
         # Comments
         can :create, Comment
@@ -18,7 +19,7 @@ class Ability
         can :destroy, Comment, :fact => { :user_id => user.id }
 
         # Tags
-        can [:create,:destroy], Tag
+        can [:create,:destroy,:add], Tag
       end
     end
   end
