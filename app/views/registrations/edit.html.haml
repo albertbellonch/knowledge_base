@@ -8,6 +8,7 @@
     %fieldset
       = f.input :name, :label => "Nom"
       = f.input :email, :label => "Email"
+      = f.association :categories, :as => :check_boxes
       = f.input :password, :label => "Nova contrasenya", :required => false
       .hint Deixa-la en blanc si no vols canviar-la
       = f.input :password_confirmation, :label => "Repeteix-la"

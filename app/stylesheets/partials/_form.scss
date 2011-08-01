@@ -9,12 +9,20 @@ form{
     margin-right: 0;
     text-align: right;
     width: 15em;
+    &.collection_check_boxes{
+      display: inline-block;
+      float: none;
+      width: 5em !important;
+    }
   }
   input, textarea{
     font-size: 15px;
     margin-left: 0px;
     padding-right: 20px;
     width: 180px;
+  }
+  input.check_boxes{
+    width: 20px !important;
   }
   input[type=submit]{
     background: black;

@@ -1123,14 +1123,24 @@ form label {
   text-align: right;
   width: 15em;
 }
-/* line 13, ../../app/stylesheets/partials/_form.scss */
+/* line 12, ../../app/stylesheets/partials/_form.scss */
+form label.collection_check_boxes {
+  display: inline-block;
+  float: none;
+  width: 5em !important;
+}
+/* line 18, ../../app/stylesheets/partials/_form.scss */
 form input, form textarea {
   font-size: 15px;
   margin-left: 0px;
   padding-right: 20px;
   width: 180px;
 }
-/* line 19, ../../app/stylesheets/partials/_form.scss */
+/* line 24, ../../app/stylesheets/partials/_form.scss */
+form input.check_boxes {
+  width: 20px !important;
+}
+/* line 27, ../../app/stylesheets/partials/_form.scss */
 form input[type=submit] {
   background: black;
   border: 0;
@@ -1140,7 +1150,7 @@ form input[type=submit] {
   padding-right: 0;
   width: 120px;
 }
-/* line 27, ../../app/stylesheets/partials/_form.scss */
+/* line 35, ../../app/stylesheets/partials/_form.scss */
 form input[type=submit]:hover {
   color: #eeeeee;
   cursor: pointer;
