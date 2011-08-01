@@ -465,17 +465,14 @@
         margin-bottom: 20px;
         padding: 10px 0;
         .tag{
-          background: #999;
+          background: black;
+          color: #eee;
           cursor: pointer;
           display: inline-block;
           margin-bottom: 10px;
           margin-right: 10px;
           padding: 6px 10px 6px 10px;
           position: relative;
-          &.selected{
-            background: black;
-            color: #eee;
-          }
         }
         .delete-tag{
           display: inline;

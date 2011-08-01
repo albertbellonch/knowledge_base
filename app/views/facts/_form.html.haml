@@ -28,11 +28,10 @@
       #tag_inputs
         -# The real thing will be held here inside!
       #new_tag
-        = text_field_tag :tag_name, "Introdueix tag...", "data-autocomplete" => autocomplete_tag_name_facts_path
+        = text_field_tag :tag_name, "Introdueix etiqueta...", "data-autocomplete" => autocomplete_tag_name_facts_path
       #tag_cloud
-        - @tags.each do |tag|
-          - selected = @fact && @fact.tags.map{|t|t.id}.include?(tag.id)
-          %div{:class => "tag #{selected ? "selected" : ""}"}
+        - @fact.tags.each do |tag|
+          .tag
             .delete-tag{:style => "display: none"}
               = link_to "#tag-cloud", :data_tag => tag.id do
                 = image_tag "cross.png"
@@ -45,7 +44,7 @@
 - content_for :custom_js do
   :javascript
     // Label to show when nothing is written there
-    var blank_label = "Introdueix tag..."
+    var blank_label = "Introdueix etiqueta..."
 
     $(document).ready(function() {
       // Cross-site request forgery params
