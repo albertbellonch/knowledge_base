@@ -65,10 +65,6 @@ class FactsController < ApplicationController
   def update
     @fact = Fact.find_by_title_url!(params[:id])
 
-    unless @fact.user == current_user
-      redirect_to(root_path, :alert => "No pots editar una entrada que no sigui teva")
-    end
-
     if @fact.update_attributes(params[:fact])
       redirect_to(root_path, :notice => "L'entrada ha estat actualitzada satisfactòriament")
     else
