@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_many :facts
   has_many :comments
   has_many :authentications
+  has_many :user_categories
+  has_many :categories, :through => :user_categories
 
   validates_presence_of :name
   validates_uniqueness_of :name
