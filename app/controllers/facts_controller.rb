@@ -15,7 +15,7 @@ class FactsController < ApplicationController
       @total = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc, :include => [:user,:comments,:tags,:category])
     else
       # Get base
-      @base = Fact.includes(:user,:comments,:tags,:category)
+      @base = Fact.includes(:user,:comments,:tags,:category).for_categories(current_user.categories)
 
       # Get total
       if @tag = params[:tag]
