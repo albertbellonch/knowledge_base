@@ -14,7 +14,11 @@ KnowledgeBase::Application.routes.draw do
     resources :comments
   end
 
-  resources :tags, :only => [:create, :destroy]
+  resources :tags, :only => [:create, :destroy] do
+    collection do
+      get 'add'
+    end
+  end
 
   resources :authentications, :only => :destroy
   match '/auth/:provider/callback' => 'authentications#create'

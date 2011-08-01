@@ -1,0 +1,5 @@
+.tag
+  .delete-tag{:style => "display: none"}
+    = link_to "#tag-cloud", :data_tag => tag.id do
+      = image_tag "cross.png"
+  .name= tag.name

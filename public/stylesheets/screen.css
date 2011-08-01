@@ -1041,13 +1041,13 @@ ul.ui-autocomplete li {
 }
 /* line 504, ../../app/stylesheets/partials/_page.scss */
 ul.ui-autocomplete li:hover {
-  cursor: pointer;
   color: white;
   background-color: black;
 }
-/* line 508, ../../app/stylesheets/partials/_page.scss */
+/* line 507, ../../app/stylesheets/partials/_page.scss */
 ul.ui-autocomplete li:hover a {
   color: white;
+  cursor: pointer;
 }
 
 /* ======================================================= */

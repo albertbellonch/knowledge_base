@@ -502,11 +502,11 @@ ul.ui-autocomplete{
     margin-left: 0;
     text-align: center;
     &:hover{
-      cursor: pointer;
       color: white;
       background-color: black;
       a{
         color: white;
+        cursor: pointer;
       }
     }
   }

@@ -5,10 +5,17 @@ class TagsController < ApplicationController
     @tag = Tag.new params[:tag]
 
     respond_to do |format|
-      if @tag.save
-        format.js { render :layout => false }
+      @tag.save
+      format.js { render :layout => false }
+    end
+  end
+
+  def add
+    respond_to do |format|
+      if @tag = Tag.find_by_name(params[:name])
+        format.js
       else
-        format.json  { render :json => @tag.errors, :status => :unprocessable_entity }
+        format.json  { render :json => "not found", :status => :unprocessable_entity }
       end
     end
   end

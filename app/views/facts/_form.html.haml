@@ -31,11 +31,7 @@
         = text_field_tag :tag_name, "Introdueix etiqueta...", "data-autocomplete" => autocomplete_tag_name_facts_path
       #tag_cloud
         - @fact.tags.each do |tag|
-          .tag
-            .delete-tag{:style => "display: none"}
-              = link_to "#tag-cloud", :data_tag => tag.id do
-                = image_tag "cross.png"
-            = tag.name
+          = render "tags/form_tag", :tag => tag
 
     -# LINKS
     = f.submit (@fact.new_record? ? "Crear entrada" : "Actualitzar entrada")
@@ -45,6 +41,36 @@
   :javascript
     // Label to show when nothing is written there
     var blank_label = "Introdueix etiqueta..."
+
+    // Functions
+
+    // Add the tag
+    function addTag(){
+      // Get name and delete it from input
+      var tagInput = $("#tag_name");
+      var tagName = tagInput.val();
+      tagInput.val("");
+
+      // Add if not binded yet
+      if(!tagExists(tagName)){
+        $.ajax({
+          url: "/tags/add",
+          data: { name : tagName }
+        });
+      }
+    }
+
+    function tagExists(tagName){
+      var isThis = false;
+      $("#tag_cloud > .tag > .name").each(function(){
+        var thisTagName = $(this).html();
+        if(tagName == thisTagName){
+          isThis = true;
+          return false;
+        }
+      });
+      return isThis;
+    }
 
     $(document).ready(function() {
       // Cross-site request forgery params
@@ -90,7 +116,6 @@
           var tag_input = $(this);
           var tag_name = tag_input.val();
           if (tag_name != ""){
-            tag_input.val("");
             var data = "_method=post";
             data += "&tag[name]=" + encodeURIComponent(tag_name);
             if (csrf_param !== undefined && csrf_token !== undefined) {
@@ -105,38 +130,17 @@
             var ajaxRequest = jQuery.ajax(options);
           }
         }
-        return false;
       });
 
-      // Add or remove "selected" class to tags
-      $(".tag").live('click', function() {
-        if ($(this).hasClass("selected")) {
-          $(this).removeClass("selected");
-        } else {
-          $(this).addClass("selected");
-        }
+      // Click on autocomplete
+      $('#tag_name').bind('railsAutocomplete.select', function(){
+        addTag();
       });
 
-      // Allow tag deleting
+      // Unbinding tag from the fact
       $(".delete-tag > a").live("click", function() {
-          var tag_to_destroy = $(this).attr("data_tag");
-          if (confirm("¿Segur que vols esborrar el tag? Si ho fas, serà esborrat de totes els entrades.")) {
-            var data = "_method=delete";
-            data += "&tag[id]=" + encodeURIComponent(tag_to_destroy);
-            if (csrf_param !== undefined && csrf_token !== undefined) {
-              data += "&" + csrf_param + "=" + encodeURIComponent(csrf_token);
-            }
-            var options = {};
-            options.type = "post";
-            options.dataType = "text";
-            options.data = data;
-            options.url = "/tags/" + tag_to_destroy;
-            options.beforeSend = function(xhr){ xhr.setRequestHeader("Accept", "application/json"); }
-            var ajaxRequest = jQuery.ajax(options);
-            $(this).parent().parent().fadeOut(function(){
-              $(this).remove();
-            });
-            return false;
+        if (confirm("¿Segur que vols esborrar el tag? Si ho fas, serà esborrat de totes els entrades.")) {
+          $(this).parent().parent().remove();
         }
       });
 
@@ -144,7 +148,7 @@
       $("#fact_submit").click(function(e) {
         var tag_inputs = "";
         var i = 0;
-        $(".selected > .delete-tag > a").each(function() {
+        $(".tag > .delete-tag > a").each(function() {
           tag_inputs += "<input id='fact_tag_ids_" + $(this).attr("data_tag");
           tag_inputs += "' name='fact[tag_ids][]' type='hidden' value='";
           tag_inputs += $(this).attr("data_tag");
