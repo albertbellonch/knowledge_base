@@ -7,6 +7,8 @@
         \|
       KnowledgeBase
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+    - if @noindex
+      %meta{:content => "noindex", :name => "robots"}
     = include_stylesheets :screen
     = csrf_meta_tag
   %body.one_col

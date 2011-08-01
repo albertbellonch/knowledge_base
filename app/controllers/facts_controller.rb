@@ -21,6 +21,7 @@ class FactsController < ApplicationController
       # Get total
       if @tag = params[:tag]
         @total = @base.for_tag(@tag)
+        @noindex = true # SEO purposes. Tell the robots not to index in this case.
       elsif @user = params[:user]
         @total = @base.for_user(@user)
       else
