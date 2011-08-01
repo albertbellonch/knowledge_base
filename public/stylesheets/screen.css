@@ -983,31 +983,22 @@ a:hover {
 /* line 452, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag input#tag_name {
   position: absolute;
-  right: 25px;
+  right: 0;
+  padding-right: 0;
   text-align: center;
   color: #999;
 }
-/* line 457, ../../app/stylesheets/partials/_page.scss */
+/* line 458, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag input#tag_name:focus {
   color: black;
 }
-/* line 461, ../../app/stylesheets/partials/_page.scss */
-#fact-form form #tags #new_tag a#new_tag_link {
-  position: absolute;
-  top: 2px;
-  right: 20px;
-}
-/* line 465, ../../app/stylesheets/partials/_page.scss */
-#fact-form form #tags #new_tag a#new_tag_link img {
-  display: block;
-}
-/* line 470, ../../app/stylesheets/partials/_page.scss */
+/* line 463, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud {
   display: block;
   margin-bottom: 20px;
   padding: 10px 0;
 }
-/* line 474, ../../app/stylesheets/partials/_page.scss */
+/* line 467, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag {
   background: #999;
   cursor: pointer;
@@ -1017,38 +1008,61 @@ a:hover {
   padding: 6px 10px 6px 10px;
   position: relative;
 }
-/* line 482, ../../app/stylesheets/partials/_page.scss */
+/* line 475, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag.selected {
   background: black;
   color: #eee;
 }
-/* line 487, ../../app/stylesheets/partials/_page.scss */
+/* line 480, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag {
   display: inline;
 }
-/* line 489, ../../app/stylesheets/partials/_page.scss */
+/* line 482, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag a {
   position: absolute;
   top: -4px;
   right: 1px;
   color: white;
 }
-/* line 498, ../../app/stylesheets/partials/_page.scss */
+/* line 491, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_submit {
   float: right;
   padding: 7px;
   width: 180px;
 }
 
+/* line 499, ../../app/stylesheets/partials/_page.scss */
+ul.ui-autocomplete {
+  width: 185px!important;
+}
+/* line 501, ../../app/stylesheets/partials/_page.scss */
+ul.ui-autocomplete li {
+  background-color: #999;
+  font-size: 15px;
+  list-style-type: none;
+  margin-left: 0;
+  text-align: center;
+}
+/* line 507, ../../app/stylesheets/partials/_page.scss */
+ul.ui-autocomplete li:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+/* line 511, ../../app/stylesheets/partials/_page.scss */
+ul.ui-autocomplete li:hover a {
+  color: white;
+}
+
 /* ======================================================= */
 /*                      Preferences                        */
 /* ======================================================= */
-/* line 512, ../../app/stylesheets/partials/_page.scss */
+/* line 524, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset label {
   width: 45%;
   margin-right: 30px;
 }
-/* line 516, ../../app/stylesheets/partials/_page.scss */
+/* line 528, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset .hint {
   font-size: 12px;
   font-style: italic;
@@ -1056,23 +1070,23 @@ a:hover {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 523, ../../app/stylesheets/partials/_page.scss */
+/* line 535, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset input[type=submit] {
   float: right;
 }
-/* line 528, ../../app/stylesheets/partials/_page.scss */
+/* line 540, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant, #preferences #available {
   margin-bottom: 25px;
   position: relative;
   vertical-align: middle;
 }
-/* line 532, ../../app/stylesheets/partials/_page.scss */
+/* line 544, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant .data, #preferences #available .data {
   position: absolute;
   top: -5px;
   left: 120px;
 }
-/* line 536, ../../app/stylesheets/partials/_page.scss */
+/* line 548, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant .data .auth, #preferences #available .data .auth {
   display: inline-block;
 }
@@ -1080,12 +1094,12 @@ a:hover {
 /* ======================================================= */
 /*                       Register                          */
 /* ======================================================= */
-/* line 549, ../../app/stylesheets/partials/_page.scss */
+/* line 561, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset label {
   width: 45%;
   margin-right: 30px;
 }
-/* line 553, ../../app/stylesheets/partials/_page.scss */
+/* line 565, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset .hint {
   font-size: 12px;
   font-style: italic;
@@ -1093,7 +1107,7 @@ a:hover {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 560, ../../app/stylesheets/partials/_page.scss */
+/* line 572, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset input[type=submit] {
   float: right;
 }

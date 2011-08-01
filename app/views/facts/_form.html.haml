@@ -29,8 +29,6 @@
         -# The real thing will be held here inside!
       #new_tag
         = text_field_tag :tag_name, "Introdueix tag...", "data-autocomplete" => autocomplete_tag_name_facts_path
-        = link_to "#", :id => "new_tag_link" do
-          = image_tag "add.png", :id => "plus"
       #tag_cloud
         - @tags.each do |tag|
           - selected = @fact && @fact.tags.map{|t|t.id}.include?(tag.id)

@@ -451,19 +451,12 @@
         right: 0;
         input#tag_name{
           position: absolute;
-          right: 25px;
+          right: 0;
+          padding-right: 0;
           text-align: center;
           color: #999;
           &:focus{
             color: black;
-          }
-        }
-        a#new_tag_link{
-          position: absolute;
-          top: 2px;
-          right: 20px;
-          img{
-            display: block;
           }
         }
       }
@@ -499,6 +492,25 @@
       float: right;
       padding: 7px;
       width: 180px;
+    }
+  }
+}
+
+ul.ui-autocomplete{
+  width: 185px!important;
+  li{
+    background-color: #999;
+    font-size: 15px;
+    list-style-type: none;
+    margin-left: 0;
+    text-align: center;
+    &:hover{
+      cursor: pointer;
+      color: white;
+      background-color: black;
+      a{
+        color: white;
+      }
     }
   }
 }
