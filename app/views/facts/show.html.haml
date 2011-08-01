@@ -11,7 +11,7 @@
         - nc = "#{99}+" if nc > 99
         #comments= nc
     - if @fact.category.present?
-      #category= @fact.category
+      #category= link_to @fact.category, root_path(:category => @fact.category.name)
     #links
       - if can? :edit, @fact
         = button_to 'Edita', edit_fact_path(@fact), :method => :get, :class => "button"

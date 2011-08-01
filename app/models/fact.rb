@@ -24,7 +24,8 @@ class Fact < ActiveRecord::Base
   # All facts for that user name (remember a user name is also unique!)
   scope :for_user, lambda {|user_name| joins(:user).where(:users => {:name => user_name}) }
 
-  # All facts filtered by some categories
+  # All facts filtered by one or more categories
+  scope :for_category, lambda {|category_name| joins(:category).where(:categories => {:name => category_name}) }
   scope :for_categories, lambda {|categories| where(:category_id => categories) }
 
   def to_s

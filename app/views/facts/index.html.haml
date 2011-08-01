@@ -4,6 +4,8 @@
 - else
   - if @tag
     - title = "Entrades del tag '#{@tag.capitalize}'"
+  - elsif @category
+    - title = "Entrades de la categoria '#{@category.capitalize}'"
   - elsif @user
     - title = "Entrades de l'usuari '#{@user}'"
   - else
@@ -36,7 +38,7 @@
             - nc = "#{99}+" if nc > 99
             .comments= nc
         - if fact.category.present?
-          .category= fact.category
+          .category= link_to fact.category, root_path(:category => fact.category.name)
         .metadata
           = link_to fact do
             %h3= fact.title
