@@ -139,7 +139,7 @@
 
       // Unbinding tag from the fact
       $(".delete-tag > a").live("click", function() {
-        if (confirm("¿Segur que vols esborrar el tag? Si ho fas, serà esborrat de totes els entrades.")) {
+        if (confirm("¿N'estas segur?")) {
           $(this).parent().parent().remove();
         }
       });
