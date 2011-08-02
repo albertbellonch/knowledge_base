@@ -2,6 +2,7 @@
   = "Preferències"
 #preferences
   %h2 Preferències
+
   %hr
   %h3 Dades
   = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
@@ -9,6 +10,12 @@
       = f.input :name, :label => "Nom"
       = f.input :email, :label => "Email"
       = f.association :categories, :as => :check_boxes
+      = f.submit "Actualitzar"
+
+  %hr
+  %h3 Canviar la contrasenya
+  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    %fieldset
       = f.input :password, :label => "Nova contrasenya", :required => false
       .hint Deixa-la en blanc si no vols canviar-la
       = f.input :password_confirmation, :label => "Repeteix-la"
