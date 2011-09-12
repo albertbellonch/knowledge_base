@@ -40,6 +40,11 @@
 /* ======================================================= */
 /*                        Content                          */
 /* ======================================================= */
+#container{
+  padding-top: 25px;
+  font-size: 12px;
+}
+
 #content{
   background: white;
   border: 2px solid black;
@@ -48,6 +53,55 @@
   display: block;
   padding: 20px 18px;
   margin-bottom: 30px;
+}
+
+/* ======================================================= */
+/*                      Pre-Header                         */
+/* ======================================================= */
+#itnig-header{
+  width: 100%;
+  height: 2em;
+	position:fixed;
+  z-index: 1000;
+	background: #0B0B0B;
+	padding-bottom:0.5%;
+  letter-spacing: .1em;
+	ul{
+    margin-left: 0;
+    li{
+      margin-left: 0;
+      display:inline;
+      padding-right:0.9%;
+      padding-left:1%;
+    }
+	}
+	a{
+		font-family:yanone-thin;
+		color: #FBFBFB;
+		@include transition-property(color);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(linear);
+		&:hover, &.current{
+			color: #1BC1C9;
+		}
+	}
+
+	#nav{
+		padding-bottom:0.5%;
+		padding-top:0.3%;
+		margin:0 auto;
+		max-width:1000px;
+		width:90%;
+		.nav-contact{
+			float:right;
+		}
+  	.banner{
+			float:right;
+			a{
+			  width:8%;
+			}
+		}
+	}
 }
 
 /* ======================================================= */

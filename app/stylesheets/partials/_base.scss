@@ -20,6 +20,36 @@ $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $b
 
 $dark-red-color: #E2001A;
 
+.clear{
+  clear: both;
+  overflow: hidden;
+}
+
+@font-face{
+	font-family:"Yanone-bold";
+	src: url('/fonts/yanone-bold.eot');
+	src:url('/fonts/yanone-bold.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/yanone-bold.ttf') format('truetype');
+}
+@font-face{
+	font-family:"Yanone-regular";
+	src: url('/fonts/yanone-regular.eot');
+	src:url('/fonts/yanone-regular.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/yanone-regular.ttf') format('truetype');
+}
+@font-face{
+	font-family:"Yanone-light";
+	src: url('/fonts/yanone-light.eot');
+	src:url('/fonts/yanone-light.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/yanone-light.ttf') format('truetype');
+}
+@font-face{
+	font-family:"Yanone-thin";
+	src: url('/fonts/yanone-thin.eot');
+	src:url('/fonts/yanone-thin.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/yanone-thin.ttf') format('truetype');
+}
+
 /* ======================================================= */
 /*                       Base Style                        */
 /* ======================================================= */
@@ -27,7 +57,7 @@ $dark-red-color: #E2001A;
 ---------------------------------------------------------- */
 body {
 	font-family: "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Arial, sans-serif;
-	font-size: 12px;
+  font-size: 100%;
 	color: #333;
   background: #eeeeee;
 }

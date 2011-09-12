@@ -85,128 +85,158 @@ body.one_col #container #content {
   width: 910px;
 }
 
+/* line 23, ../../app/stylesheets/partials/_base.scss */
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Yanone-bold";
+  src: url("/fonts/yanone-bold.eot");
+  src: url("/fonts/yanone-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/yanone-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Yanone-regular";
+  src: url("/fonts/yanone-regular.eot");
+  src: url("/fonts/yanone-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/yanone-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Yanone-light";
+  src: url("/fonts/yanone-light.eot");
+  src: url("/fonts/yanone-light.eot?#iefix") format("embedded-opentype"), url("/fonts/yanone-light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Yanone-thin";
+  src: url("/fonts/yanone-thin.eot");
+  src: url("/fonts/yanone-thin.eot?#iefix") format("embedded-opentype"), url("/fonts/yanone-thin.ttf") format("truetype");
+}
+
 /* ======================================================= */
 /*                       Base Style                        */
 /* ======================================================= */
 /* Basic typography
 ---------------------------------------------------------- */
-/* line 28, ../../app/stylesheets/partials/_base.scss */
+/* line 58, ../../app/stylesheets/partials/_base.scss */
 body {
   font-family: "Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 100%;
   color: #333;
   background: #eeeeee;
 }
 
-/* line 34, ../../app/stylesheets/partials/_base.scss */
+/* line 64, ../../app/stylesheets/partials/_base.scss */
 strong, th, thead td {
   font-weight: bold;
 }
 
-/* line 37, ../../app/stylesheets/partials/_base.scss */
+/* line 67, ../../app/stylesheets/partials/_base.scss */
 cite, em, dfn {
   font-style: italic;
 }
 
-/* line 40, ../../app/stylesheets/partials/_base.scss */
+/* line 70, ../../app/stylesheets/partials/_base.scss */
 code, kbd, samp, pre, tt, var {
   font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
 }
 
-/* line 43, ../../app/stylesheets/partials/_base.scss */
+/* line 73, ../../app/stylesheets/partials/_base.scss */
 code, pre {
   display: block;
   white-space: pre;
 }
 
-/* line 47, ../../app/stylesheets/partials/_base.scss */
+/* line 77, ../../app/stylesheets/partials/_base.scss */
 del {
   text-decoration: line-through;
   color: #666;
 }
 
-/* line 51, ../../app/stylesheets/partials/_base.scss */
+/* line 81, ../../app/stylesheets/partials/_base.scss */
 ins, dfn {
   border-bottom: 1px solid #ccc;
 }
 
-/* line 54, ../../app/stylesheets/partials/_base.scss */
+/* line 84, ../../app/stylesheets/partials/_base.scss */
 small, sup, sub {
   font-size: 85%;
 }
 
-/* line 57, ../../app/stylesheets/partials/_base.scss */
+/* line 87, ../../app/stylesheets/partials/_base.scss */
 abbr, acronym {
   text-transform: uppercase;
   letter-spacing: .1em;
 }
 
-/* line 61, ../../app/stylesheets/partials/_base.scss */
+/* line 91, ../../app/stylesheets/partials/_base.scss */
 a abbr, a acronym {
   border: none;
 }
 
-/* line 64, ../../app/stylesheets/partials/_base.scss */
+/* line 94, ../../app/stylesheets/partials/_base.scss */
 abbr[title], acronym[title], dfn[title] {
   cursor: help;
   border-bottom: 1px dotted #ccc;
 }
 
-/* line 68, ../../app/stylesheets/partials/_base.scss */
+/* line 98, ../../app/stylesheets/partials/_base.scss */
 sup {
   vertical-align: super;
 }
 
-/* line 71, ../../app/stylesheets/partials/_base.scss */
+/* line 101, ../../app/stylesheets/partials/_base.scss */
 sub {
   vertical-align: sub;
 }
 
-/* line 74, ../../app/stylesheets/partials/_base.scss */
+/* line 104, ../../app/stylesheets/partials/_base.scss */
 p, ul, ol, dl, table, fieldset, blockquote, pre, code {
   margin-bottom: 20px;
 }
 
 /* Basic size
 ---------------------------------------------------------- */
-/* line 80, ../../app/stylesheets/partials/_base.scss */
+/* line 110, ../../app/stylesheets/partials/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.6em;
   font-weight: normal;
   line-height: 1em;
 }
 
-/* line 85, ../../app/stylesheets/partials/_base.scss */
+/* line 115, ../../app/stylesheets/partials/_base.scss */
 h1 {
   font-size: 36px;
 }
 
-/* line 88, ../../app/stylesheets/partials/_base.scss */
+/* line 118, ../../app/stylesheets/partials/_base.scss */
 h2 {
   font-size: 30px;
 }
 
-/* line 91, ../../app/stylesheets/partials/_base.scss */
+/* line 121, ../../app/stylesheets/partials/_base.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 94, ../../app/stylesheets/partials/_base.scss */
+/* line 124, ../../app/stylesheets/partials/_base.scss */
 h4 {
   font-size: 18px;
 }
 
-/* line 97, ../../app/stylesheets/partials/_base.scss */
+/* line 127, ../../app/stylesheets/partials/_base.scss */
 h5 {
   font-size: 14px;
 }
 
-/* line 100, ../../app/stylesheets/partials/_base.scss */
+/* line 130, ../../app/stylesheets/partials/_base.scss */
 h6 {
   font-size: 12px;
 }
 
-/* line 103, ../../app/stylesheets/partials/_base.scss */
+/* line 133, ../../app/stylesheets/partials/_base.scss */
 h1 .subTitle, h2 .subTitle, h3 .subTitle, h4 .subTitle, h5 .subTitle, h6 .subTitle {
   display: block;
   color: #999;
@@ -216,171 +246,171 @@ h1 .subTitle, h2 .subTitle, h3 .subTitle, h4 .subTitle, h5 .subTitle, h6 .subTit
 
 /* Basic lists
 ---------------------------------------------------------- */
-/* line 111, ../../app/stylesheets/partials/_base.scss */
+/* line 141, ../../app/stylesheets/partials/_base.scss */
 ul {
   margin-left: 1.5em;
   list-style-type: disc;
 }
 
-/* line 115, ../../app/stylesheets/partials/_base.scss */
+/* line 145, ../../app/stylesheets/partials/_base.scss */
 ul li {
   margin-left: .85em;
 }
 
-/* line 118, ../../app/stylesheets/partials/_base.scss */
+/* line 148, ../../app/stylesheets/partials/_base.scss */
 ul ul {
   list-style-type: square;
 }
 
-/* line 121, ../../app/stylesheets/partials/_base.scss */
+/* line 151, ../../app/stylesheets/partials/_base.scss */
 ul ul ul {
   list-style-type: circle;
 }
 
-/* line 124, ../../app/stylesheets/partials/_base.scss */
+/* line 154, ../../app/stylesheets/partials/_base.scss */
 ol {
   margin-left: 2.35em;
   list-style-position: outside;
   list-style-type: decimal;
 }
 
-/* line 129, ../../app/stylesheets/partials/_base.scss */
+/* line 159, ../../app/stylesheets/partials/_base.scss */
 dt {
   margin-top: .8em;
   margin-bottom: .4em;
   font-weight: bold;
 }
 
-/* line 134, ../../app/stylesheets/partials/_base.scss */
+/* line 164, ../../app/stylesheets/partials/_base.scss */
 ol ol, ul ol {
   margin-left: 2.5em;
 }
 
-/* line 137, ../../app/stylesheets/partials/_base.scss */
+/* line 167, ../../app/stylesheets/partials/_base.scss */
 ul ol, ol ul, ol ol, ul ul {
   margin-bottom: 0;
 }
 
 /* Link style
 ---------------------------------------------------------- */
-/* line 142, ../../app/stylesheets/partials/_base.scss */
+/* line 172, ../../app/stylesheets/partials/_base.scss */
 a:link, a:visited, a:hover, a:active, a:focus {
   color: #666;
   outline: 0 none;
   text-decoration: none;
 }
 
-/* line 148, ../../app/stylesheets/partials/_base.scss */
+/* line 178, ../../app/stylesheets/partials/_base.scss */
 a:hover {
   color: #000;
 }
 
 /* Background Colors
 ---------------------------------------------------------- */
-/* line 155, ../../app/stylesheets/partials/_base.scss */
+/* line 185, ../../app/stylesheets/partials/_base.scss */
 .green {
   background-color: #CBDB2A;
 }
 
-/* line 158, ../../app/stylesheets/partials/_base.scss */
+/* line 188, ../../app/stylesheets/partials/_base.scss */
 .orange {
   background-color: #ff5c00;
 }
 
-/* line 161, ../../app/stylesheets/partials/_base.scss */
+/* line 191, ../../app/stylesheets/partials/_base.scss */
 .black {
   background-color: #111111;
 }
 
-/* line 164, ../../app/stylesheets/partials/_base.scss */
+/* line 194, ../../app/stylesheets/partials/_base.scss */
 .gray {
   background-color: #666666;
 }
 
-/* line 167, ../../app/stylesheets/partials/_base.scss */
+/* line 197, ../../app/stylesheets/partials/_base.scss */
 .soft-gray {
   background-color: #BBB;
 }
 
-/* line 170, ../../app/stylesheets/partials/_base.scss */
+/* line 200, ../../app/stylesheets/partials/_base.scss */
 .white {
   background-color: #FFFFFF;
 }
-/* line 172, ../../app/stylesheets/partials/_base.scss */
+/* line 202, ../../app/stylesheets/partials/_base.scss */
 .white span {
   color: #666666;
 }
 
-/* line 176, ../../app/stylesheets/partials/_base.scss */
+/* line 206, ../../app/stylesheets/partials/_base.scss */
 .red {
   background-color: #e62727;
 }
 
-/* line 179, ../../app/stylesheets/partials/_base.scss */
+/* line 209, ../../app/stylesheets/partials/_base.scss */
 .dark-red {
   background-color: #e2001a;
 }
-/* line 181, ../../app/stylesheets/partials/_base.scss */
+/* line 211, ../../app/stylesheets/partials/_base.scss */
 .dark-red span {
   color: #FFF;
 }
 
-/* line 185, ../../app/stylesheets/partials/_base.scss */
+/* line 215, ../../app/stylesheets/partials/_base.scss */
 .orange {
   background-color: #ff5c00;
 }
 
-/* line 188, ../../app/stylesheets/partials/_base.scss */
+/* line 218, ../../app/stylesheets/partials/_base.scss */
 .magenta {
   background-color: #A9014B;
 }
 
-/* line 191, ../../app/stylesheets/partials/_base.scss */
+/* line 221, ../../app/stylesheets/partials/_base.scss */
 .yellow {
   background-color: #ffb515;
 }
 
-/* line 194, ../../app/stylesheets/partials/_base.scss */
+/* line 224, ../../app/stylesheets/partials/_base.scss */
 .blue {
   background-color: #00ADEE;
 }
 
-/* line 197, ../../app/stylesheets/partials/_base.scss */
+/* line 227, ../../app/stylesheets/partials/_base.scss */
 .pink {
   background-color: #e22092;
 }
 
-/* line 200, ../../app/stylesheets/partials/_base.scss */
+/* line 230, ../../app/stylesheets/partials/_base.scss */
 .rosy {
   background-color: #F16C7C;
 }
 
 /* Buttons */
-/* line 206, ../../app/stylesheets/partials/_base.scss */
+/* line 236, ../../app/stylesheets/partials/_base.scss */
 .button.dark-gray, .button.dark-gray:hover {
   background-color: #555;
 }
-/* line 208, ../../app/stylesheets/partials/_base.scss */
+/* line 238, ../../app/stylesheets/partials/_base.scss */
 .button.dark-gray span, .button.dark-gray a, .button.dark-gray:hover span, .button.dark-gray:hover a {
   color: #FFF;
   border-color: #CCC;
 }
 
-/* line 213, ../../app/stylesheets/partials/_base.scss */
+/* line 243, ../../app/stylesheets/partials/_base.scss */
 .button.gray, .button.gray:hover {
   background-color: #CCC;
 }
-/* line 215, ../../app/stylesheets/partials/_base.scss */
+/* line 245, ../../app/stylesheets/partials/_base.scss */
 .button.gray span, .button.gray a, .button.gray:hover span, .button.gray:hover a {
   color: #111;
   border-color: #DDD;
 }
 
-/* line 220, ../../app/stylesheets/partials/_base.scss */
+/* line 250, ../../app/stylesheets/partials/_base.scss */
 .button.red, .button.red:hover {
   background-color: #e2001a;
 }
-/* line 222, ../../app/stylesheets/partials/_base.scss */
+/* line 252, ../../app/stylesheets/partials/_base.scss */
 .button.red span, .button.red:hover span {
   color: #FFF;
   border-color: red;
@@ -388,39 +418,39 @@ a:hover {
 
 /* Non-semantic helper classes
 ---------------------------------------------------------- */
-/* line 230, ../../app/stylesheets/partials/_base.scss */
+/* line 260, ../../app/stylesheets/partials/_base.scss */
 .center {
   text-align: center;
 }
 
-/* line 233, ../../app/stylesheets/partials/_base.scss */
+/* line 263, ../../app/stylesheets/partials/_base.scss */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 237, ../../app/stylesheets/partials/_base.scss */
+/* line 267, ../../app/stylesheets/partials/_base.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 240, ../../app/stylesheets/partials/_base.scss */
+/* line 270, ../../app/stylesheets/partials/_base.scss */
 .alignright {
   float: right;
 }
 
-/* line 243, ../../app/stylesheets/partials/_base.scss */
+/* line 273, ../../app/stylesheets/partials/_base.scss */
 .alignleft {
   float: left;
 }
 
-/* line 246, ../../app/stylesheets/partials/_base.scss */
+/* line 276, ../../app/stylesheets/partials/_base.scss */
 .aligncenter {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 250, ../../app/stylesheets/partials/_base.scss */
+/* line 280, ../../app/stylesheets/partials/_base.scss */
 .clearboth {
   clear: both;
   display: block;
@@ -431,17 +461,17 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 260, ../../app/stylesheets/partials/_base.scss */
+/* line 290, ../../app/stylesheets/partials/_base.scss */
 .separator {
   height: 15em;
 }
 
-/* line 264, ../../app/stylesheets/partials/_base.scss */
+/* line 294, ../../app/stylesheets/partials/_base.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 269, ../../app/stylesheets/partials/_base.scss */
+/* line 299, ../../app/stylesheets/partials/_base.scss */
 .underlined a, .underlined {
   text-decoration: underline;
 }
@@ -491,6 +521,12 @@ a:hover {
 /*                        Content                          */
 /* ======================================================= */
 /* line 43, ../../app/stylesheets/partials/_page.scss */
+#container {
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+/* line 48, ../../app/stylesheets/partials/_page.scss */
 #content {
   background: white;
   border: 2px solid black;
@@ -502,9 +538,75 @@ a:hover {
 }
 
 /* ======================================================= */
+/*                      Pre-Header                         */
+/* ======================================================= */
+/* line 61, ../../app/stylesheets/partials/_page.scss */
+#itnig-header {
+  width: 100%;
+  height: 2em;
+  position: fixed;
+  z-index: 1000;
+  background: #0B0B0B;
+  padding-bottom: 0.5%;
+  letter-spacing: .1em;
+}
+/* line 69, ../../app/stylesheets/partials/_page.scss */
+#itnig-header ul {
+  margin-left: 0;
+}
+/* line 71, ../../app/stylesheets/partials/_page.scss */
+#itnig-header ul li {
+  margin-left: 0;
+  display: inline;
+  padding-right: 0.9%;
+  padding-left: 1%;
+}
+/* line 78, ../../app/stylesheets/partials/_page.scss */
+#itnig-header a {
+  font-family: yanone-thin;
+  color: #FBFBFB;
+  -moz-transition-property: color;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+/* line 84, ../../app/stylesheets/partials/_page.scss */
+#itnig-header a:hover, #itnig-header a.current {
+  color: #1BC1C9;
+}
+/* line 89, ../../app/stylesheets/partials/_page.scss */
+#itnig-header #nav {
+  padding-bottom: 0.5%;
+  padding-top: 0.3%;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 90%;
+}
+/* line 95, ../../app/stylesheets/partials/_page.scss */
+#itnig-header #nav .nav-contact {
+  float: right;
+}
+/* line 98, ../../app/stylesheets/partials/_page.scss */
+#itnig-header #nav .banner {
+  float: right;
+}
+/* line 100, ../../app/stylesheets/partials/_page.scss */
+#itnig-header #nav .banner a {
+  width: 8%;
+}
+
+/* ======================================================= */
 /*                        Header                           */
 /* ======================================================= */
-/* line 56, ../../app/stylesheets/partials/_page.scss */
+/* line 110, ../../app/stylesheets/partials/_page.scss */
 #header {
   background: white;
   border: 2px solid black;
@@ -516,42 +618,42 @@ a:hover {
   padding: 10px 18px;
   position: relative;
 }
-/* line 66, ../../app/stylesheets/partials/_page.scss */
+/* line 120, ../../app/stylesheets/partials/_page.scss */
 #header #left {
   display: inline-block;
   position: relative;
   width: 350px!important;
 }
-/* line 70, ../../app/stylesheets/partials/_page.scss */
+/* line 124, ../../app/stylesheets/partials/_page.scss */
 #header #left #img {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 75, ../../app/stylesheets/partials/_page.scss */
+/* line 129, ../../app/stylesheets/partials/_page.scss */
 #header #left #title {
   padding-left: 55px;
   font-size: 35px;
 }
-/* line 79, ../../app/stylesheets/partials/_page.scss */
+/* line 133, ../../app/stylesheets/partials/_page.scss */
 #header #left #social {
   bottom: 0px;
 }
-/* line 81, ../../app/stylesheets/partials/_page.scss */
+/* line 135, ../../app/stylesheets/partials/_page.scss */
 #header #left #social .facebook, #header #left #social .google, #header #left #social .twitter {
   display: inline-block;
   padding-right: 5px;
 }
-/* line 85, ../../app/stylesheets/partials/_page.scss */
+/* line 139, ../../app/stylesheets/partials/_page.scss */
 #header #left #social .twitter {
   width: 95px;
 }
-/* line 88, ../../app/stylesheets/partials/_page.scss */
+/* line 142, ../../app/stylesheets/partials/_page.scss */
 #header #left #social .fb_iframe_widget {
   position: relative;
   top: -5px;
 }
-/* line 94, ../../app/stylesheets/partials/_page.scss */
+/* line 148, ../../app/stylesheets/partials/_page.scss */
 #header #right {
   display: inline-block;
   float: right;
@@ -561,29 +663,29 @@ a:hover {
   top: 10px;
   right: 10px;
 }
-/* line 102, ../../app/stylesheets/partials/_page.scss */
+/* line 156, ../../app/stylesheets/partials/_page.scss */
 #header #right p {
   margin-top: 5px;
   margin-bottom: 20px;
   text-align: right;
 }
-/* line 107, ../../app/stylesheets/partials/_page.scss */
+/* line 161, ../../app/stylesheets/partials/_page.scss */
 #header #right ul {
   float: right;
   display: inline;
 }
-/* line 110, ../../app/stylesheets/partials/_page.scss */
+/* line 164, ../../app/stylesheets/partials/_page.scss */
 #header #right ul li {
   display: inline;
 }
-/* line 114, ../../app/stylesheets/partials/_page.scss */
+/* line 168, ../../app/stylesheets/partials/_page.scss */
 #header #right img.pic {
   position: absolute;
   top: 2px;
   right: 0;
 }
 
-/* line 122, ../../app/stylesheets/partials/_page.scss */
+/* line 176, ../../app/stylesheets/partials/_page.scss */
 #notconnected {
   border: 2px solid black;
   -moz-border-radius: 20px;
@@ -596,7 +698,7 @@ a:hover {
   color: white;
   text-align: center;
 }
-/* line 133, ../../app/stylesheets/partials/_page.scss */
+/* line 187, ../../app/stylesheets/partials/_page.scss */
 #notconnected a {
   color: #ccc;
 }
@@ -604,15 +706,15 @@ a:hover {
 /* ======================================================= */
 /*                       Fact list                         */
 /* ======================================================= */
-/* line 141, ../../app/stylesheets/partials/_page.scss */
+/* line 195, ../../app/stylesheets/partials/_page.scss */
 #fact-list {
   position: relative;
 }
-/* line 144, ../../app/stylesheets/partials/_page.scss */
+/* line 198, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar input, #fact-list #search-bar img {
   position: absolute;
 }
-/* line 147, ../../app/stylesheets/partials/_page.scss */
+/* line 201, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar input {
   top: -10px;
   right: 30px;
@@ -627,59 +729,59 @@ a:hover {
   text-align: center;
   padding: 4px 10px 4px 10px;
 }
-/* line 160, ../../app/stylesheets/partials/_page.scss */
+/* line 214, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar input:focus {
   border-color: #666;
   color: black;
   outline: none;
 }
-/* line 166, ../../app/stylesheets/partials/_page.scss */
+/* line 220, ../../app/stylesheets/partials/_page.scss */
 #fact-list #search-bar img {
   top: -10px;
   right: -10px;
 }
-/* line 171, ../../app/stylesheets/partials/_page.scss */
+/* line 225, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination {
   font-size: 15px;
   padding: 5px;
 }
-/* line 174, ../../app/stylesheets/partials/_page.scss */
+/* line 228, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination {
   text-align: center;
 }
-/* line 176, ../../app/stylesheets/partials/_page.scss */
+/* line 230, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination a, #fact-list #pagination .pagination em {
   padding: 2px;
 }
-/* line 179, ../../app/stylesheets/partials/_page.scss */
+/* line 233, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination em {
   color: black;
   font-style: normal;
   padding: 2px 6px;
 }
-/* line 184, ../../app/stylesheets/partials/_page.scss */
+/* line 238, ../../app/stylesheets/partials/_page.scss */
 #fact-list #pagination .pagination .disabled {
   color: #bbb;
 }
-/* line 189, ../../app/stylesheets/partials/_page.scss */
+/* line 243, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact {
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* line 193, ../../app/stylesheets/partials/_page.scss */
+/* line 247, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact img {
   position: absolute;
 }
-/* line 196, ../../app/stylesheets/partials/_page.scss */
+/* line 250, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-link {
   color: #eee;
 }
-/* line 198, ../../app/stylesheets/partials/_page.scss */
+/* line 252, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-link:hover {
   color: white;
 }
-/* line 202, ../../app/stylesheets/partials/_page.scss */
+/* line 256, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-wrapper {
   background-image: url("../images/comments_50.png");
   background-repeat: no-repeat;
@@ -689,13 +791,13 @@ a:hover {
   height: 60px;
   width: 50px;
 }
-/* line 210, ../../app/stylesheets/partials/_page.scss */
+/* line 264, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .comments-wrapper .comments {
   font-size: 20px;
   margin-top: 3px;
   text-align: center;
 }
-/* line 216, ../../app/stylesheets/partials/_page.scss */
+/* line 270, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .category {
   position: absolute;
   border: 1px solid #999;
@@ -706,43 +808,43 @@ a:hover {
   font-weight: bold;
   text-align: center;
 }
-/* line 226, ../../app/stylesheets/partials/_page.scss */
+/* line 280, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .metadata {
   padding-left: 115px;
 }
-/* line 228, ../../app/stylesheets/partials/_page.scss */
+/* line 282, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .metadata .dates {
   font-size: 11px;
   margin-top: -10px;
 }
-/* line 233, ../../app/stylesheets/partials/_page.scss */
+/* line 287, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .text {
   margin-top: 20px;
   text-align: justify;
 }
-/* line 237, ../../app/stylesheets/partials/_page.scss */
+/* line 291, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: right;
 }
-/* line 241, ../../app/stylesheets/partials/_page.scss */
+/* line 295, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag {
   background: #666;
   display: inline-block;
   padding: 1px 5px;
 }
-/* line 245, ../../app/stylesheets/partials/_page.scss */
+/* line 299, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag:hover {
   background: black;
   cursor: pointer;
 }
-/* line 249, ../../app/stylesheets/partials/_page.scss */
+/* line 303, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag a {
   color: #eee;
   font-size: 10px;
 }
-/* line 252, ../../app/stylesheets/partials/_page.scss */
+/* line 306, ../../app/stylesheets/partials/_page.scss */
 #fact-list .fact .tags .tag a:hover {
   color: white;
 }
@@ -750,16 +852,16 @@ a:hover {
 /* ======================================================= */
 /*                       Fact show                         */
 /* ======================================================= */
-/* line 264, ../../app/stylesheets/partials/_page.scss */
+/* line 318, ../../app/stylesheets/partials/_page.scss */
 #fact-show {
   padding: 10px;
   position: relative;
 }
-/* line 267, ../../app/stylesheets/partials/_page.scss */
+/* line 321, ../../app/stylesheets/partials/_page.scss */
 #fact-show #gravatar {
   position: absolute;
 }
-/* line 270, ../../app/stylesheets/partials/_page.scss */
+/* line 324, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments-wrapper {
   background-image: url("../images/comments_50.png");
   background-repeat: no-repeat;
@@ -769,14 +871,14 @@ a:hover {
   height: 60px;
   width: 50px;
 }
-/* line 278, ../../app/stylesheets/partials/_page.scss */
+/* line 332, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments-wrapper #comments {
   color: #eee;
   font-size: 20px;
   margin-top: 3px;
   text-align: center;
 }
-/* line 285, ../../app/stylesheets/partials/_page.scss */
+/* line 339, ../../app/stylesheets/partials/_page.scss */
 #fact-show #category {
   position: absolute;
   border: 1px solid #999;
@@ -786,130 +888,130 @@ a:hover {
   font-weight: bold;
   text-align: center;
 }
-/* line 294, ../../app/stylesheets/partials/_page.scss */
+/* line 348, ../../app/stylesheets/partials/_page.scss */
 #fact-show #links {
   float: right;
   font-size: 14px;
 }
-/* line 297, ../../app/stylesheets/partials/_page.scss */
+/* line 351, ../../app/stylesheets/partials/_page.scss */
 #fact-show #links form {
   display: inline;
   padding: 0;
 }
-/* line 300, ../../app/stylesheets/partials/_page.scss */
+/* line 354, ../../app/stylesheets/partials/_page.scss */
 #fact-show #links form input {
   display: inline;
 }
-/* line 305, ../../app/stylesheets/partials/_page.scss */
+/* line 359, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head {
   padding-left: 120px;
 }
-/* line 307, ../../app/stylesheets/partials/_page.scss */
+/* line 361, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head #metadata {
   margin-top: -10px;
 }
-/* line 310, ../../app/stylesheets/partials/_page.scss */
+/* line 364, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head #social {
   margin-top: 5px;
 }
-/* line 312, ../../app/stylesheets/partials/_page.scss */
+/* line 366, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head #social .facebook, #fact-show #head #social .twitter, #fact-show #head #social .google {
   display: inline-block;
   padding-right: 5px;
 }
-/* line 316, ../../app/stylesheets/partials/_page.scss */
+/* line 370, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head #social .twitter {
   width: 95px;
 }
-/* line 319, ../../app/stylesheets/partials/_page.scss */
+/* line 373, ../../app/stylesheets/partials/_page.scss */
 #fact-show #head #social .fb_iframe_widget {
   position: relative;
   top: -5px;
 }
-/* line 325, ../../app/stylesheets/partials/_page.scss */
+/* line 379, ../../app/stylesheets/partials/_page.scss */
 #fact-show #text {
   position: relative;
   font-size: 14px;
   margin-top: 10px;
   text-align: justify;
 }
-/* line 331, ../../app/stylesheets/partials/_page.scss */
+/* line 385, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags {
   margin-bottom: 30px;
 }
-/* line 333, ../../app/stylesheets/partials/_page.scss */
+/* line 387, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag {
   background: #666;
   display: inline;
   padding: 6px 10px;
 }
-/* line 337, ../../app/stylesheets/partials/_page.scss */
+/* line 391, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag:hover {
   background: black;
   cursor: pointer;
 }
-/* line 341, ../../app/stylesheets/partials/_page.scss */
+/* line 395, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag a {
   color: #eee;
   font-size: 15px;
 }
-/* line 344, ../../app/stylesheets/partials/_page.scss */
+/* line 398, ../../app/stylesheets/partials/_page.scss */
 #fact-show #tags .tag a:hover {
   color: white;
 }
-/* line 352, ../../app/stylesheets/partials/_page.scss */
+/* line 406, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment {
   display: block;
   margin-bottom: 20px;
   position: relative;
 }
-/* line 356, ../../app/stylesheets/partials/_page.scss */
+/* line 410, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .gravatar {
   position: absolute;
 }
-/* line 359, ../../app/stylesheets/partials/_page.scss */
+/* line 413, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .delete {
   float: right;
 }
-/* line 362, ../../app/stylesheets/partials/_page.scss */
+/* line 416, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .metadata {
   padding-left: 60px;
 }
-/* line 364, ../../app/stylesheets/partials/_page.scss */
+/* line 418, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .metadata .sent {
   margin-top: -10px;
 }
-/* line 368, ../../app/stylesheets/partials/_page.scss */
+/* line 422, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #comment-list .comment .text {
   font-size: 14px;
   margin-top: 25px;
   text-align: justify;
 }
-/* line 375, ../../app/stylesheets/partials/_page.scss */
+/* line 429, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment {
   position: relative;
 }
-/* line 377, ../../app/stylesheets/partials/_page.scss */
+/* line 431, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment #gravatar {
   position: absolute;
   top: 5px;
 }
-/* line 381, ../../app/stylesheets/partials/_page.scss */
+/* line 435, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment .tip {
   padding-left: 60px;
 }
-/* line 384, ../../app/stylesheets/partials/_page.scss */
+/* line 438, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment form {
   margin-bottom: 25px;
   padding-left: 60px;
 }
-/* line 387, ../../app/stylesheets/partials/_page.scss */
+/* line 441, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment form textarea {
   display: block;
   height: 120px;
   width: 97%;
 }
-/* line 392, ../../app/stylesheets/partials/_page.scss */
+/* line 446, ../../app/stylesheets/partials/_page.scss */
 #fact-show #comments #newcomment form input[type=submit] {
   float: right;
   margin-top: 10px;
@@ -918,18 +1020,18 @@ a:hover {
 /* ======================================================= */
 /*                       Fact form                         */
 /* ======================================================= */
-/* line 404, ../../app/stylesheets/partials/_page.scss */
+/* line 458, ../../app/stylesheets/partials/_page.scss */
 #fact-form {
   padding: 0 10px 10px 10px;
   position: relative;
 }
-/* line 408, ../../app/stylesheets/partials/_page.scss */
+/* line 462, ../../app/stylesheets/partials/_page.scss */
 #fact-form form img.plus {
   position: absolute;
   top: 0;
   left: 15px;
 }
-/* line 413, ../../app/stylesheets/partials/_page.scss */
+/* line 467, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_title {
   font-size: 24px;
   margin-top: -5px;
@@ -937,50 +1039,50 @@ a:hover {
   margin-bottom: 20px;
   width: 500px;
 }
-/* line 420, ../../app/stylesheets/partials/_page.scss */
+/* line 474, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #metadata {
   margin-top: 5px;
 }
-/* line 423, ../../app/stylesheets/partials/_page.scss */
+/* line 477, ../../app/stylesheets/partials/_page.scss */
 #fact-form form textarea {
   width: 97%;
 }
-/* line 426, ../../app/stylesheets/partials/_page.scss */
+/* line 480, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #category {
   position: relative;
 }
-/* line 428, ../../app/stylesheets/partials/_page.scss */
+/* line 482, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #category label[for=fact_category] {
   display: none;
 }
-/* line 431, ../../app/stylesheets/partials/_page.scss */
+/* line 485, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #category #category_picker {
   position: absolute;
   top: 0;
   left: 250px;
 }
-/* line 435, ../../app/stylesheets/partials/_page.scss */
+/* line 489, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #category #category_picker input {
   width: 20px;
 }
-/* line 438, ../../app/stylesheets/partials/_page.scss */
+/* line 492, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #category #category_picker span label {
   display: inline;
   float: none;
   text-align: left;
   padding-right: 30px;
 }
-/* line 446, ../../app/stylesheets/partials/_page.scss */
+/* line 500, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags {
   position: relative;
 }
-/* line 448, ../../app/stylesheets/partials/_page.scss */
+/* line 502, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag {
   position: absolute;
   top: -2px;
   right: 0;
 }
-/* line 452, ../../app/stylesheets/partials/_page.scss */
+/* line 506, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag input#tag_name {
   position: absolute;
   right: 0;
@@ -988,17 +1090,17 @@ a:hover {
   text-align: center;
   color: #999;
 }
-/* line 458, ../../app/stylesheets/partials/_page.scss */
+/* line 512, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #new_tag input#tag_name:focus {
   color: black;
 }
-/* line 463, ../../app/stylesheets/partials/_page.scss */
+/* line 517, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud {
   display: block;
   margin-bottom: 20px;
   padding: 10px 0;
 }
-/* line 467, ../../app/stylesheets/partials/_page.scss */
+/* line 521, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .tag {
   background: black;
   color: #eee;
@@ -1009,29 +1111,29 @@ a:hover {
   padding: 6px 10px 6px 10px;
   position: relative;
 }
-/* line 477, ../../app/stylesheets/partials/_page.scss */
+/* line 531, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag {
   display: inline;
 }
-/* line 479, ../../app/stylesheets/partials/_page.scss */
+/* line 533, ../../app/stylesheets/partials/_page.scss */
 #fact-form form #tags #tag_cloud .delete-tag a {
   position: absolute;
   top: -4px;
   right: 1px;
   color: white;
 }
-/* line 488, ../../app/stylesheets/partials/_page.scss */
+/* line 542, ../../app/stylesheets/partials/_page.scss */
 #fact-form form input#fact_submit {
   float: right;
   padding: 7px;
   width: 180px;
 }
 
-/* line 496, ../../app/stylesheets/partials/_page.scss */
+/* line 550, ../../app/stylesheets/partials/_page.scss */
 ul.ui-autocomplete {
   width: 185px!important;
 }
-/* line 498, ../../app/stylesheets/partials/_page.scss */
+/* line 552, ../../app/stylesheets/partials/_page.scss */
 ul.ui-autocomplete li {
   background-color: #999;
   font-size: 15px;
@@ -1039,12 +1141,12 @@ ul.ui-autocomplete li {
   margin-left: 0;
   text-align: center;
 }
-/* line 504, ../../app/stylesheets/partials/_page.scss */
+/* line 558, ../../app/stylesheets/partials/_page.scss */
 ul.ui-autocomplete li:hover {
   color: white;
   background-color: black;
 }
-/* line 507, ../../app/stylesheets/partials/_page.scss */
+/* line 561, ../../app/stylesheets/partials/_page.scss */
 ul.ui-autocomplete li:hover a {
   color: white;
   cursor: pointer;
@@ -1053,12 +1155,12 @@ ul.ui-autocomplete li:hover a {
 /* ======================================================= */
 /*                      Preferences                        */
 /* ======================================================= */
-/* line 521, ../../app/stylesheets/partials/_page.scss */
+/* line 575, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset label {
   width: 45%;
   margin-right: 30px;
 }
-/* line 525, ../../app/stylesheets/partials/_page.scss */
+/* line 579, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset .hint {
   font-size: 12px;
   font-style: italic;
@@ -1066,23 +1168,23 @@ ul.ui-autocomplete li:hover a {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 532, ../../app/stylesheets/partials/_page.scss */
+/* line 586, ../../app/stylesheets/partials/_page.scss */
 #preferences form fieldset input[type=submit] {
   float: right;
 }
-/* line 537, ../../app/stylesheets/partials/_page.scss */
+/* line 591, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant, #preferences #available {
   margin-bottom: 25px;
   position: relative;
   vertical-align: middle;
 }
-/* line 541, ../../app/stylesheets/partials/_page.scss */
+/* line 595, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant .data, #preferences #available .data {
   position: absolute;
   top: -5px;
   left: 120px;
 }
-/* line 545, ../../app/stylesheets/partials/_page.scss */
+/* line 599, ../../app/stylesheets/partials/_page.scss */
 #preferences #existant .data .auth, #preferences #available .data .auth {
   display: inline-block;
 }
@@ -1090,12 +1192,12 @@ ul.ui-autocomplete li:hover a {
 /* ======================================================= */
 /*                       Register                          */
 /* ======================================================= */
-/* line 558, ../../app/stylesheets/partials/_page.scss */
+/* line 612, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset label {
   width: 45%;
   margin-right: 30px;
 }
-/* line 562, ../../app/stylesheets/partials/_page.scss */
+/* line 616, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset .hint {
   font-size: 12px;
   font-style: italic;
@@ -1103,7 +1205,7 @@ ul.ui-autocomplete li:hover a {
   margin-bottom: 10px;
   text-align: center;
 }
-/* line 569, ../../app/stylesheets/partials/_page.scss */
+/* line 623, ../../app/stylesheets/partials/_page.scss */
 #register form fieldset input[type=submit] {
   float: right;
 }

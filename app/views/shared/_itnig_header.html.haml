@@ -1,0 +1,21 @@
+#itnig-header
+  #nav
+    %ul
+      %li
+        = link_to 'Itnig', "http://itnig.net"
+      %li
+        = link_to 'Service', "http://itnig.net/service"
+      %li
+        = link_to 'Company', "http://itnig.net/company"
+      %li
+        = link_to 'Projects', "http://itnig.net/projects"
+      -#%li.nav-events
+        = section_link_to 'Events', events_path
+      -#%li.nav-blog
+        = section_link_to 'Blog', posts_path
+      %li
+        = link_to 'Knowledge', 'http://how.itnig.net', :class => "current"
+      %li.nav-contact
+        =link_to 'Contact','http://itnig.net#footer-container'
+      .clear
+.clear

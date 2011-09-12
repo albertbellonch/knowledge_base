@@ -9,9 +9,13 @@
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
     - if @noindex
       %meta{:content => "noindex", :name => "robots"}
+    %script{:src => "http://use.typekit.com/bys2kmu.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
     = include_stylesheets :screen
     = csrf_meta_tag
   %body.one_col
+    = render "shared/itnig_header"
     #container
       = render "shared/flash"
       = render "shared/header"
