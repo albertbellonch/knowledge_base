@@ -4,10 +4,10 @@ defaults: &defaults
     smtp:
       address: "smtp.gmail.com"
       port: 587
-      domain: "itnig.net"
+      domain: "unicorn-world.com"
     account:
-      user_name: "notifier@itnig.net"
-      password: "3UnTrhWj"
+      user_name: "notifier@unicorn-world.com"
+      password: "do-the-cuca"
   hostname: "localhost:3000"
 
 development:
