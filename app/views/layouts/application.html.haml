@@ -13,6 +13,7 @@
     :javascript
       try{Typekit.load();}catch(e){}
     = include_stylesheets :screen
+    %link{ :rel => "shortcut icon", :href => "/images/favicon.png" }
     = csrf_meta_tag
   %body.one_col
     = render "shared/itnig_header"
