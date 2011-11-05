@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 class FactsController < ApplicationController
   load_resource :find_by => :title_url
   authorize_resource
