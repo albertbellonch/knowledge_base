@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 class FactsController < ApplicationController
   autocomplete :tag, :name, :full => true
 
