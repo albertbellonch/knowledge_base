@@ -28,7 +28,7 @@ class FactsController < ApplicationController
       elsif @user = params[:user]
         @total = @base.for_user(@user)
       else
-        @total = @base.all
+        @total = @base
       end
     end
 
