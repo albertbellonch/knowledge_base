@@ -16,7 +16,7 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'gravatar_image_tag'
 
-gem 'thinking-sphinx', '2.0.3'
+gem 'thinking-sphinx', '~> 2.0.10'
 
 gem 'jammit'
 gem "dalli"
