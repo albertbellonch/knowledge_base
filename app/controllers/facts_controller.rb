@@ -10,10 +10,12 @@ class FactsController < ApplicationController
   def index
     # Search params
     @is_search = params[:search]
+    @page = params[:page].to_i
+    @page = 1 if @page == 0
 
     if @is_search
       # Search directly
-      @total = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc, :include => [:user,:comments,:tags,:category])
+      @facts = Fact.search(params[:search], :order => :created_at, :sort_mode => :desc, :include => [:user,:comments,:tags,:category], :page => @page, :per_page => 10)
     else
       # Get base
       @base = Fact.includes(:user,:comments,:tags,:category)
@@ -30,12 +32,9 @@ class FactsController < ApplicationController
       else
         @total = @base
       end
-    end
 
-    # And paginate!
-    @page = params[:page].to_i
-    @page = 1 if @page == 0
-    @facts = @total.paginate :page => @page, :per_page => 10
+      @facts = @total.paginate :page => @page, :per_page => 10
+    end
   end
 
   def show
