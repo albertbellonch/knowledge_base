@@ -1,5 +1,6 @@
 defaults: &defaults
   port: 23761
+  bin_path: "/usr/local/bin"
 
 production:
   <<: *defaults
