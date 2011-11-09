@@ -21,7 +21,7 @@ gem 'thinking-sphinx', '2.0.3'
 gem 'jammit'
 gem "dalli"
 
-gem 'best_in_place'
+gem 'best_in_place', "~> 0.2.0"
 gem 'rails3-jquery-autocomplete'
 
 gem 'lorem'
@@ -30,7 +30,6 @@ gem 'unicode'
 gem 'fb-localizer'
 gem 'tweet-button'
 
-gem "rake", "0.8.7"
 gem "whenever", :require => false
 
 gem 'mysql2', "0.2.7"
