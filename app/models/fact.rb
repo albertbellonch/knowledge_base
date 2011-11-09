@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 class Fact < ActiveRecord::Base
   CATEGORIES = ["Enginyeria","Màrqueting","Disseny"]
 
