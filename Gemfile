@@ -4,7 +4,7 @@ gem 'rails', '3.0.7'
 gem 'rdiscount'
 
 gem 'devise'
-gem 'omniauth'
+gem 'omniauth', "~> 0.3.0"
 gem 'cancan'
 
 gem 'compass'
